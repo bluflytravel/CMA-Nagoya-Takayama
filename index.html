@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Nagoya Takayama (TG) 7D5N 30 SEP - 6 OCT 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: '#00A0C6',
+        'brand-dark': '#007A99',
+        'brand-light': '#E6F7FB',
+        'brand-50': '#F0FAFC',
+        surface: '#FFFFFF',
+        txt: '#1E293B',
+        subtle: '#64748B',
+        accent: '#F59E0B'
+      }
+    }
+  }
+}
+</script>
+  <style>
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { font-family: 'Prompt', sans-serif; }
+.font-display { font-family: 'Playfair Display', serif; }
+
+.nav-btn { transition: all 0.3s ease; }
+.nav-btn:hover, .nav-btn.active { background: #00A0C6; color: white; }
+.nav-btn.active { box-shadow: 0 4px 12px rgba(0,160,198,0.3); }
+
+.card-hover { transition: all 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,160,198,0.15); }
+
+.day-card { border-left: 4px solid #00A0C6; }
+
+.fade-in { animation: fadeIn 0.5s ease forwards; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+.timeline-dot { width: 14px; height: 14px; border-radius: 50%; background: #00A0C6; border: 3px solid white; box-shadow: 0 0 0 2px #00A0C6; }
+
+.meal-card { background: linear-gradient(135deg, #F0FAFC 0%, #FFFFFF 100%); }
+
+.weather-icon { font-size: 2rem; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F0FAFC; }
+::-webkit-scrollbar-thumb { background: #00A0C6; border-radius: 3px; }
+
+.hero-bg {
+  background: linear-gradient(135deg, #00A0C6 0%, #007A99 40%, #005E78 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, transparent 70%);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, white, transparent);
+}
+
+.tab-section { display: none; }
+.tab-section.active { display: block; }
+
+.day-tab { cursor: pointer; transition: all 0.2s; }
+.day-tab:hover { background: #E6F7FB; }
+.day-tab.active-day { background: #00A0C6; color: white; border-radius: 9999px; }
+
+/* Responsive image — works on both desktop and mobile */
+.tour-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+/* ===================== RESPONSIVE LAYOUT SYSTEM ===================== */
+/* Mobile-first base styles, then desktop overrides at md breakpoint (768px) */
+
+/* --- Navigation: mobile = 3-column grid menu, desktop = single scrollable row --- */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+}
+.nav-btn {
+  white-space: normal;
+  text-align: center;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  padding: 0.55rem 0.3rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .nav-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.4rem;
+  }
+  .nav-btn {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    min-height: auto;
+    display: inline-block;
+  }
+}
+
+/* --- Meal / attraction image pairs: stack on mobile, side-by-side on desktop --- */
+.img-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.img-pair > img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .img-pair {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+  .img-pair > img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .tour-img { aspect-ratio: 4 / 3; }
+}
+
+/* --- Timeline: tighter indent + smaller dot offset on mobile --- */
+.timeline-list {
+  margin-left: 0.25rem;
+  border-left-width: 2px;
+  padding-left: 1rem;
+}
+.timeline-dot-wrap { left: -21px; }
+@media (min-width: 768px) {
+  .timeline-list {
+    margin-left: 1.25rem;
+    padding-left: 1.5rem;
+  }
+  .timeline-dot-wrap { left: -31px; }
+}
+
+/* --- Day tabs (วันที่ 1/2/3): full-width equal split on mobile, pill row on desktop --- */
+.day-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.day-tab {
+  text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .day-tabs {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .day-tab {
+    display: inline-flex;
+    min-height: auto;
+  }
+}
+
+/* --- Passenger room cards: 1 column mobile, 2 columns desktop --- */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .rooms-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+.room-card { margin-bottom: 0 !important; }
+
+/* --- Summary stat bar: 2x2 on mobile, single row on desktop --- */
+.stats-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .stats-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+}
+
+/* --- Flight cards: stack the times vertically on very small screens --- */
+@media (max-width: 420px) {
+  .flight-row { flex-wrap: wrap; row-gap: 0.75rem; }
+  .flight-row .flight-arrow { order: 3; width: 100%; }
+}
+</style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-white text-txt">
+  <div id="app" class="h-full overflow-auto w-full">
+
+   <!-- Hero -->
+   <header class="hero-bg text-white px-4 py-10 md:py-16 text-center relative z-10">
+    <div class="max-w-4xl mx-auto relative z-10">
+     <p id="companyNameDisplay" class="text-sm tracking-[0.3em] uppercase opacity-80 mb-3">Bluefly Travel</p>
+     <div class="flex items-center justify-center gap-2 md:gap-3 mb-4">
+      <h1 id="mainTitleDisplay" class="font-display text-2xl md:text-5xl font-bold leading-tight"> Japan 🍂</h1>
+     </div>
+     <p class="text-lg md:text-xl opacity-90 font-light">7 Days 5 Nights</p>
+     <div class="flex items-center justify-center gap-4 mt-4 text-sm opacity-80">
+      <span>📅 30 กันยายน – 6 ตุลาคม 2569</span> 
+     </div>
+     <div class="flex flex-wrap justify-center gap-2 mt-6">
+      <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs">TAKAYAMA</span>
+      <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs">KAMIKOCHI</span>
+      <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs">NAGOYA</span>
+     </div>
+    </div>
+   </header>
+
+   <!-- Navigation -->
+   <nav class="sticky top-0 z-50 bg-white shadow-md border-b border-brand-light">
+    <div class="max-w-5xl mx-auto nav-grid p-2">
+     <button onclick="showSection('flights')" class="nav-btn active rounded-full font-medium text-brand border border-brand/20" data-nav="flights"><span class="hidden md:inline">✈️ </span>เที่ยวบิน</button>
+     <button onclick="showSection('itinerary')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="itinerary"><span class="hidden md:inline">📋 </span>โปรแกรมทัวร์</button>
+     <button onclick="showSection('country')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="country"><span class="hidden md:inline">🐦‍🔥 </span>ข้อมูลประเทศ</button>
+     <button onclick="showSection('weather')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="weather"><span class="hidden md:inline">🌤️ </span>สภาพอากาศ</button>
+     <button onclick="showSection('clothing')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="clothing"><span class="hidden md:inline">👔 </span>การแต่งกาย</button>
+     <button onclick="showSection('Passenger')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="Passenger">รายชื่อผู้เดินทาง</button>
+    </div>
+   </nav>
+
+   <main class="max-w-5xl mx-auto px-4 py-8">
+
+    <!-- ========== FLIGHTS ========== -->
+    <section id="sec-flights" class="tab-section active fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">✈️ ข้อมูลเที่ยวบิน</h2>
+
+     <h3 class="font-semibold text-brand mb-3">🛫 ขาไป — 1 ตุลาคม 2569</h3>
+     <div class="space-y-4 mb-8">
+      <div class="bg-white border border-brand/20 rounded-2xl p-5 card-hover">
+       <div class="flex items-center gap-2 mb-3">
+        <span class="bg-brand text-white px-3 py-1 rounded-full text-xs font-semibold">TG 644</span>
+        <span class="text-sm text-subtle">THAI AIRWAYS</span>
+       </div>
+       <div class="flex items-center gap-4">
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">00:05</p>
+         <p class="text-sm font-medium">BKK</p>
+         <p class="text-xs text-subtle">กรุงเทพฯ</p>
+         <p class="text-xs text-subtle">1 ต.ค.</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center">
+         <p class="text-xs text-subtle mb-1">5 ชม. 55 นาที</p>
+         <div class="w-full flex items-center">
+          <div class="w-2 h-2 rounded-full bg-brand"></div>
+          <div class="flex-1 h-[2px] bg-gradient-to-r from-brand to-brand-dark"></div>
+          <span class="text-lg">✈️</span>
+         </div>
+        </div>
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">08:00</p>
+         <p class="text-sm font-medium">NGO</p>
+         <p class="text-xs text-subtle">นาโกย่า</p>
+         <p class="text-xs text-subtle">1 ต.ค.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+
+     <h3 class="font-semibold text-brand mb-3">🛫 ขากลับ — 6 ตุลาคม 2569</h3>
+     <div class="space-y-4 mb-8">
+      <div class="bg-white border border-brand/20 rounded-2xl p-5 card-hover">
+       <div class="flex items-center gap-2 mb-3">
+        <span class="bg-brand text-white px-3 py-1 rounded-full text-xs font-semibold">TG 645</span>
+        <span class="text-sm text-subtle">THAI AIRWAYS</span>
+       </div>
+       <div class="flex items-center gap-4">
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">11:00</p>
+         <p class="text-sm font-medium">NGO</p>
+         <p class="text-xs text-subtle">นาโกย่า</p>
+         <p class="text-xs text-subtle">6 ต.ค.</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center">
+         <p class="text-xs text-subtle mb-1">6 ชม. 00 นาที</p>
+         <div class="w-full flex items-center">
+          <div class="w-2 h-2 rounded-full bg-brand"></div>
+          <div class="flex-1 h-[2px] bg-gradient-to-r from-brand to-brand-dark"></div>
+          <span class="text-lg">✈️</span>
+         </div>
+        </div>
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">15:00</p>
+         <p class="text-sm font-medium">BKK</p>
+         <p class="text-xs text-subtle">กรุงเทพฯ</p>
+         <p class="text-xs text-subtle">6 ต.ค.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- ========== ITINERARY ========== -->
+    <section id="sec-itinerary" class="tab-section fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">📋 โปรแกรมทัวร์</h2>
+     <div class="flex flex-wrap gap-2 mb-6">
+      <button onclick="showDay(1)" class="day-tab active-day px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 1</button>
+      <button onclick="showDay(2)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 2</button>
+      <button onclick="showDay(3)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 3</button>
+      <button onclick="showDay(4)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 4</button>
+      <button onclick="showDay(5)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 5</button>
+      <button onclick="showDay(6)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 6</button>
+      <button onclick="showDay(7)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 7</button>
+     </div>
+
+     <!-- ===== DAY 1 ===== -->
+     <div id="day-1" class="day-content w-full">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันพุธที่ 30 กันยายน 2569</h3>
+         <p class="text-sm text-subtle">กรุงเทพฯ</p>
+        </div>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">21:00 น.</span> — คณะพบกันที่ สนามบินสุวรรณภูมิ อาคารผู้โดยสารขาออกระหว่างประเทศ ชั้น 4 ประตู 4 เคาน์เตอร์ H สายการบินไทย เจ้าหน้าที่บริษัทบลูฟลาย ทราเวิลคอยให้การต้อนรับและอำนวยความสะดวก</p>
+        </div>
+
+        <div class="bg-brand-50 rounded-xl p-3 text-xs text-subtle flex items-center gap-2">
+         <span>💡</span> แนะนำเดินทางมาถึงสนามบินก่อนเวลานัดหมายอย่างน้อย 30 นาที
+        </div>
+       </div>
+      </div>
+     </div> <!-- /day-1 -->
+
+<!-- ===== DAY 2 ===== -->
+<div id="day-2" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันพฤหัสบดีที่ 1 ตุลาคม 2569</h3>
+         <p class="text-sm text-subtle">กรุงเทพฯ → นาโกย่า (ประเทศญี่ปุ่น) → ทาคายาม่า </p>
+        </div>
+        <span class="ml-auto text-2xl">🍂</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">00:05 น.</span> — ✈️ สนามบินนาโกย่า โดยสายการบินไทย เที่ยวบินที่ TG 644</p>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">08:00 น.</span> — ✈️ คณะเดินทางถึง สนามบินนาโกย่า ประเทศญี่ปุ่น หลังผ่านพิธีการตรวจคนเข้าเมืองและศุลกากรเรียบร้อยแล้ว (เวลาท้องถิ่นเร็วกว่าประเทศไทย 2 ชั่วโมง)</p>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🚌 เมืองทาคายาม่า (Takayama)</p>
+          <p class="text-subtle mt-1">นําคณะเดินทางสู่ เมืองทาคายาม่า (Takayama) เป็นเมืองเล็กๆ ที่ตั้งอยู่จังหวัดกิฟุ ตัวเมืองมีสถานที่ ท่องเที่ยวสำคัญๆมีศิลปวัฒนธรรมและสถานปัตยกรรมแบบดั้งเดิมและมีธรรมชาติที่สวยงาม
+ทำให้ทาคายาม่าเป็นเมืองสวยอันดับต้นๆของญี่ปุ่น</p>
+          <div class="mt-3">
+           <img src="https://www.agoda.com/wp-content/uploads/2024/02/Shirakawago-village-in-autumn-1050x700.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏚️ เมืองเก่าฮิดะฟุรุคาวะ (Hida-Furukawa)</p>
+          <p class="text-subtle mt-1">นำคณะชม เมืองเก่าฮิดะฟุรุคาวะ (Hida-Furukawa) เป็นเมืองสงบที่มีเสน่ห์ด้วยทางเดินเลียบคลองเซโตะซึ่งเต็มไป
+ด้วยปลาคาร์ปหลากสีและโกดังผนังสีขาวแบบโบราณ โด่งดังจากการเป็นสถานที่ต้นแบบในอนิเมะเรื่อง Your Name และมีงานเทศกาลตีกลองประจำปีที่ได้รับการยกย่องจาก UNESCO เหมาะสำหรับการเดินเที่ยวชมสถาปัตยกรรมไม้พื้นเมืองและสัมผัสวัฒนธรรมช่างไม้ฮิดะอันประณีต 
+          <div class="mt-3">
+           <img src="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/nuyzwktpyv6cc0m6jtzt.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏬 ย่านเมืองเก่าทาคายามะ (Takayama Old Town)  - ทาคายามะจินยะ (Takayama Jinya) </p>
+          <p class="text-subtle mt-1">เดินทางสู่ ฮิดะทาคายามะ (Hida Takayama) เมืองเก่ากลางหุบเขาในจังหวัดกิฟุที่เปรียบเสมือนพิพิธภัณฑ์มีชีวิต ด้วยการรักษาสถาปัตยกรรมไม้และบรรยากาศย้อนยุคสมัยเอโดะไว้อย่างสมบูรณ์ สัมผัสวิถีชีวิตดั้งเดิมผ่านการชม ย่านเมืองเก่าทาคายาม่า จากนั้นเข้าชม ทาคายามะจินยะ (Takayama Jinya) อดีตที่ทำการรัฐบาลและที่พักของเจ้าเมืองในยุคโชกุนโทกุงาวะ ซึ่งถือเป็นจวนผู้ว่าเก่าแก่เพียงแห่งเดียวที่ยังหลงเหลืออยู่ในญี่ปุ่น ภายในจัดแสดงห้องโถง
+ไม้ที่ประณีต คลังเก็บข้าวสารโบราณ รวมถึงโบราณวัตถุและอาวุธที่สะท้อนถึงประวัติศาสตร์การปกครองอันยาวนานกว่าร้อยปีได้อย่างน่าประทับใจ</p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmgysO8Gc6n37uGXlIOFK_Z48jaWjoOABIw&s"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 1">
+
+            <img
+                src="https://images.trvl-media.com/place/6104068/9609d626-8b17-4e75-9aad-eba35ec1b63a.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨 ♨️ </span> <strong>นำคณะเข้าสู่ที่พัก TOKYU STAY Hida-Takayama Musubi no Yu หรือเทียบเท่า ★★★★</strong>
+       </div>
+      </div>
+     </div><!-- /day-2 -->
+
+     <!-- ===== DAY 3 ===== -->
+     <div id="day-3" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันศุกร์ที่ 2 ตุลาคม 2569</h3>
+         <p class="text-sm text-subtle">ทาคายาม่า → ชินโฮทากะโรปเวย์ → ทาคายาม่า</p>
+        </div>
+        <span class="ml-auto text-2xl">🚠</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🚠 กระเช้าลอยฟ้าชินโฮทากะ (Shinhotaka Ropeway) </p>
+          <p class="text-subtle mt-1">สัมผัสประสบการณ์สุดพิเศษกับการเดินทางขึ้นสู่ยอดเขาในเทือกเขาเจแปนแอลป์ตอนเหนือ ซึ่งความโดดเด่นอยู่ที่การแบ่งการเดินทางออกเป็น 2 ช่วง โดยเริ่มต้นช่วงแรกด้วยกระเช้าแบบมาตรฐานพาท่านข้ามผ่านผืนป่าอันอุดมสมบูรณ์สู่จุดพักครึ่งทางที่มีบ่อน้ำพุร้อนแช่เท้าให้ผ่อนคลาย จากนั้นเข้าสู่ไฮไลท์สำคัญในการเดินทางช่วงที่สองกับ กระเช้าลอยฟ้าแบบ 2 ชั้นแห่งเดียวในญี่ปุ่น ที่จะไต่ระดับความสูงอย่างรวดเร็วพาท่านทะยานสู่สถานีนิชิโฮทากะกุจิ บนความสูงกว่า 2,156 เมตรเหนือระดับน้ำทะเล ณ จุดชมวิวบนยอดเขา ชมทัศนียภาพพาโนรามาแบบ 360 องศา ที่เผยให้เห็นสีสันของใบไม้เปลี่ยนสีตามฤดูกาล มอบวิวทิวทัศน์อันสวยงามระดับโลกอย่างแท้จริง</p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://res.cloudinary.com/jnto/image/upload/w_1650,f_auto,fl_lossy,q_auto,c_scale/v1/media_national_parks/filer_public/a7/02/a702c03a-0537-486e-8a60-f176695ba826/chubusangaku_shinhotaka_ropeway_shinhotaka_npoj10-12_vnkh2p"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 1">
+
+            <img
+                src="https://mushroomtravelpage.b-cdn.net/wp-content/uploads/2024/05/13-shinhotaka-ropeway.jp_.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍂 อุทยานแห่งชาติคามิโกจิ - สะพานกัปปะบาชิ </p>
+          <p class="text-subtle mt-1">เดินทางสู่ อุทยานแห่งชาติคามิโกจิ แหล่งท่องเที่ยวทางธรรมชาติระดับโลกในจังหวัดกิฟุที่ได้รับฉายาว่า 
+"สวิตเซอร์แลนด์แห่งญี่ปุ่น" ด้วยทัศนียภาพอันบริสุทธิ์ของเทือกเขาแอลป์ตอนเหนือที่ตั้งตระหง่านเป็นฉากหลังอย่างยิ่งใหญ่ ชม สะพานกัปปะบาชิ สะพานไม้แขวนสัญลักษณ์ของอุทยาน ซึ่งเป็นจุดชมวิวที่สวยงามที่สุดในการมองเห็นยอดเขาโฮทากะ นอกจากนี้จะได้พบกับความสงบนิ่งของ บึงทาชิโระ พื้นที่ชุ่มน ้าอันทรงเสน่ห์ที่สะท้อนภาพธรรมชาติรอบตัวได้อย่างละมุนตา ในบรรยากาศที่อากาศเย็นสบายและสดชื่นตลอดวัน</p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://cdn.mushroomtravel.com/destination/Japan/Matsumoto/Kamikochi/Kamikochi-05.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 1">
+
+            <img
+                src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1280,h_853/w_79,x_14,y_14,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/deial0m9h3ny2bz0gyaw/%E0%B8%97%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%8A%E0%B8%A1%E0%B9%83%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A7%E0%B8%B2%E0%B9%82%E0%B8%81%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%AA%E0%B9%82%E0%B8%8A,%E0%B8%AE%E0%B8%B4%E0%B8%94%E0%B8%B0%E0%B8%97%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%88%E0%B8%B4.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🚌 นำคณะเดินทางกลับสู่ เมืองทาคายาม่า (Takayama)</p>
+          <div>
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨♨️</span> <strong>นำคณะเข้าสู่ที่พัก TOKYU STAY Hida-Takayama Musubi no Yu หรือเทียบเท่า ★★★★</strong>
+       </div>
+      </div>
+
+     </div><!-- /day-3 -->
+
+<!-- ===== DAY 4 ===== -->
+<div id="day-4" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">4</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันเสาร์ที่ 3 ตุลาคม 2569</h3>
+         <p class="text-sm text-subtle">ทาคายาม่า → โทยาม่า → ทาคาโอกะ </p>
+        </div>
+        <span class="ml-auto text-2xl">🍂</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🧺 ตลาดเช้ามิยากาวะ (Miyagawa Morning Market)</p>
+          <p class="text-subtle mt-1">ตลาดเก่าแก่ที่เต็มไปด้วยเสน่ห์ของชาวเมืองทาคายามะ ผลผลิตสดใหม่จากไร่ ชิมขนมพื้นเมือง และเลือกซื้อสินค้าทำมือที่เป็นเอกลักษณ์ ท่ามกลางบรรยากาศเรียบง่ายและเป็นกันเอง
+          <div class="mt-3">
+           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/83/36/01/shops-selling-local-products.jpg?w=900&h=500&s=1" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🦞 โทยามะ (Toyama) - ตลาดชินมินาโตะ คิตโตะคิโตะ </p>
+          <p class="text-subtle mt-1">เดินทางสู่ โทยามะ (Toyama) เมืองท่าเปี่ยมเสน่ห์ริมชายฝั่งที่ขึ้นชื่อเรื่องความอุดมสมบูรณ์ของอาหารทะเลสดใหม่ส่งตรงจากอ่าว โดยเฉพาะที่ ตลาดชินมินาโตะ คิตโตะคิโตะ แหล่งรวมวัตถุดิบชั้นเลิศอย่างกุ้งขาวและปูแดงรสหวานฉ่ำที่สามารถเลือกซื้อและลิ้มลองรสชาติความสดได้ทันที</p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://static.gltjp.com/glt/data/directory/13000/12699/20220204_105920_557ae5de_w1920.webp"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 1">
+
+            <img
+                src="https://ak-d.tripcdn.com/images/1mi0a224x90n54wav275A.jpg?proc=source/trip"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🛕 เมืองทาคาโอกะ (Takaoka)  - วัดซุยริวจิ (Zuiryuji Temple)</p>
+          <p class="text-subtle mt-1">เดินทางสู่ เมืองทาคาโอกะ (Takaoka) เมืองเก่าแก่ทรงเสน่ห์ที่อบอวลไปด้วยกลิ่นอายประวัติศาสตร์และงาน
+คราฟต์อันประณีต โดดเด่นด้วยการเป็นเมืองแห่งการหล่อโลหะที่สืบทอดมาอย่างยาวนาน จากนั้นเข้าชม วัดซุยริวจิ (Zuiryuji Temple) วัดพุทธนิกายเซนที่ได้รับการยกย่องให้เป็นสมบัติชาติของญี่ปุ่น โดดเด่นด้วยสถาปัตยกรรมแบบดั้งเดิมที่สมบูรณ์แบบและการวางผังอาคารที่สมมาตรอย่างสวยงาม ภายในบริเวณวัดท่านจะได้พบกับความสงบนิ่งของลานหินสีขาวสะอาดตา ตัดกับอาคารไม้เก่าแก่ที่แสดงถึงความรุ่งเรืองของตระกูลมาเอดะในอดีต มอบบรรยากาศ
+ที่เปี่ยมไปด้วยมนต์ขลังและความศรัทธาที่สืบทอดมาอย่างยาวนาน
+          <div class="mt-3">
+           <img src="https://cdn.gaijinpot.com/app/uploads/sites/6/2023/01/pixta_48294663_M-copy-800x500.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🛕 พระใหญ่ทาคาโอกะ (Takaoka Daibutsu)</p>
+          <p class="text-subtle mt-1"> ได้รับการยกย่องให้เป็น 1 ใน 3 พระพุทธรูปองค์ใหญ่ที่สุดในญี่ปุ่น องค์พระหล่อจากทองเหลืองด้วยฝีมืออันประณีตของช่างหล่อโลหะท้องถิ่นที่มีชื่อเสียงระดับโลก เดินชมผลงานจิตรกรรมด้านในฐานองค์พระที่เงียบสงบและเปี่ยมด้วยศรัทธา นับเป็นสัญลักษณ์สำคัญที่แสดงถึงความรุ่งเรืองทางศิลปะและจิตวิญญาณของเมืองทาคาโอกะ
+          <div class="mt-3">
+           <img src="https://www.info-toyama.com/storage/tourism_attractions/21108/responsive_images/9LWCkc2twED3VeQrjm65L5JFtYDzFTn5aWXX96h6__1673_1115.jpeg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍂 สวนสาธารณะคันซุย (Kansui Park)  - สะพานเท็มมง (Tenmon Bridge) </p>
+          <p class="text-subtle mt-1">ชม สวนสาธารณะคันซุย (Kansui Park) เป็นพื้นที่พักผ่อนหย่อนใจริมน้ำขนาดใหญ่ใจกลางเมืองโทยามะ โดดเด่น
+ด้วยทัศนียภาพอันทันสมัยและเงียบสงบ โดยมีสะพานเท็มมง (Tenmon Bridge) เป็นแลนด์มาร์คสำคัญที่เชื่อมต่อพื้นที่สองฝั่งน้ำเข้าด้วยกัน ภายในสวนเป็นที่ตั้งของร้านสตาร์บัคส์ ดีไซน์สวยระดับโลก จิบกาแฟพร้อมดื่มด่ำกับวิวสวน และสายน้ำได้อย่างผ่อนคลาย</p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://scontent.fbkk12-4.fna.fbcdn.net/v/t39.30808-6/490980334_2582682042063597_7322626551184462155_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x720&ctp=s960x720&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YzXpDfhcGP0Q7kNvwGYGpjS&_nc_oc=AdoRqettaJ6PHh4K12RQaJYAUIDUw0eNrI8J6lbB0ZIuYMAFXAqtkgPcQnQPFGZEAeVQ2Yy2AwLw6RSJmmsbYV7n&_nc_zt=23&_nc_ht=scontent.fbkk12-4.fna&_nc_gid=t9CCP2FaZYJ5Gge3Jq-COA&_nc_ss=7b2a8&oh=00_Af9JWxNIhw6ThGjwifjf7-M06zY9UF99wPm2cwYScveT5w&oe=6A42DF95"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 1">
+
+            <img
+                src="https://www.info-toyama.com/storage/tourism_attractions/11009/responsive_images/JE6tmpbNvOBGw4jwFoFpCSHlSfLvuL3Cm3kVSMQe__1673_1115.jpeg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก ANA Crowne Plaza Toyama หรือเทียบเท่า ★★★★</strong>
+       </div>
+      </div>
+     </div><!-- /day-4 -->
+
+<!-- ===== DAY 5 ===== -->
+<div id="day-5" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">5</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันอาทิตย์ที่ 4 ตุลาคม 2569</h3>
+         <p class="text-sm text-subtle"> ทาคาโอกะ → ชิราคาวาโกะ → นาโกย่า </p>
+        </div>
+        <span class="ml-auto text-2xl">🏰</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🛖 หมู่บ้านชิราคาวาโกะ </p>
+          <p class="text-subtle mt-1">เดินทางสู่ หมู่บ้านชิราคาวาโกะ (ใช้เวลาเดินทางประมาณ 1 ชั่วโมง) เป็นหมู่บ้านสไตล์กัชโชแบบญี่ปุ่นดั้งเดิม และยังได้รับเลือกเป็นมรดกโลกในปี 1995 ซึ่งเป็นหมู่บ้านสไตล์กัชโช-สึคุริ จะมีความยาวประมาณ 18 เมตร และมีความกว้าง 10 เมตร ซึ่งโครงสร้างของบ้านสามารถรองรับหิมะที่ตกหนักในช่วงฤดูหนาวได้ และรูปร่างของหลังคาเหมือนกับสองมือของพระเจ้า หรือพระพุทธเจ้า จึง
+เรียกหมู่บ้านในสไตล์นี้ว่า กัสโช พร้อมกันนี้ท่านจะเพลิดเพลินกับฝูงปลาคราฟนับร้อยที่แหวกว่ายอยู่ตามลำธารหน้าบ้านซึ่งจะเห็นได้ก็แต่เมืองในแถบนี้เท่านั้น
+          <div class="mt-3">
+           <img src="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/yzz2uxipbt4mi2rx26jv.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏰 ปราสาทอินุยามา (Inuyama Castle)  </p>
+          <p class="text-subtle mt-1">เดินทางสู่ ปราสาทอินุยามา (Inuyama Castle) (ใช้เวลาเดินทางประมาณ 2 ชั่วโมง) เป็นหนึ่งในห้าปราสาทของญี่ปุ่นที่ได้รับการขึ้นทะเบียนเป็นสมบัติชาติ โดยมีความโดดเด่นที่ตัวหอคอยหลัก (Tenshu) จังหวัดไอจิ สามารถเดินขึ้นไปยังชั้นบนสุดเพื่อชมวิวทิวทัศน์แบบพาโนรามาที่สวยงาม รวมถึงสัมผัสกลิ่นอายประวัติศาสตร์อันทรงพลังผ่านสถาปัตยกรรมยุคเซ็นโกคุที่ยังคงความสมบูรณ์มาจนถึงปัจจุบัน</p>
+          <div class="mt-3">
+           <img src="https://edolegacytravel.metro.tokyo.lg.jp/wp-content/uploads/2025/10/50Inuyama-Castle01.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏚️ ย่านเมืองเก่าอินุยามา (Inuyama Castle Town)</p>
+          <p class="text-subtle mt-1">ย่านเมืองเก่าอินุยามา (Inuyama Castle Town) ในจังหวัดไอจิ เป็นถนนสายประวัติศาสตร์ที่เต็มไปด้วยบรรยากาศย้อนยุคสมัยเอโดะ เรียงรายด้วยอาคารไม้โบราณที่ดัดแปลงเป็นร้านขนมและคาเฟ่ ไฮไลต์ที่ห้ามพลาดคือการชิมสตรีทฟู้ดหน้าตาสวยงามและการเดินชมวิวทอดยาวไปจนถึงปราสาทอินุยามา
+          <div class="mt-3">
+           <img src="https://muza-chan.net/aj/poze-weblog6/traditional-street-inuyama-castle-big.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🛍️ Toki Premium Outlets</p>
+          <p class="text-subtle mt-1"> เดินทางสู่ Toki Premium Outlets (ใช้เวลาเดินทางประมาณ 40 นาที) เป็นหนึ่งในแหล่งช้อปปิ้งขนาดใหญ่ยอดนิยมในภูมิภาคชูบุ รวบรวมแบรนด์ชั้นนำ ทั้งในญี่ปุ่นและระดับโลกกว่า 180 ร้านค้า มีครบทั้งเสื้อผ้าแฟชั่น เครื่องแต่งกาย รองเท้า กระเป๋า สินค้ากีฬา อุปกรณ์ Outdoor ของใช้ในบ้าน ไปจนถึงร้านอาหารและคาเฟ่ ตัวเอาท์เล็ทออกแบบมาในสไตล์ American Art Deco ให้ความรู้สึกเหมือนเดินช้อปปิ้งอยู่ในแถบโคโลราโดหรือฝั่งตะวันออกของอเมริกา ตั้งอยู่บนเนินเขาที่โอบล้อมด้วยธรรมชาติ ทำให้ทัศนียภาพรอบ ๆ สวยงาม อากาศโปร่งสบาย และคนไม่หนาแน่นแออัดเท่าเอาท์เล็ทในเมืองใหญ่
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://www.prime-place.jp/cms/wp-content/uploads/2024/02/marela02_re2.webp"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 1">
+
+            <img
+                src="https://japanshopping.org/files/shopimg/MK1_4014kawai.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+            <img
+                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
+                class="w-1/2 rounded-lg object-cover aspect-video"
+                alt="Image 2">
+           </div>
+          </div>
+         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">💡 งานประดับไฟ นาบานะโนะ ซาโตะ (Nabana no Sato) </p>
+          <p class="text-subtle mt-1">สวนพฤกษศาสตร์ขนาดใหญ่ที่เนรมิตงานประดับไฟ (Illumination) ได้ยิ่งใหญ่และสวยงามติดอันดับต้นๆ ของญี่ปุ่น ไฮไลท์สำคัญคืออุโมงค์ไฟระยิบระยับที่ยาวสุดลูกหูลูกตาและการจัดแสดงแสงสีบนทุ่งหญ้ากว้างที่เปลี่ยนธีมไปในแต่ละปีอย่างน่าอัศจรรย์</p>
+          <div class="mt-3">
+           <img src="https://www.nagoya-info.jp/upload/spots/large/4143834105e607e29bbdb0.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute timeline-dot-wrap top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">จากนั้นเดินทางกลับสู่ เมืองนาโกย่า (Nagoya) เมืองหลวงแห่งจังหวัดไอจิ (Aichi) ที่มีขนาดใหญ่ที่สุดในภูมิภาคชูบุ และเป็นเมืองที่ใหญ่เป็นอันดับ 4 ของประเทศญี่ปุ่น</p>
+          <div>
+          </div>
+         </div>
+        </div>
+
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Nagoya Tokyu Hotel หรือเทียบเท่า ★★★★</strong>
+       </div>
+      </div>
+     </div><!-- /day-5 -->
+
+<!-- ===== DAY 6 ===== -->
+<div id="day-6" class="day-content" style="display:none;">
+  <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">6</span>
+      <div>
+        <h3 class="font-semibold text-lg">วันจันทร์ที่ 5 ตุลาคม 2569</h3>
+        <p class="text-sm text-subtle">นาโกย่า → โครังเค → ซากาเอะ</p>
+      </div>
+      <span class="ml-auto text-2xl">🍂🛍️</span>
+    </div>
+    <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+
+      <div class="relative">
+        <div class="timeline-dot absolute -left-[31px] top-1"></div>
+        <div class="text-sm">
+          <p class="font-semibold">⛰️ อุทยานหุบเขาโครังเค (Korankei Valley)</p>
+          <p class="text-subtle mt-1">เดินทางสู่ อุทยานหุบเขาโครังเค (Korankei Valley) จุดชมใบไม้เปลี่ยนสีที่สวยงามและมีชื่อเสียงที่สุดแห่งหนึ่งในภูมิภาคชูบุ โดดเด่นด้วยทัศนียภาพของต้นเมเปิลกว่า 4,000 ต้น ที่พร้อมใจกันเปลี่ยนเป็นสีแดงส้มโอบล้อมลำน้ำ โทโมเอะ โดยมีสะพานสีแดง "ไทเก็ตสึเคียว" เป็นจุดถ่ายรูปสัญลักษณ์สำคัญ</p>
+          <div class="mt-3">
+            <img src="https://aichinow.pref.aichi.jp/upload/site/events/6817f5a3adc15cc921d94ba16e00fc69.jpg" loading="lazy" class="tour-img" alt="Korankei Valley">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="timeline-dot absolute -left-[31px] top-1"></div>
+        <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร</p>
+          <div class="mt-3 flex gap-3">
+            <img src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg" class="w-1/2 rounded-lg object-cover aspect-video" alt="TBA">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="timeline-dot absolute -left-[31px] top-1"></div>
+        <div class="text-sm">
+          <p class="font-semibold">🛍️ ย่านซากาเอะ (Sakae)</p>
+          <p class="text-subtle mt-1">เดินทางกลับสู่ เมืองนาโกย่า (Nagoya) จากนั้นอิสระช้อปปิ้ง ย่านซากาเอะ (Sakae) เป็นย่านการค้าที่มีความสำคัญที่สุดของเมืองนาโงย่า ทั้งยังเป็นที่ตั้งของหอคอยส่งสัญญาณโทรทัศน์แห่งเมืองนาโงย่า มีห้างสรรพสินค้าชื่อดังและร้านค้าแบรนด์เนมต่างๆ เรียงรายเต็มสองฟากฝั่งถนน</p>
+          <div class="mt-3">
+            <img src="https://www.kintetsu.co.jp/foreign/assets/sightseeing/nagoya/spot11/images/spot11_pic03.png" loading="lazy" class="tour-img" alt="Sakae Nagoya">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="timeline-dot absolute -left-[31px] top-1"></div>
+        <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Jojoen Nagoya Sakae</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+            <p class="font-medium text-brand-dark mb-1">Menu:</p>
+            <p>Yuki (snow) Kaiseki course</p>
+            <div class="mt-3 flex gap-3">
+              <img src="https://scontent.fbkk8-2.fna.fbcdn.net/v/t39.30808-6/495335766_10232914097988769_3502532895071375816_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x676&ctp=s960x676&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ggN3VWy1pEQQ7kNvwHm22gt&_nc_oc=AdqfZ0dBsz_B80lriD4VJal8Eu6e3hUO88RvyJTyhd1N3RbwM4mAwOixnbco4aSdEkeYtIkbhGUI42AH8NbNNQKn&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&_nc_gid=tAvBXlE8407fkKkGm7muJw&_nc_ss=7b2a8&oh=00_Af8AC2NwC39W_b5NWCqGp_OJfoTjv47YNz5wOFWP9fHGkA&oe=6A44073C" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 1">
+              <img src="https://scontent.fbkk8-4.fna.fbcdn.net/v/t39.30808-6/494713879_10232914097868766_2683198103901847154_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x720&ctp=s960x720&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=k1uMqkTiGywQ7kNvwHcXuvr&_nc_oc=Adoh9UaBzJWB92AHmnX5n_SCMHV4ROcwXOsY_j1n0tiT8PIVQGHm6m07HadtRSIk4vMtXNva0UKPC2BPIDSV0wz1&_nc_zt=23&_nc_ht=scontent.fbkk8-4.fna&_nc_gid=kQJY3qpmi5sAcDH6hXKuIg&_nc_ss=7b2a8&oh=00_Af8wuR93AITP_5R0Xe75P6JPnDfBVCGvEf6DcnmM_1g0QA&oe=6A43F9FB" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+      <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Nagoya Tokyu Hotel หรือเทียบเท่า ★★★★</strong>
+    </div>
+  </div>
+</div><!-- /day-6 -->
+
+<!-- ===== DAY 7 ===== -->
+<div id="day-7" class="day-content" style="display:none;">
+  <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">7</span>
+      <div>
+        <h3 class="font-semibold text-lg">วันอังคารที่ 6 ตุลาคม 2569</h3>
+        <p class="text-sm text-subtle">นาโกย่า (ประเทศญี่ปุ่น) → กรุงเทพฯ</p>
+      </div>
+      <span class="ml-auto text-2xl">✈️🏠</span>
+    </div>
+    <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+
+      <div class="relative">
+        <div class="timeline-dot absolute -left-[31px] top-1"></div>
+        <div class="text-sm">
+          <p class="font-semibold">นำคณะเดินทางสู่ สนามบินนาโกย่า</p>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="timeline-dot absolute -left-[31px] top-1"></div>
+        <p class="text-sm"><span class="font-semibold text-brand">11:00 น.</span> — ✈️ ออกเดินทางจากสนามบินนาโกย่า โดยสายการบินไทย เที่ยวบินที่ TG 645</p>
+      </div>
+
+      <div class="relative">
+        <div class="timeline-dot absolute -left-[31px] top-1"></div>
+        <p class="text-sm"><span class="font-semibold text-brand">15:00 น.</span> — คณะเดินทางถึง สนามบินสุวรรณภูมิ โดยสวัสดิภาพ</p>
+      </div>
+    </div>
+  </div>
+</div><!-- /day-7 -->
+    </section>
+
+<!-- ========== COUNTRY INFO ========== -->
+<section id="sec-country" class="tab-section fade-in">
+  <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">🗾 ข้อมูลประเทศญี่ปุ่น</h2>
+  <div class="grid md:grid-cols-2 gap-4 mb-6">
+    <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+      <h3 class="font-semibold text-brand-dark mb-3 text-lg">🇯🇵 ข้อมูลทั่วไป</h3>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between"><span class="text-subtle">ชื่อทางการ</span><span class="font-medium">Nippon-koku / Japan</span></div>
+        <div class="flex justify-between"><span class="text-subtle">เมืองหลวง</span><span class="font-medium">โตเกียว (Tokyo)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">ภาษาราชการ</span><span class="font-medium">ภาษาญี่ปุ่น (Japanese)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">สกุลเงิน</span><span class="font-medium">เยน (JPY / ¥)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">เวลาท้องถิ่น</span><span class="font-medium">GMT+9 (เร็วกว่าไทย 2 ชม.)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">ปลั๊กไฟ</span><span class="font-medium">Type A (100V / 50-60Hz)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">ประชากร</span><span class="font-medium">~124 ล้านคน</span></div>
+        <div class="flex justify-between"><span class="text-subtle">เบอร์ฉุกเฉิน</span><span class="font-medium">ตำรวจ 110 / เพลิง-กู้ภัย 119</span></div>
+      </div>
+    </div>
+    <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+      <h3 class="font-semibold text-brand-dark mb-3 text-lg">💴 สกุลเงินและค่าใช้จ่าย</h3>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between items-start"><span class="text-subtle">อัตราแลกเปลี่ยน (โดยประมาณ)</span><span class="font-medium text-right">1 THB ≈ 4.84 JPY<br></span></div>
+        <div class="flex justify-between"><span class="text-subtle">100 JPY ≈</span><span class="font-medium">~20.7 บาท</span></div>
+        <div class="flex justify-between"><span class="text-subtle">1,000 JPY ≈</span><span class="font-medium">~207 บาท</span></div>
+        <div class="flex justify-between"><span class="text-subtle">5,000 JPY ≈</span><span class="font-medium">~1,035 บาท</span></div>
+        <div class="flex justify-between"><span class="text-subtle">10,000 JPY ≈</span><span class="font-medium">~2,070 บาท</span></div>
+        <div class="mt-2 bg-white/60 rounded-lg p-2 text-xs text-subtle">💡 แนะนำแลกเงินเยนจากไทยก่อนเดินทาง หรือกดจากตู้ ATM Japan Post / 7-Eleven ในญี่ปุ่น เนื่องจากหลายร้านยังรับเฉพาะเงินสด</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
+    <h4 class="font-semibold text-amber-800 mb-3">⚠️ สิ่งที่ควรรู้และมารยาททางวัฒนธรรม</h4>
+    <ul class="text-sm text-amber-700 space-y-2">
+      <li>• <strong>ห้ามทิป:</strong> การให้ทิปในญี่ปุ่นถือเป็นเรื่องหยาบคาย ไม่มีวัฒนธรรมการให้ทิปในร้านอาหาร โรงแรม หรือแท็กซี่</li>
+      <li>• <strong>ถอดรองเท้าก่อนเข้า:</strong> ต้องถอดรองเท้าก่อนเข้าบ้าน ร้านอาหารแบบดั้งเดิม วัด และที่พักสไตล์ญี่ปุ่น (ริวกัง) ควรสวมรองเท้าที่ถอดง่าย</li>
+      <li>• <strong>รถไฟ/ขนส่งสาธารณะ:</strong> ห้ามพูดโทรศัพท์เสียงดัง ห้ามรับประทานอาหาร และควรปิดเสียงโทรศัพท์บนรถ</li>
+      <li>• <strong>ออนเซ็น (บ่อน้ำแร่):</strong> ต้องอาบน้ำทำความสะอาดร่างกายให้เรียบร้อยก่อนลงบ่อเสมอ ห้ามนำผ้าขนหนูลงในบ่อ และโดยทั่วไปห้ามผู้ที่มีรอยสักใช้ออนเซ็นสาธารณะ</li>
+      <li>• <strong>รับของด้วยสองมือ:</strong> การรับสิ่งของ นามบัตร หรือเงินทอนด้วยสองมือแสดงถึงความเคารพ</li>
+      <li>• <strong>ขยะ:</strong> ถังขยะสาธารณะหายากมากในญี่ปุ่น ควรพกถุงเก็บขยะส่วนตัวไว้กับตัว</li>
+      <li>• <strong>ห้ามกินขณะเดิน:</strong> ในเมืองส่วนใหญ่ การรับประทานอาหารขณะเดินถนนถือเป็นมารยาทที่ไม่ดี ควรหยุดทานที่จุดที่กำหนด</li>
+      <li>• <strong>ตรงต่อเวลา:</strong> ชาวญี่ปุ่นให้ความสำคัญกับความตรงเวลามาก ไม่ควรมาสาย</li>
+    </ul>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 mt-6">
+    <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+      <h4 class="font-semibold text-brand-dark mb-3">🗣️ ภาษาญี่ปุ่นพื้นฐาน</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Konnichiwa (โคนิจิวะ)</span><span class="text-subtle"> — สวัสดี</span></div>
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Arigatou (อาริกาโตะ)</span><span class="text-subtle"> — ขอบคุณ</span></div>
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Sumimasen (ซุมิมาเซ็น)</span><span class="text-subtle"> — ขอโทษ/ขอทาง</span></div>
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Ikura desu ka? (อิคุระ เดสุ กะ)</span><span class="text-subtle"> — ราคาเท่าไหร่?</span></div>
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Itadakimasu (อิตาดากิมาสุ)</span><span class="text-subtle"> — ก่อนรับประทานอาหาร</span></div>
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Doko desu ka? (โดโกะ เดสุ กะ)</span><span class="text-subtle"> — อยู่ที่ไหน?</span></div>
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Onegaishimasu (โอเนไก ชิมาสุ)</span><span class="text-subtle"> — ได้โปรด/ขอด้วย</span></div>
+        <div class="bg-white/60 rounded-lg p-2"><span class="font-medium">Wakarimasen (วาคาริมาเซ็น)</span><span class="text-subtle"> — ไม่เข้าใจ</span></div>
+      </div>
+    </div>
+    <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+      <h4 class="font-semibold text-brand-dark mb-3">📱 การสื่อสารและอินเทอร์เน็ต</h4>
+      <ul class="text-sm text-subtle space-y-2">
+        <li>• <strong>eSIM / Pocket WiFi:</strong> แนะนำซื้อ eSIM หรือ Roaming ก่อนเดินทาง</li>
+        <li>• <strong>สถานเอกอัครราชทูตไทย ณ กรุงโตเกียว:</strong> +81-3-3447-2247</li>
+        <li>• <strong>สายด่วนฉุกเฉินสำหรับชาวต่างชาติ:</strong> #9110 (ตำรวจ)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WEATHER ========== -->
+<section id="sec-weather" class="tab-section fade-in">
+  <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-2">🌤️ สภาพอากาศ</h2>
+  <p class="text-sm text-subtle mb-6">คาดการณ์สภาพอากาศช่วง 30 ก.ย. – 6 ต.ค. 2569 • อ้างอิง: <a href="https://www.accuweather.com" target="_blank" rel="noopener noreferrer" class="text-brand underline">accuweather.com</a></p>
+
+  <h3 class="font-semibold text-brand-dark mb-3">🏔️ ทาคายาม่า / คามิโกจิ (วันที่ 2–4)</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+      <p class="text-xs text-subtle">1 ต.ค. (วันที่ 2)</p>
+      <p class="font-semibold text-sm">ทาคายาม่า</p>
+      <div class="weather-icon my-2">⛅</div>
+      <p class="text-2xl font-bold text-brand-dark">18°<span class="text-base font-normal text-subtle">/8°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆบางส่วน เย็นในตอนเย็น</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 70%</span><span>🌧️ 30%</span></div>
+    </div>
+    <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+      <p class="text-xs text-subtle">2 ต.ค. (วันที่ 3)</p>
+      <p class="font-semibold text-sm">ชินโฮทากะ / คามิโกจิ</p>
+      <div class="weather-icon my-2">🌤️</div>
+      <p class="text-2xl font-bold text-brand-dark">16°<span class="text-base font-normal text-subtle">/6°C</span></p>
+      <p class="text-xs text-subtle mt-1">แดดบางส่วน เย็นบนยอดเขา</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 65%</span><span>🌧️ 25%</span></div>
+    </div>
+    <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+      <p class="text-xs text-subtle">3 ต.ค. (วันที่ 4)</p>
+      <p class="font-semibold text-sm">โทยาม่า / ทาคาโอกะ</p>
+      <div class="weather-icon my-2">🌥️</div>
+      <p class="text-2xl font-bold text-brand-dark">19°<span class="text-base font-normal text-subtle">/10°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆมาก อาจมีฝนสั้นๆ</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 72%</span><span>🌧️ 35%</span></div>
+    </div>
+  </div>
+
+  <h3 class="font-semibold text-brand-dark mb-3">🏙️ นาโกย่า / ไอจิ (วันที่ 5–7)</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+      <p class="text-xs text-subtle">4 ต.ค. (วันที่ 5)</p>
+      <p class="font-semibold text-sm">นาโกย่า / อินุยามา</p>
+      <div class="weather-icon my-2">☀️</div>
+      <p class="text-2xl font-bold text-brand-dark">22°<span class="text-base font-normal text-subtle">/14°C</span></p>
+      <p class="text-xs text-subtle mt-1">แดดออก อากาศดี</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 60%</span><span>🌧️ 10%</span></div>
+    </div>
+    <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+      <p class="text-xs text-subtle">5 ต.ค. (วันที่ 6)</p>
+      <p class="font-semibold text-sm">โครังเค / นาโกย่า</p>
+      <div class="weather-icon my-2">🍂</div>
+      <p class="text-2xl font-bold text-brand-dark">21°<span class="text-base font-normal text-subtle">/13°C</span></p>
+      <p class="text-xs text-subtle mt-1">แดดออก เหมาะชมใบไม้เปลี่ยนสี</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 55%</span><span>🌧️ 10%</span></div>
+    </div>
+    <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+      <p class="text-xs text-subtle">6 ต.ค. (วันที่ 7)</p>
+      <p class="font-semibold text-sm">นาโกย่า → กรุงเทพฯ</p>
+      <div class="weather-icon my-2">🌤️</div>
+      <p class="text-2xl font-bold text-brand-dark">21°<span class="text-base font-normal text-subtle">/14°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆบางส่วน อากาศดี</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 58%</span><span>🌧️ 15%</span></div>
+    </div>
+  </div>
+
+  <div class="mt-2 bg-brand-50 border border-brand/10 rounded-2xl p-5">
+    <h4 class="font-semibold text-brand-dark mb-3">📊 สรุปอากาศช่วง 30 ก.ย. – 6 ต.ค. 2569</h4>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <div>
+        <p class="font-medium">🏔️ ทาคายาม่า / คามิโกจิ / ชินโฮทากะ</p>
+        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 14–18°C กลางคืนเย็นจัดประมาณ 6–10°C โดยเฉพาะบนเขาและในหุบเขาจะเย็นกว่า ต้นเดือนตุลาคมเริ่มเห็นใบไม้เปลี่ยนสีที่คามิโกจิ อาจมีฝนระหว่างวัน</p>
+      </div>
+      <div>
+        <p class="font-medium">🏙️ โทยาม่า / นาโกย่า / ไอจิ</p>
+        <p class="text-subtle mt-1">อุณหภูมิกลางวันสบายประมาณ 19–22°C กลางคืนเย็นลงประมาณ 13–14°C เดือนตุลาคมถือเป็นช่วงฤดูใบไม้ร่วงที่อากาศดีที่สุด ฝนน้อย ท้องฟ้าโปร่ง เหมาะแก่การท่องเที่ยว</p>
+      </div>
+    </div>
+    <div class="mt-3 bg-blue-50 border border-blue-100 rounded-xl p-3 text-xs text-blue-700 flex items-start gap-2">
+      <span>🌡️</span>
+      <span>ช่วงเวลาเดินทาง (1–6 ต.ค.) อยู่ในต้นฤดูใบไม้ร่วงของญี่ปุ่น ความแตกต่างของอุณหภูมิกลางวัน-กลางคืนค่อนข้างมาก ควรเตรียมเสื้อกันหนาวและเสื้อกันลมสำหรับภาคเช้าและกลางคืน</span>
+    </div>
+  </div>
+  <p class="text-xs text-subtle mt-4 italic">* ข้อมูลสภาพอากาศเป็นการคาดการณ์โดยประมาณ กรุณาตรวจสอบอีกครั้งก่อนเดินทางที่ accuweather.com</p>
+</section>
+
+<!-- ========== CLOTHING ========== -->
+<section id="sec-clothing" class="tab-section fade-in">
+  <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">👔 คำแนะนำการแต่งกาย</h2>
+  <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
+    <h3 class="font-semibold text-brand-dark mb-2">🌡️ สภาพอากาศโดยรวม</h3>
+    <p class="text-sm text-subtle">ช่วงต้นเดือนตุลาคมในญี่ปุ่น (แถบกิฟุ–ไอจิ) อยู่ในต้นฤดูใบไม้ร่วง กลางวันอากาศสบาย 18–22°C แต่กลางคืนเย็นจัดโดยเฉพาะในเมืองภูเขาอย่างทาคายาม่าและบนกระเช้าชินโฮทากะอาจเย็นถึง 6–8°C ต้องเตรียมเสื้อผ้าแบบ <strong>"Layering"</strong> (แต่งหลายชั้น) และพกร่มเผื่อฝน</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 mb-6">
+    <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+      <h4 class="font-semibold text-brand-dark mb-3">🧥 เสื้อผ้าหลักที่ต้องเตรียม</h4>
+      <ul class="text-sm space-y-2">
+        <li class="flex items-start gap-2"><span>👕</span> เสื้อแขนยาวหรือเสื้อเชิ้ต เนื้อผ้าระบายอากาศ (ชั้นใน)</li>
+        <li class="flex items-start gap-2"><span>🧥</span> เสื้อกันหนาวหรือแจ็คเก็ตบาง-กลาง ใส่ทับได้</li>
+        <li class="flex items-start gap-2"><span>🧣</span> ผ้าพันคอหรือผ้าโพก สำหรับตอนเช้าและกลางคืน</li>
+        <li class="flex items-start gap-2"><span>👖</span> กางเกงขายาวหรือจีนส์ ไม่แนะนำกางเกงขาสั้น</li>
+        <li class="flex items-start gap-2"><span>👟</span> รองเท้าผ้าใบหรือรองเท้าเดินป่าที่สวมสบาย กันลื่น</li>
+        <li class="flex items-start gap-2"><span>🧤</span> ถุงมือบาง (เผื่อขึ้นกระเช้าชินโฮทากะ)</li>
+      </ul>
+    </div>
+
+  <h3 class="font-semibold text-brand-dark text-lg mb-3">📅 แนะนำการแต่งกายตามรายวัน</h3>
+  <div class="space-y-3">
+    <div class="bg-white border-l-4 border-gray-300 rounded-r-xl p-4">
+      <p class="font-semibold text-sm">วันที่ 1 | กรุงเทพฯ → สนามบิน (30 ก.ย.)</p>
+      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับเดินทางกลางคืน / 🧥 พกเสื้อคลุมบางขึ้นเครื่อง อากาศเย็นในเครื่องบิน</p>
+    </div>
+    <div class="bg-white border-l-4 border-brand rounded-r-xl p-4">
+      <p class="font-semibold text-sm">วันที่ 2 | นาโกย่า → ฮิดะฟุรุคาวะ → ทาคายาม่า (1 ต.ค. | 8–18°C)</p>
+      <p class="text-xs text-subtle mt-1">🧥 เสื้อแขนยาว + แจ็คเก็ต / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบสวมสบาย / ☂️ พกร่มเผื่อฝน</p>
+    </div>
+    <div class="bg-white border-l-4 border-blue-400 rounded-r-xl p-4">
+      <p class="font-semibold text-sm">วันที่ 3 | ชินโฮทากะโรปเวย์ → คามิโกจิ (2 ต.ค. | 6–16°C)</p>
+      <p class="text-xs text-subtle mt-1">🧥 แต่งหนาเป็นพิเศษ! เสื้อแขนยาว + เสื้อกันหนาว + แจ็คเก็ตกันลม / 🧣 ผ้าพันคอ + ถุงมือ / 👟 รองเท้าเดินป่า / ☂️ ร่มหรือเสื้อกันฝน (บนเขาอาจหนาวและมีหมอก)</p>
+    </div>
+    <div class="bg-white border-l-4 border-teal-400 rounded-r-xl p-4">
+      <p class="font-semibold text-sm">วันที่ 4 | โทยาม่า → ทาคาโอกะ (3 ต.ค. | 10–19°C)</p>
+      <p class="text-xs text-subtle mt-1">🧥 เสื้อแขนยาว + แจ็คเก็ตบาง / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบ / ☂️ พกร่มเผื่อฝนสั้นๆ</p>
+    </div>
+    <div class="bg-white border-l-4 border-orange-400 rounded-r-xl p-4">
+      <p class="font-semibold text-sm">วันที่ 5 | ชิราคาวาโกะ → อินุยามา → นาโกย่า (4 ต.ค. | 14–22°C)</p>
+      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนยาวหรือสั้น + แจ็คเก็ตบางพับพก / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบ / 💡 กลางคืนชม Nabana no Sato ต้องใส่เสื้อกันหนาว อาจหนาว</p>
+    </div>
+    <div class="bg-white border-l-4 border-red-400 rounded-r-xl p-4">
+      <p class="font-semibold text-sm">วันที่ 6 | โครังเค → ซากาเอะ (5 ต.ค. | 13–21°C)</p>
+      <p class="text-xs text-subtle mt-1">🍂 เสื้อแขนยาว + แจ็คเก็ตที่ดูสวย เหมาะถ่ายรูปใบไม้แดง / 👖 กางเกงขายาว / 👟 รองเท้าสบายสำหรับเดินช้อปปิ้ง</p>
+    </div>
+    <div class="bg-white border-l-4 border-brand-dark rounded-r-xl p-4">
+      <p class="font-semibold text-sm">วันที่ 7 | นาโกย่า → กรุงเทพฯ (6 ต.ค. | 14–21°C)</p>
+      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับวันเดินทาง / 🧥 เสื้อคลุมบางขึ้นเครื่อง </p>
+    </div>
+  </div>
+
+  <div class="mt-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
+    <h4 class="font-semibold text-amber-800 mb-3">🎒 สิ่งที่ควรพกติดตัว</h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+      <div class="flex items-center gap-2"><span>🧴</span> ครีมกันแดด SPF 50+</div>
+      <div class="flex items-center gap-2"><span>🧥</span> เสื้อกันลม / กันฝน</div>
+      <div class="flex items-center gap-2"><span>☂️</span> ร่มพับขนาดเล็ก</div>
+      <div class="flex items-center gap-2"><span>🔌</span> Adapter ปลั๊กแบบ A (ขา แบน 2 ขา)</div>
+      <div class="flex items-center gap-2"><span>💊</span> ยาประจำตัว </div>
+      <div class="flex items-center gap-2"><span>🎒</span> กระเป๋าเป้เล็กสำหรับเดินทาง</div>
+      <div class="flex items-center gap-2"><span>💴</span> เงินสดเยน (หลายร้านไม่รับบัตร)</div>
+      <div class="flex items-center gap-2"><span>🧣</span> ผ้าพันคอ / ถุงมือบาง</div>
+      <div class="flex items-center gap-2"><span>👟</span> รองเท้าที่เดินสบายทั้งวัน</div>
+      <div class="flex items-center gap-2"><span>🛍️</span> ถุงผ้าพับได้ (ห้างญี่ปุ่นคิดค่าถุงเพิ่ม)</div>
+    </div>
+  </div>
+</section>
+
+    <!-- ========== PASSENGER ========== -->
+    <section id="sec-Passenger" class="tab-section fade-in">
+     <div style="background: linear-gradient(160deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%); border-radius: 1rem; padding: 1.25rem;" class="md:!p-8">
+      <div class="max-w-3xl mx-auto">
+       <header class="text-center mb-8 md:mb-10">
+        <div class="inline-flex items-center gap-2 mb-3 px-4 py-1.5 rounded-full" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);">
+         <i data-lucide="plane" style="width:16px;height:16px;color:#60a5fa;"></i>
+         <span class="text-xs font-semibold tracking-widest uppercase" style="color:#93c5fd;">Passenger name</span>
+        </div>
+        <h1 class="font-display text-2xl md:text-4xl font-bold text-white mt-3">รายชื่อผู้เดินทาง</h1>
+        <p class="mt-2 text-sm" style="color:#94a3b8;">ข้อมูลห้องพักของผู้เดินทาง</p>
+       </header>
+       <style>
+        .room-card { background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 1rem; padding: 1.25rem; }
+        .room-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        .badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .dietary-badge { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .room-badge { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+        .guest-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+        .guest-row + .guest-row { border-top: 1px dashed #e5e7eb; }
+        .avatar { width: 33px; height: 33px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; color: #fff; }
+       </style>
+       <div class="rooms-grid mb-6">
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 1</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">1</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. THANAKRIT ITTIANAN</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">2</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS POPPORN INGKATAWEERUT</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 2</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">3</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. NIKOM TORRUNGRUEANGKIT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">4</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS PAWEENA BOONNAK</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 3</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">5</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. SORACHAI CHIAMSIRIWATTANA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">6</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS TARA KARNTARA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 4</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6,#0d9488);">7</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS AURAPAN CHANTAROJVANICH</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f43f5e,#e11d48);">8</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS THAWANRATH PHACHARAWITKAMON</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 5</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#a855f7,#9333ea);">9</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. NARIN BOVONRATTANAKOSOL</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#7c3aed,#6d28d9);">10</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">NAN MYA HNIN OO</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง (เมียนม่า)</span><span class="badge" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;"><i data-lucide="tv" style="width:12px;height:12px;"></i>ไม่ดูบอล</span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 6</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">11</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. KITTISAK SUVISUTTIMONTRE</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">12</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS ISSADAORN PAKTAWEE</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;"><i data-lucide="tv" style="width:12px;height:12px;"></i>ไม่ดูบอล</span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 7</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">13</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. APICHA CHANTARAWARAROJ</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">14</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS TANYALUK HIRANKAIPHOT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 8</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">15</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. TEERATAN THAMMANICHANONT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6,#0d9488);">16</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MRS. SARANPHAT THAMMANICHANONT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 9</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f43f5e,#e11d48);">17</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS PANNAPHAT SUWANNAPHAN</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">18</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS THIDA NARKNIYOM</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 10</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#a855f7,#9333ea);">19</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MASTER PATTRADIT CHANTAROJVANICH</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">20</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. SIRICHAI PUMKRACHANG</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
+       </div>
+       <div class="rounded-xl p-4 stats-bar text-sm" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
+        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="users" style="width:16px;height:16px;"></i><span>ผู้เดินทางทั้งหมด <strong class="text-white">20</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="bed-double" style="width:16px;height:16px;"></i><span>ห้องพัก <strong class="text-white">10</strong> ห้อง</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><i data-lucide="utensils" style="width:16px;height:16px;"></i><span>ไม่ทานเนื้อ <strong class="text-white">6</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-cyan-300"><i data-lucide="tv" style="width:16px;height:16px;"></i><span>ไม่ดูบอล <strong class="text-white">2</strong> ท่าน</span></div>
+       </div>
+      </div>
+     </div>
+    </section>
+
+   </main>
+
+   <!-- Footer -->
+   <footer class="bg-brand-dark text-white text-center py-6 px-4">
+    <p class="text-sm opacity-80" id="footerText">Japan (Takayama-Kamikochi-Nagoya) (TG)</p>
+    <p class="text-xs opacity-50 mt-1">30 กันยายน - 6 ตุลาคม 2569 | 7 วัน 5 คืน</p>
+   </footer>
+  </div>
+
+  <script>
+function showSection(id) {
+  document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const sec = document.getElementById('sec-' + id);
+  if (sec) { sec.classList.add('active'); sec.classList.remove('fade-in'); void sec.offsetWidth; sec.classList.add('fade-in'); }
+  document.querySelector('[data-nav="' + id + '"]')?.classList.add('active');
+}
+
+function showDay(n) {
+  document.querySelectorAll('.day-content').forEach(d => d.style.display = 'none');
+  document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active-day'));
+  const dayEl = document.getElementById('day-' + n);
+  if (dayEl) { dayEl.style.display = 'block'; dayEl.classList.remove('fade-in'); void dayEl.offsetWidth; dayEl.classList.add('fade-in'); }
+  document.querySelectorAll('.day-tab')[n - 1]?.classList.add('active-day');
+}
+
+const defaultConfig = {
+  main_title: 'SPAIN EXPLORER',
+  company_name: 'Professional Travel Agency',
+  background_color: '#FFFFFF',
+  surface_color: '#F0FAFC',
+  text_color: '#1E293B',
+  primary_action_color: '#00A0C6',
+  secondary_action_color: '#007A99',
+  font_family: 'Prompt',
+  font_size: 16
+};
+
+function applyConfig(config) {
+  const t = (k) => config[k] || defaultConfig[k];
+  const el = (id) => document.getElementById(id);
+  if (el('mainTitleDisplay')) el('mainTitleDisplay').textContent = t('main_title');
+  if (el('companyNameDisplay')) el('companyNameDisplay').textContent = t('company_name');
+  document.body.style.backgroundColor = t('background_color');
+  document.body.style.color = t('text_color');
+  document.querySelectorAll('.bg-brand-50, .meal-card').forEach(el => el.style.backgroundColor = t('surface_color'));
+  document.querySelectorAll('.nav-btn.active').forEach(el => { el.style.backgroundColor = t('primary_action_color'); el.style.color = '#fff'; });
+  document.querySelectorAll('.day-tab.active-day').forEach(el => { el.style.backgroundColor = t('primary_action_color'); el.style.color = '#fff'; });
+  document.querySelectorAll('.timeline-dot').forEach(el => { el.style.backgroundColor = t('primary_action_color'); el.style.boxShadow = '0 0 0 2px ' + t('primary_action_color'); });
+  const footer = document.querySelector('footer');
+  if (footer) footer.style.backgroundColor = t('secondary_action_color');
+  const font = t('font_family');
+  const baseSize = t('font_size');
+  document.body.style.fontFamily = font + ', Prompt, sans-serif';
+  document.querySelectorAll('h1').forEach(el => el.style.fontSize = (baseSize * 2.5) + 'px');
+  document.querySelectorAll('h2').forEach(el => el.style.fontSize = (baseSize * 1.75) + 'px');
+  document.querySelectorAll('h3').forEach(el => el.style.fontSize = (baseSize * 1.25) + 'px');
+  document.querySelectorAll('p, li, span, td').forEach(el => { if (!el.closest('h1, h2, h3, h4, button')) el.style.fontSize = baseSize + 'px'; });
+}
+
+if (window.elementSdk) {
+  window.elementSdk.init({
+    defaultConfig,
+    onConfigChange: async (config) => applyConfig(config),
+    mapToCapabilities: (config) => ({
+      recolorables: [
+        { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+        { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+        { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+        { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
+        { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } }
+      ],
+      borderables: [],
+      fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+      fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+    }),
+    mapToEditPanelValues: (config) => new Map([
+      ['main_title', config.main_title || defaultConfig.main_title],
+      ['company_name', config.company_name || defaultConfig.company_name]
+    ])
+  });
+}
+
+lucide.createIcons();
+</script>
+ </body>
+</html>
