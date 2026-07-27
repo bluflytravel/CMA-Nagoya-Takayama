@@ -297,7 +297,7 @@ body { font-family: 'Prompt', sans-serif; }
     <div class="max-w-4xl mx-auto relative z-10">
      <p id="companyNameDisplay" class="text-sm tracking-[0.3em] uppercase opacity-80 mb-3">Bluefly Travel</p>
      <div class="flex items-center justify-center gap-2 md:gap-3 mb-4">
-      <h1 id="mainTitleDisplay" class="font-display text-2xl md:text-5xl font-bold leading-tight"> Japan 🍂</h1>
+      <h1 id="mainTitleDisplay" class="font-display text-2xl md:text-5xl font-bold leading-tight"> Japan ⛩️</h1>
      </div>
      <p class="text-lg md:text-xl opacity-90 font-light">7 Days 5 Nights</p>
      <div class="flex items-center justify-center gap-4 mt-4 text-sm opacity-80">
@@ -439,7 +439,7 @@ body { font-family: 'Prompt', sans-serif; }
          <h3 class="font-semibold text-lg">วันพฤหัสบดีที่ 1 ตุลาคม 2569</h3>
          <p class="text-sm text-subtle">กรุงเทพฯ → นาโกย่า (ประเทศญี่ปุ่น) → ทาคายาม่า </p>
         </div>
-        <span class="ml-auto text-2xl">🍂</span>
+        <span class="ml-auto text-2xl">⛩️</span>
        </div>
        <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
 
@@ -459,11 +459,16 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🚌 เมืองทาคายาม่า (Takayama)</p>
           <p class="text-subtle mt-1">นําคณะเดินทางสู่ เมืองทาคายาม่า (Takayama) เป็นเมืองเล็กๆ ที่ตั้งอยู่จังหวัดกิฟุ ตัวเมืองมีสถานที่ ท่องเที่ยวสำคัญๆมีศิลปวัฒนธรรมและสถานปัตยกรรมแบบดั้งเดิมและมีธรรมชาติที่สวยงาม
 ทำให้ทาคายาม่าเป็นเมืองสวยอันดับต้นๆของญี่ปุ่น</p>
-          <div class="mt-3">
-           <img src="https://www.agoda.com/wp-content/uploads/2024/02/Shirakawago-village-in-autumn-1050x700.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://images.trvl-media.com/place/6104070/09d0348b-e52a-4331-8bb1-603e42743e54.jpg" loading="lazy" alt="Takayama 1"></div>
+              <div class="img-slide"><img src="https://www.japan-guide.com/g17/5903_top.jpg" loading="lazy" alt="Takayama 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
         </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -481,7 +486,7 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="text-subtle mt-1">นำคณะชม เมืองเก่าฮิดะฟุรุคาวะ (Hida-Furukawa) เป็นเมืองสงบที่มีเสน่ห์ด้วยทางเดินเลียบคลองเซโตะซึ่งเต็มไป
 ด้วยปลาคาร์ปหลากสีและโกดังผนังสีขาวแบบโบราณ โด่งดังจากการเป็นสถานที่ต้นแบบในอนิเมะเรื่อง Your Name และมีงานเทศกาลตีกลองประจำปีที่ได้รับการยกย่องจาก UNESCO เหมาะสำหรับการเดินเที่ยวชมสถาปัตยกรรมไม้พื้นเมืองและสัมผัสวัฒนธรรมช่างไม้ฮิดะอันประณีต 
           <div class="mt-3">
-           <img src="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/nuyzwktpyv6cc0m6jtzt.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2023/10/27212654_m-1024x683.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
           </div>
          </div>
         </div>
@@ -536,11 +541,11 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🚠 กระเช้าลอยฟ้าชินโฮทากะ (Shinhotaka Ropeway) </p>
-          <p class="text-subtle mt-1">สัมผัสประสบการณ์สุดพิเศษกับการเดินทางขึ้นสู่ยอดเขาในเทือกเขาเจแปนแอลป์ตอนเหนือ ซึ่งความโดดเด่นอยู่ที่การแบ่งการเดินทางออกเป็น 2 ช่วง โดยเริ่มต้นช่วงแรกด้วยกระเช้าแบบมาตรฐานพาท่านข้ามผ่านผืนป่าอันอุดมสมบูรณ์สู่จุดพักครึ่งทางที่มีบ่อน้ำพุร้อนแช่เท้าให้ผ่อนคลาย จากนั้นเข้าสู่ไฮไลท์สำคัญในการเดินทางช่วงที่สองกับ กระเช้าลอยฟ้าแบบ 2 ชั้นแห่งเดียวในญี่ปุ่น ที่จะไต่ระดับความสูงอย่างรวดเร็วพาท่านทะยานสู่สถานีนิชิโฮทากะกุจิ บนความสูงกว่า 2,156 เมตรเหนือระดับน้ำทะเล ณ จุดชมวิวบนยอดเขา ชมทัศนียภาพพาโนรามาแบบ 360 องศา ที่เผยให้เห็นสีสันของใบไม้เปลี่ยนสีตามฤดูกาล มอบวิวทิวทัศน์อันสวยงามระดับโลกอย่างแท้จริง</p>
+          <p class="text-subtle mt-1">สัมผัสประสบการณ์สุดพิเศษกับการเดินทางขึ้นสู่ยอดเขาในเทือกเขาเจแปนแอลป์ตอนเหนือ ซึ่งความโดดเด่นอยู่ที่การแบ่งการเดินทางออกเป็น 2 ช่วง โดยเริ่มต้นช่วงแรกด้วยกระเช้าแบบมาตรฐานพาท่านข้ามผ่านผืนป่าอันอุดมสมบูรณ์สู่จุดพักครึ่งทางที่มีบ่อน้ำพุร้อนแช่เท้าให้ผ่อนคลาย จากนั้นเข้าสู่ไฮไลท์สำคัญในการเดินทางช่วงที่สองกับ กระเช้าลอยฟ้าแบบ 2 ชั้นแห่งเดียวในญี่ปุ่น ที่จะไต่ระดับความสูงอย่างรวดเร็วพาท่านทะยานสู่สถานีนิชิโฮทากะกุจิ บนความสูงกว่า 2,156 เมตรเหนือระดับน้ำทะเล ณ จุดชมวิวบนยอดเขา</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://res.cloudinary.com/jnto/image/upload/w_1650,f_auto,fl_lossy,q_auto,c_scale/v1/media_national_parks/filer_public/a7/02/a702c03a-0537-486e-8a60-f176695ba826/chubusangaku_shinhotaka_ropeway_shinhotaka_npoj10-12_vnkh2p" loading="lazy" alt="Shinhotaka Ropeway 1"></div>
-              <div class="img-slide"><img src="https://mushroomtravelpage.b-cdn.net/wp-content/uploads/2024/05/13-shinhotaka-ropeway.jp_.jpg" loading="lazy" alt="Shinhotaka Ropeway 2"></div>
+              <div class="img-slide"><img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2024/04/3879924_m-1.jpg" loading="lazy" alt="Shinhotaka Ropeway 1"></div>
+              <div class="img-slide"><img src="https://image.kkday.com/v2/image/get/s1.kkday.com/product_scm_8281/20260401031712_rFCN4/png" loading="lazy" alt="Shinhotaka Ropeway 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -560,13 +565,13 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍂 อุทยานแห่งชาติคามิโกจิ - สะพานกัปปะบาชิ </p>
+          <p class="font-semibold">🍃อุทยานแห่งชาติคามิโกจิ - สะพานกัปปะบาชิ </p>
           <p class="text-subtle mt-1">เดินทางสู่ อุทยานแห่งชาติคามิโกจิ แหล่งท่องเที่ยวทางธรรมชาติระดับโลกในจังหวัดกิฟุที่ได้รับฉายาว่า 
 "สวิตเซอร์แลนด์แห่งญี่ปุ่น" ด้วยทัศนียภาพอันบริสุทธิ์ของเทือกเขาแอลป์ตอนเหนือที่ตั้งตระหง่านเป็นฉากหลังอย่างยิ่งใหญ่ ชม สะพานกัปปะบาชิ สะพานไม้แขวนสัญลักษณ์ของอุทยาน ซึ่งเป็นจุดชมวิวที่สวยงามที่สุดในการมองเห็นยอดเขาโฮทากะ นอกจากนี้จะได้พบกับความสงบนิ่งของ บึงทาชิโระ พื้นที่ชุ่มน ้าอันทรงเสน่ห์ที่สะท้อนภาพธรรมชาติรอบตัวได้อย่างละมุนตา ในบรรยากาศที่อากาศเย็นสบายและสดชื่นตลอดวัน</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://cdn.mushroomtravel.com/destination/Japan/Matsumoto/Kamikochi/Kamikochi-05.jpg" loading="lazy" alt="Shinhotaka Ropeway 1"></div>
-              <div class="img-slide"><img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1280,h_853/w_79,x_14,y_14,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/deial0m9h3ny2bz0gyaw/%E0%B8%97%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%8A%E0%B8%A1%E0%B9%83%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A7%E0%B8%B2%E0%B9%82%E0%B8%81%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%AA%E0%B9%82%E0%B8%8A,%E0%B8%AE%E0%B8%B4%E0%B8%94%E0%B8%B0%E0%B8%97%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%88%E0%B8%B4.jpg" loading="lazy" alt="Shinhotaka Ropeway 2"></div>
+              <div class="img-slide"><img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2020/06/26612277_m.jpg" loading="lazy" alt="Shinhotaka Ropeway 1"></div>
+              <div class="img-slide"><img src="https://cdn.mushroomtravel.com/destination/Japan/Nagono/Kamikochi/Kamikochi-22.jpg" loading="lazy" alt="Shinhotaka Ropeway 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -609,7 +614,7 @@ body { font-family: 'Prompt', sans-serif; }
          <h3 class="font-semibold text-lg">วันเสาร์ที่ 3 ตุลาคม 2569</h3>
          <p class="text-sm text-subtle">ทาคายาม่า → โทยาม่า → ทาคาโอกะ </p>
         </div>
-        <span class="ml-auto text-2xl">🍂</span>
+        <span class="ml-auto text-2xl">🌳</span>
        </div>
        <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
 
@@ -676,13 +681,13 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍂 สวนสาธารณะคันซุย (Kansui Park)  - สะพานเท็มมง (Tenmon Bridge) </p>
+          <p class="font-semibold">🌳 สวนสาธารณะคันซุย (Kansui Park)  - สะพานเท็มมง (Tenmon Bridge) </p>
           <p class="text-subtle mt-1">ชม สวนสาธารณะคันซุย (Kansui Park) เป็นพื้นที่พักผ่อนหย่อนใจริมน้ำขนาดใหญ่ใจกลางเมืองโทยามะ โดดเด่น
 ด้วยทัศนียภาพอันทันสมัยและเงียบสงบ โดยมีสะพานเท็มมง (Tenmon Bridge) เป็นแลนด์มาร์คสำคัญที่เชื่อมต่อพื้นที่สองฝั่งน้ำเข้าด้วยกัน ภายในสวนเป็นที่ตั้งของร้านสตาร์บัคส์ ดีไซน์สวยระดับโลก จิบกาแฟพร้อมดื่มด่ำกับวิวสวน และสายน้ำได้อย่างผ่อนคลาย</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.toyamashi-kankoukyoukai.jp/wp-content/uploads/2026/03/img_69afafe9de1e31.03308975-1024x683.jpg" loading="lazy" alt="Kansui Park 1"></div>
-              <div class="img-slide"><img src="https://www.info-toyama.com/storage/tourism_attractions/11009/responsive_images/JE6tmpbNvOBGw4jwFoFpCSHlSfLvuL3Cm3kVSMQe__1673_1115.jpeg" loading="lazy" alt="Kansui Park 2"></div>
+              <div class="img-slide"><img src="https://www.info-toyama.com/storage/tourism_attractions/11009/responsive_images/JE6tmpbNvOBGw4jwFoFpCSHlSfLvuL3Cm3kVSMQe__1673_1115.jpeg" loading="lazy" alt="Kansui Park 1"></div>
+              <div class="img-slide"><img src="https://svcstrg.cld.navitime.jp/travelguide/p16010001/p16010001_03.jpg" loading="lazy" alt="Kansui Park 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -727,8 +732,8 @@ body { font-family: 'Prompt', sans-serif; }
 เรียกหมู่บ้านในสไตล์นี้ว่า กัสโช พร้อมกันนี้ท่านจะเพลิดเพลินกับฝูงปลาคราฟนับร้อยที่แหวกว่ายอยู่ตามลำธารหน้าบ้านซึ่งจะเห็นได้ก็แต่เมืองในแถบนี้เท่านั้น
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/yzz2uxipbt4mi2rx26jv.jpg" loading="lazy" alt="Shirakawa-go 1"></div>
-              <div class="img-slide"><img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000286/img/en/a0000286_parts_64f01a5fb7249.jpg?20251027110200&q=80&rw=686&rh=490" loading="lazy" alt="Shirakawa-go 2"></div>
+              <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXtDrOprRhNVPV95ZUcU34lOVK8JOUFXlzdYQuEfNNeltILQfMcAxeI8Q&s=10" loading="lazy" alt="Shirakawa-go 1"></div>
+              <div class="img-slide"><img src="https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/kjwc0imvfkhdjtcf3ukb/TakayamaShirakawagoGasshoVillageOne-DayBusTripfromNagoya-Klook.jpg" loading="lazy" alt="Shirakawa-go 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -742,7 +747,7 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🏰 ปราสาทอินุยามา (Inuyama Castle)  </p>
           <p class="text-subtle mt-1">เดินทางสู่ ปราสาทอินุยามา (Inuyama Castle) (ใช้เวลาเดินทางประมาณ 2 ชั่วโมง) เป็นหนึ่งในห้าปราสาทของญี่ปุ่นที่ได้รับการขึ้นทะเบียนเป็นสมบัติชาติ โดยมีความโดดเด่นที่ตัวหอคอยหลัก (Tenshu) จังหวัดไอจิ สามารถเดินขึ้นไปยังชั้นบนสุดเพื่อชมวิวทิวทัศน์แบบพาโนรามาที่สวยงาม รวมถึงสัมผัสกลิ่นอายประวัติศาสตร์อันทรงพลังผ่านสถาปัตยกรรมยุคเซ็นโกคุที่ยังคงความสมบูรณ์มาจนถึงปัจจุบัน</p>
           <div class="mt-3">
-           <img src="https://edolegacytravel.metro.tokyo.lg.jp/wp-content/uploads/2025/10/50Inuyama-Castle01.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://centrip-japan.com/sites/default/files/inuyama-castle-ogp.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
           </div>
          </div>
         </div>
@@ -766,7 +771,7 @@ body { font-family: 'Prompt', sans-serif; }
           <div class="img-slider">
             <div class="img-slider-track">
               <div class="img-slide"><img src="https://www.prime-place.jp/cms/wp-content/uploads/2024/02/marela02_re2.webp" loading="lazy" alt="Toki Premium Outlets 1"></div>
-              <div class="img-slide"><img src="https://japanshopping.org/files/shopimg/MK1_4014kawai.jpg" loading="lazy" alt="Toki Premium Outlets 2"></div>
+              <div class="img-slide"><img src="https://japanshopping.org/files/shopimg/MK1_3922kawai.jpg" loading="lazy" alt="Toki Premium Outlets 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -824,7 +829,7 @@ body { font-family: 'Prompt', sans-serif; }
         <h3 class="font-semibold text-lg">วันจันทร์ที่ 5 ตุลาคม 2569</h3>
         <p class="text-sm text-subtle">นาโกย่า → โครังเค → ซากาเอะ</p>
       </div>
-      <span class="ml-auto text-2xl">🍂🛍️</span>
+      <span class="ml-auto text-2xl">🛍️</span>
     </div>
     <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
 
@@ -832,11 +837,11 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
           <p class="font-semibold">⛰️ อุทยานหุบเขาโครังเค (Korankei Valley)</p>
-          <p class="text-subtle mt-1">เดินทางสู่ อุทยานหุบเขาโครังเค (Korankei Valley) จุดชมใบไม้เปลี่ยนสีที่สวยงามและมีชื่อเสียงที่สุดแห่งหนึ่งในภูมิภาคชูบุ โดดเด่นด้วยทัศนียภาพของต้นเมเปิลกว่า 4,000 ต้น ที่พร้อมใจกันเปลี่ยนเป็นสีแดงส้มโอบล้อมลำน้ำ โทโมเอะ โดยมีสะพานสีแดง "ไทเก็ตสึเคียว" เป็นจุดถ่ายรูปสัญลักษณ์สำคัญ</p>
+          <p class="text-subtle mt-1">เดินทางสู่ อุทยานหุบเขาโครังเค (Korankei Valley) จุดชมวิวที่สวยงามและมีชื่อเสียงที่สุดแห่งหนึ่งในภูมิภาคชูบุ โดดเด่นด้วยทัศนียภาพของต้นเมเปิลกว่า 4,000 ต้น ที่พร้อมใจกันเปลี่ยนเป็นสีแดงส้มโอบล้อมลำน้ำ โทโมเอะ โดยมีสะพานสีแดง "ไทเก็ตสึเคียว" เป็นจุดถ่ายรูปสัญลักษณ์สำคัญ</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://res.klook.com/image/upload/activities/xqkpfwlsschyeze3mizw.jpg" loading="lazy" alt="Korankei Valley 1"></div>
-              <div class="img-slide"><img src="https://aichinow.pref.aichi.jp/upload/site/events/6817f5a3adc15cc921d94ba16e00fc69.jpg" loading="lazy" alt="Korankei Valley 2"></div>
+              <div class="img-slide"><img src="https://aichinow.pref.aichi.jp/upload/site/spots/1429cc4b0116b0db6a789b6f870d72cf.jpg" loading="lazy" alt="Korankei Valley 1"></div>
+              <div class="img-slide"><img src="https://svcstrg.cld.navitime.jp/travelguide/p23100004/p23100004_07.jpg" loading="lazy" alt="Korankei Valley 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -1029,9 +1034,9 @@ body { font-family: 'Prompt', sans-serif; }
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">5 ต.ค. (วันที่ 6)</p>
       <p class="font-semibold text-sm">โครังเค / นาโกย่า</p>
-      <div class="weather-icon my-2">🍂</div>
+      <div class="weather-icon my-2">☀️</div>
       <p class="text-2xl font-bold text-brand-dark">21°<span class="text-base font-normal text-subtle">/13°C</span></p>
-      <p class="text-xs text-subtle mt-1">แดดออก เหมาะชมใบไม้เปลี่ยนสี</p>
+      <p class="text-xs text-subtle mt-1">มีแดดออก</p>
       <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 55%</span><span>🌧️ 10%</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
@@ -1049,16 +1054,16 @@ body { font-family: 'Prompt', sans-serif; }
     <div class="grid md:grid-cols-2 gap-4 text-sm">
       <div>
         <p class="font-medium">🏔️ ทาคายาม่า / คามิโกจิ / ชินโฮทากะ</p>
-        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 14–18°C กลางคืนเย็นจัดประมาณ 6–10°C โดยเฉพาะบนเขาและในหุบเขาจะเย็นกว่า ต้นเดือนตุลาคมเริ่มเห็นใบไม้เปลี่ยนสีที่คามิโกจิ อาจมีฝนระหว่างวัน</p>
+        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 14–18°C กลางคืนเย็นจัดประมาณ 6–10°C โดยเฉพาะบนเขาและในหุบเขาจะเย็นกว่า อาจมีฝนระหว่างวัน</p>
       </div>
       <div>
         <p class="font-medium">🏙️ โทยาม่า / นาโกย่า / ไอจิ</p>
-        <p class="text-subtle mt-1">อุณหภูมิกลางวันสบายประมาณ 19–22°C กลางคืนเย็นลงประมาณ 13–14°C เดือนตุลาคมถือเป็นช่วงฤดูใบไม้ร่วงที่อากาศดีที่สุด ฝนน้อย ท้องฟ้าโปร่ง เหมาะแก่การท่องเที่ยว</p>
+        <p class="text-subtle mt-1">อุณหภูมิกลางวันสบายประมาณ 19–22°C กลางคืนเย็นลงประมาณ 13–14°C เดือนตุลาคมถือเป็นช่วงที่อากาศดีที่สุด ฝนน้อย ท้องฟ้าโปร่ง เหมาะแก่การท่องเที่ยว</p>
       </div>
     </div>
     <div class="mt-3 bg-blue-50 border border-blue-100 rounded-xl p-3 text-xs text-blue-700 flex items-start gap-2">
       <span>🌡️</span>
-      <span>ช่วงเวลาเดินทาง (1–6 ต.ค.) อยู่ในต้นฤดูใบไม้ร่วงของญี่ปุ่น ความแตกต่างของอุณหภูมิกลางวัน-กลางคืนค่อนข้างมาก ควรเตรียมเสื้อกันหนาวและเสื้อกันลมสำหรับภาคเช้าและกลางคืน</span>
+      <span>ช่วงเวลาเดินทาง (1–6 ต.ค.) ความแตกต่างของอุณหภูมิกลางวัน-กลางคืนค่อนข้างมาก ควรเตรียมเสื้อกันหนาวและเสื้อกันลมสำหรับภาคเช้าและกลางคืน</span>
     </div>
   </div>
   <p class="text-xs text-subtle mt-4 italic">* ข้อมูลสภาพอากาศเป็นการคาดการณ์โดยประมาณ กรุณาตรวจสอบอีกครั้งก่อนเดินทางที่ accuweather.com</p>
@@ -1069,7 +1074,7 @@ body { font-family: 'Prompt', sans-serif; }
   <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">👔 คำแนะนำการแต่งกาย</h2>
   <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
     <h3 class="font-semibold text-brand-dark mb-2">🌡️ สภาพอากาศโดยรวม</h3>
-    <p class="text-sm text-subtle">ช่วงต้นเดือนตุลาคมในญี่ปุ่น (แถบกิฟุ–ไอจิ) อยู่ในต้นฤดูใบไม้ร่วง กลางวันอากาศสบาย 18–22°C แต่กลางคืนเย็นจัดโดยเฉพาะในเมืองภูเขาอย่างทาคายาม่าและบนกระเช้าชินโฮทากะอาจเย็นถึง 6–8°C ต้องเตรียมเสื้อผ้าแบบ <strong>"Layering"</strong> (แต่งหลายชั้น) และพกร่มเผื่อฝน</p>
+    <p class="text-sm text-subtle">ช่วงต้นเดือนตุลาคมในญี่ปุ่น (แถบกิฟุ–ไอจิ) กลางวันอากาศสบาย 18–22°C แต่กลางคืนเย็นจัดโดยเฉพาะในเมืองภูเขาอย่างทาคายาม่าและบนกระเช้าชินโฮทากะอาจเย็นถึง 6–8°C ต้องเตรียมเสื้อผ้าแบบ <strong>"Layering"</strong> (แต่งหลายชั้น) และพกร่มเผื่อฝน</p>
   </div>
 
   <div class="grid md:grid-cols-2 gap-4 mb-6">
@@ -1109,7 +1114,7 @@ body { font-family: 'Prompt', sans-serif; }
     </div>
     <div class="bg-white border-l-4 border-red-400 rounded-r-xl p-4">
       <p class="font-semibold text-sm">วันที่ 6 | โครังเค → ซากาเอะ (5 ต.ค. | 13–21°C)</p>
-      <p class="text-xs text-subtle mt-1">🍂 เสื้อแขนยาว + แจ็คเก็ตที่ดูสวย เหมาะถ่ายรูปใบไม้แดง / 👖 กางเกงขายาว / 👟 รองเท้าสบายสำหรับเดินช้อปปิ้ง</p>
+      <p class="text-xs text-subtle mt-1">🥼 เสื้อแขนยาว + แจ็คเก็ต / 👖 กางเกงขายาว / 👟 รองเท้าสบายสำหรับเดินช้อปปิ้ง</p>
     </div>
     <div class="bg-white border-l-4 border-brand-dark rounded-r-xl p-4">
       <p class="font-semibold text-sm">วันที่ 7 | นาโกย่า → กรุงเทพฯ (6 ต.ค. | 14–21°C)</p>
