@@ -228,6 +228,63 @@ body { font-family: 'Prompt', sans-serif; }
   .flight-row { flex-wrap: wrap; row-gap: 0.75rem; }
   .flight-row .flight-arrow { order: 3; width: 100%; }
 }
+/* --- Image slider: swipeable, one large image at a time --- */
+.img-slider {
+  position: relative;
+  margin-top: 0.75rem;
+}
+.img-slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.75rem;
+  scrollbar-width: none;
+}
+.img-slider-track::-webkit-scrollbar { display: none; }
+.img-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+.img-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.img-slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  pointer-events: none;
+}
+.img-slider-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.55);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.img-slider-dots span.active {
+  background: #ffffff;
+  transform: scale(1.3);
+}
+.img-slider-counter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(15,23,42,0.55);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  pointer-events: none;
+
 </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
@@ -259,7 +316,7 @@ body { font-family: 'Prompt', sans-serif; }
     <div class="max-w-5xl mx-auto nav-grid p-2">
      <button onclick="showSection('flights')" class="nav-btn active rounded-full font-medium text-brand border border-brand/20" data-nav="flights"><span class="hidden md:inline">✈️ </span>เที่ยวบิน</button>
      <button onclick="showSection('itinerary')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="itinerary"><span class="hidden md:inline">📋 </span>โปรแกรมทัวร์</button>
-     <button onclick="showSection('country')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="country"><span class="hidden md:inline">🐦‍🔥 </span>ข้อมูลประเทศ</button>
+     <button onclick="showSection('country')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="country"><span class="hidden md:inline">🍣 </span>ข้อมูลประเทศ</button>
      <button onclick="showSection('weather')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="weather"><span class="hidden md:inline">🌤️ </span>สภาพอากาศ</button>
      <button onclick="showSection('clothing')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="clothing"><span class="hidden md:inline">👔 </span>การแต่งกาย</button>
      <button onclick="showSection('Passenger')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="Passenger">รายชื่อผู้เดินทาง</button>
@@ -413,10 +470,6 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
            <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
            </div>
           </div>
          </div>
@@ -439,29 +492,22 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🏬 ย่านเมืองเก่าทาคายามะ (Takayama Old Town)  - ทาคายามะจินยะ (Takayama Jinya) </p>
           <p class="text-subtle mt-1">เดินทางสู่ ฮิดะทาคายามะ (Hida Takayama) เมืองเก่ากลางหุบเขาในจังหวัดกิฟุที่เปรียบเสมือนพิพิธภัณฑ์มีชีวิต ด้วยการรักษาสถาปัตยกรรมไม้และบรรยากาศย้อนยุคสมัยเอโดะไว้อย่างสมบูรณ์ สัมผัสวิถีชีวิตดั้งเดิมผ่านการชม ย่านเมืองเก่าทาคายาม่า จากนั้นเข้าชม ทาคายามะจินยะ (Takayama Jinya) อดีตที่ทำการรัฐบาลและที่พักของเจ้าเมืองในยุคโชกุนโทกุงาวะ ซึ่งถือเป็นจวนผู้ว่าเก่าแก่เพียงแห่งเดียวที่ยังหลงเหลืออยู่ในญี่ปุ่น ภายในจัดแสดงห้องโถง
 ไม้ที่ประณีต คลังเก็บข้าวสารโบราณ รวมถึงโบราณวัตถุและอาวุธที่สะท้อนถึงประวัติศาสตร์การปกครองอันยาวนานกว่าร้อยปีได้อย่างน่าประทับใจ</p>
-           <div class="mt-3 flex gap-3">
-            <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmgysO8Gc6n37uGXlIOFK_Z48jaWjoOABIw&s"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 1">
-
-            <img
-                src="https://images.trvl-media.com/place/6104068/9609d626-8b17-4e75-9aad-eba35ec1b63a.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
-           </div>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmgysO8Gc6n37uGXlIOFK_Z48jaWjoOABIw&s" loading="lazy" alt="Takayama Old Town 1"></div>
+              <div class="img-slide"><img src="https://images.trvl-media.com/place/6104068/9609d626-8b17-4e75-9aad-eba35ec1b63a.jpg" loading="lazy" alt="Takayama Old Town 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+        </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
            <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
            </div>
           </div>
          </div>
@@ -491,29 +537,22 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="text-sm">
           <p class="font-semibold">🚠 กระเช้าลอยฟ้าชินโฮทากะ (Shinhotaka Ropeway) </p>
           <p class="text-subtle mt-1">สัมผัสประสบการณ์สุดพิเศษกับการเดินทางขึ้นสู่ยอดเขาในเทือกเขาเจแปนแอลป์ตอนเหนือ ซึ่งความโดดเด่นอยู่ที่การแบ่งการเดินทางออกเป็น 2 ช่วง โดยเริ่มต้นช่วงแรกด้วยกระเช้าแบบมาตรฐานพาท่านข้ามผ่านผืนป่าอันอุดมสมบูรณ์สู่จุดพักครึ่งทางที่มีบ่อน้ำพุร้อนแช่เท้าให้ผ่อนคลาย จากนั้นเข้าสู่ไฮไลท์สำคัญในการเดินทางช่วงที่สองกับ กระเช้าลอยฟ้าแบบ 2 ชั้นแห่งเดียวในญี่ปุ่น ที่จะไต่ระดับความสูงอย่างรวดเร็วพาท่านทะยานสู่สถานีนิชิโฮทากะกุจิ บนความสูงกว่า 2,156 เมตรเหนือระดับน้ำทะเล ณ จุดชมวิวบนยอดเขา ชมทัศนียภาพพาโนรามาแบบ 360 องศา ที่เผยให้เห็นสีสันของใบไม้เปลี่ยนสีตามฤดูกาล มอบวิวทิวทัศน์อันสวยงามระดับโลกอย่างแท้จริง</p>
-           <div class="mt-3 flex gap-3">
-            <img
-                src="https://res.cloudinary.com/jnto/image/upload/w_1650,f_auto,fl_lossy,q_auto,c_scale/v1/media_national_parks/filer_public/a7/02/a702c03a-0537-486e-8a60-f176695ba826/chubusangaku_shinhotaka_ropeway_shinhotaka_npoj10-12_vnkh2p"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 1">
-
-            <img
-                src="https://mushroomtravelpage.b-cdn.net/wp-content/uploads/2024/05/13-shinhotaka-ropeway.jp_.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
-           </div>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://res.cloudinary.com/jnto/image/upload/w_1650,f_auto,fl_lossy,q_auto,c_scale/v1/media_national_parks/filer_public/a7/02/a702c03a-0537-486e-8a60-f176695ba826/chubusangaku_shinhotaka_ropeway_shinhotaka_npoj10-12_vnkh2p" loading="lazy" alt="Shinhotaka Ropeway 1"></div>
+              <div class="img-slide"><img src="https://mushroomtravelpage.b-cdn.net/wp-content/uploads/2024/05/13-shinhotaka-ropeway.jp_.jpg" loading="lazy" alt="Shinhotaka Ropeway 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+        </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
            <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
            </div>
           </div>
          </div>
@@ -524,19 +563,16 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🍂 อุทยานแห่งชาติคามิโกจิ - สะพานกัปปะบาชิ </p>
           <p class="text-subtle mt-1">เดินทางสู่ อุทยานแห่งชาติคามิโกจิ แหล่งท่องเที่ยวทางธรรมชาติระดับโลกในจังหวัดกิฟุที่ได้รับฉายาว่า 
 "สวิตเซอร์แลนด์แห่งญี่ปุ่น" ด้วยทัศนียภาพอันบริสุทธิ์ของเทือกเขาแอลป์ตอนเหนือที่ตั้งตระหง่านเป็นฉากหลังอย่างยิ่งใหญ่ ชม สะพานกัปปะบาชิ สะพานไม้แขวนสัญลักษณ์ของอุทยาน ซึ่งเป็นจุดชมวิวที่สวยงามที่สุดในการมองเห็นยอดเขาโฮทากะ นอกจากนี้จะได้พบกับความสงบนิ่งของ บึงทาชิโระ พื้นที่ชุ่มน ้าอันทรงเสน่ห์ที่สะท้อนภาพธรรมชาติรอบตัวได้อย่างละมุนตา ในบรรยากาศที่อากาศเย็นสบายและสดชื่นตลอดวัน</p>
-           <div class="mt-3 flex gap-3">
-            <img
-                src="https://cdn.mushroomtravel.com/destination/Japan/Matsumoto/Kamikochi/Kamikochi-05.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 1">
-
-            <img
-                src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1280,h_853/w_79,x_14,y_14,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/deial0m9h3ny2bz0gyaw/%E0%B8%97%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%8A%E0%B8%A1%E0%B9%83%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A7%E0%B8%B2%E0%B9%82%E0%B8%81%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%AA%E0%B9%82%E0%B8%8A,%E0%B8%AE%E0%B8%B4%E0%B8%94%E0%B8%B0%E0%B8%97%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%88%E0%B8%B4.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
-           </div>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://cdn.mushroomtravel.com/destination/Japan/Matsumoto/Kamikochi/Kamikochi-05.jpg" loading="lazy" alt="Shinhotaka Ropeway 1"></div>
+              <div class="img-slide"><img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1280,h_853/w_79,x_14,y_14,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/deial0m9h3ny2bz0gyaw/%E0%B8%97%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%8A%E0%B8%A1%E0%B9%83%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A7%E0%B8%B2%E0%B9%82%E0%B8%81%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%AA%E0%B9%82%E0%B8%8A,%E0%B8%AE%E0%B8%B4%E0%B8%94%E0%B8%B0%E0%B8%97%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%88%E0%B8%B4.jpg" loading="lazy" alt="Shinhotaka Ropeway 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+        </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -552,10 +588,6 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
            <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
            </div>
           </div>
          </div>
@@ -597,29 +629,22 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="text-sm">
           <p class="font-semibold">🦞 โทยามะ (Toyama) - ตลาดชินมินาโตะ คิตโตะคิโตะ </p>
           <p class="text-subtle mt-1">เดินทางสู่ โทยามะ (Toyama) เมืองท่าเปี่ยมเสน่ห์ริมชายฝั่งที่ขึ้นชื่อเรื่องความอุดมสมบูรณ์ของอาหารทะเลสดใหม่ส่งตรงจากอ่าว โดยเฉพาะที่ ตลาดชินมินาโตะ คิตโตะคิโตะ แหล่งรวมวัตถุดิบชั้นเลิศอย่างกุ้งขาวและปูแดงรสหวานฉ่ำที่สามารถเลือกซื้อและลิ้มลองรสชาติความสดได้ทันที</p>
-           <div class="mt-3 flex gap-3">
-            <img
-                src="https://static.gltjp.com/glt/data/directory/13000/12699/20220204_105920_557ae5de_w1920.webp"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 1">
-
-            <img
-                src="https://ak-d.tripcdn.com/images/1mi0a224x90n54wav275A.jpg?proc=source/trip"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
-           </div>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://static.gltjp.com/glt/data/directory/13000/12699/20220204_105920_557ae5de_w1920.webp" loading="lazy" alt="Toyama 1"></div>
+              <div class="img-slide"><img src="https://ak-d.tripcdn.com/images/1mi0a224x90n54wav275A.jpg?proc=source/trip" loading="lazy" alt="Toyama 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+        </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
            <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
            </div>
           </div>
          </div>
@@ -654,29 +679,22 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🍂 สวนสาธารณะคันซุย (Kansui Park)  - สะพานเท็มมง (Tenmon Bridge) </p>
           <p class="text-subtle mt-1">ชม สวนสาธารณะคันซุย (Kansui Park) เป็นพื้นที่พักผ่อนหย่อนใจริมน้ำขนาดใหญ่ใจกลางเมืองโทยามะ โดดเด่น
 ด้วยทัศนียภาพอันทันสมัยและเงียบสงบ โดยมีสะพานเท็มมง (Tenmon Bridge) เป็นแลนด์มาร์คสำคัญที่เชื่อมต่อพื้นที่สองฝั่งน้ำเข้าด้วยกัน ภายในสวนเป็นที่ตั้งของร้านสตาร์บัคส์ ดีไซน์สวยระดับโลก จิบกาแฟพร้อมดื่มด่ำกับวิวสวน และสายน้ำได้อย่างผ่อนคลาย</p>
-           <div class="mt-3 flex gap-3">
-            <img
-                src="https://scontent.fbkk12-4.fna.fbcdn.net/v/t39.30808-6/490980334_2582682042063597_7322626551184462155_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x720&ctp=s960x720&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YzXpDfhcGP0Q7kNvwGYGpjS&_nc_oc=AdoRqettaJ6PHh4K12RQaJYAUIDUw0eNrI8J6lbB0ZIuYMAFXAqtkgPcQnQPFGZEAeVQ2Yy2AwLw6RSJmmsbYV7n&_nc_zt=23&_nc_ht=scontent.fbkk12-4.fna&_nc_gid=t9CCP2FaZYJ5Gge3Jq-COA&_nc_ss=7b2a8&oh=00_Af9JWxNIhw6ThGjwifjf7-M06zY9UF99wPm2cwYScveT5w&oe=6A42DF95"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 1">
-
-            <img
-                src="https://www.info-toyama.com/storage/tourism_attractions/11009/responsive_images/JE6tmpbNvOBGw4jwFoFpCSHlSfLvuL3Cm3kVSMQe__1673_1115.jpeg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
-           </div>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://scontent.fbkk12-4.fna.fbcdn.net/v/t39.30808-6/490980334_2582682042063597_7322626551184462155_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x720&ctp=s960x720&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YzXpDfhcGP0Q7kNvwGYGpjS&_nc_oc=AdoRqettaJ6PHh4K12RQaJYAUIDUw0eNrI8J6lbB0ZIuYMAFXAqtkgPcQnQPFGZEAeVQ2Yy2AwLw6RSJmmsbYV7n&_nc_zt=23&_nc_ht=scontent.fbkk12-4.fna&_nc_gid=t9CCP2FaZYJ5Gge3Jq-COA&_nc_ss=7b2a8&oh=00_Af9JWxNIhw6ThGjwifjf7-M06zY9UF99wPm2cwYScveT5w&oe=6A42DF95" loading="lazy" alt="Kansui Park 1"></div>
+              <div class="img-slide"><img src="https://www.info-toyama.com/storage/tourism_attractions/11009/responsive_images/JE6tmpbNvOBGw4jwFoFpCSHlSfLvuL3Cm3kVSMQe__1673_1115.jpeg" loading="lazy" alt="Kansui Park 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+        </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
            <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
            </div>
           </div>
          </div>
@@ -704,27 +722,19 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🛖 หมู่บ้านชิราคาวาโกะ </p>
+          <p class="font-semibold">🛖 หมู่บ้านชิราคาวาโกะ (Shirakawa-go)</p>
           <p class="text-subtle mt-1">เดินทางสู่ หมู่บ้านชิราคาวาโกะ (ใช้เวลาเดินทางประมาณ 1 ชั่วโมง) เป็นหมู่บ้านสไตล์กัชโชแบบญี่ปุ่นดั้งเดิม และยังได้รับเลือกเป็นมรดกโลกในปี 1995 ซึ่งเป็นหมู่บ้านสไตล์กัชโช-สึคุริ จะมีความยาวประมาณ 18 เมตร และมีความกว้าง 10 เมตร ซึ่งโครงสร้างของบ้านสามารถรองรับหิมะที่ตกหนักในช่วงฤดูหนาวได้ และรูปร่างของหลังคาเหมือนกับสองมือของพระเจ้า หรือพระพุทธเจ้า จึง
 เรียกหมู่บ้านในสไตล์นี้ว่า กัสโช พร้อมกันนี้ท่านจะเพลิดเพลินกับฝูงปลาคราฟนับร้อยที่แหวกว่ายอยู่ตามลำธารหน้าบ้านซึ่งจะเห็นได้ก็แต่เมืองในแถบนี้เท่านั้น
-          <div class="mt-3">
-           <img src="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/yzz2uxipbt4mi2rx26jv.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/yzz2uxipbt4mi2rx26jv.jpg" loading="lazy" alt="Shirakawa-go 1"></div>
+              <div class="img-slide"><img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000286/img/en/a0000286_parts_64f01a5fb7249.jpg?20251027110200&q=80&rw=686&rh=490" loading="lazy" alt="Shirakawa-go 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
         </div>
-
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
-           </div>
-          </div>
-         </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -753,29 +763,22 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="text-sm">
           <p class="font-semibold">🛍️ Toki Premium Outlets</p>
           <p class="text-subtle mt-1"> เดินทางสู่ Toki Premium Outlets (ใช้เวลาเดินทางประมาณ 40 นาที) เป็นหนึ่งในแหล่งช้อปปิ้งขนาดใหญ่ยอดนิยมในภูมิภาคชูบุ รวบรวมแบรนด์ชั้นนำ ทั้งในญี่ปุ่นและระดับโลกกว่า 180 ร้านค้า มีครบทั้งเสื้อผ้าแฟชั่น เครื่องแต่งกาย รองเท้า กระเป๋า สินค้ากีฬา อุปกรณ์ Outdoor ของใช้ในบ้าน ไปจนถึงร้านอาหารและคาเฟ่ ตัวเอาท์เล็ทออกแบบมาในสไตล์ American Art Deco ให้ความรู้สึกเหมือนเดินช้อปปิ้งอยู่ในแถบโคโลราโดหรือฝั่งตะวันออกของอเมริกา ตั้งอยู่บนเนินเขาที่โอบล้อมด้วยธรรมชาติ ทำให้ทัศนียภาพรอบ ๆ สวยงาม อากาศโปร่งสบาย และคนไม่หนาแน่นแออัดเท่าเอาท์เล็ทในเมืองใหญ่
-           <div class="mt-3 flex gap-3">
-            <img
-                src="https://www.prime-place.jp/cms/wp-content/uploads/2024/02/marela02_re2.webp"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 1">
-
-            <img
-                src="https://japanshopping.org/files/shopimg/MK1_4014kawai.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
-           </div>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.prime-place.jp/cms/wp-content/uploads/2024/02/marela02_re2.webp" loading="lazy" alt="Toki Premium Outlets 1"></div>
+              <div class="img-slide"><img src="https://japanshopping.org/files/shopimg/MK1_4014kawai.jpg" loading="lazy" alt="Toki Premium Outlets 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+        </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
            <div class="mt-3 flex gap-3">
-            <img
-                src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg"
-                class="w-1/2 rounded-lg object-cover aspect-video"
-                alt="Image 2">
            </div>
           </div>
          </div>
@@ -785,11 +788,16 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="text-sm">
           <p class="font-semibold">💡 งานประดับไฟ นาบานะโนะ ซาโตะ (Nabana no Sato) </p>
           <p class="text-subtle mt-1">สวนพฤกษศาสตร์ขนาดใหญ่ที่เนรมิตงานประดับไฟ (Illumination) ได้ยิ่งใหญ่และสวยงามติดอันดับต้นๆ ของญี่ปุ่น ไฮไลท์สำคัญคืออุโมงค์ไฟระยิบระยับที่ยาวสุดลูกหูลูกตาและการจัดแสดงแสงสีบนทุ่งหญ้ากว้างที่เปลี่ยนธีมไปในแต่ละปีอย่างน่าอัศจรรย์</p>
-          <div class="mt-3">
-           <img src="https://www.nagoya-info.jp/upload/spots/large/4143834105e607e29bbdb0.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.nagoya-info.jp/upload/spots/large/4143834105e607e29bbdb0.jpg" loading="lazy" alt="Nabana no Sato 1"></div>
+              <div class="img-slide"><img src="https://s3-ap-northeast-1.amazonaws.com/thegate/2021/01/14/11/21/17/Nabana-no-sato.jpg" loading="lazy" alt="Nabana no Sato 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
         </div>
+      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute timeline-dot-wrap top-1"></div>
@@ -825,8 +833,13 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="text-sm">
           <p class="font-semibold">⛰️ อุทยานหุบเขาโครังเค (Korankei Valley)</p>
           <p class="text-subtle mt-1">เดินทางสู่ อุทยานหุบเขาโครังเค (Korankei Valley) จุดชมใบไม้เปลี่ยนสีที่สวยงามและมีชื่อเสียงที่สุดแห่งหนึ่งในภูมิภาคชูบุ โดดเด่นด้วยทัศนียภาพของต้นเมเปิลกว่า 4,000 ต้น ที่พร้อมใจกันเปลี่ยนเป็นสีแดงส้มโอบล้อมลำน้ำ โทโมเอะ โดยมีสะพานสีแดง "ไทเก็ตสึเคียว" เป็นจุดถ่ายรูปสัญลักษณ์สำคัญ</p>
-          <div class="mt-3">
-            <img src="https://aichinow.pref.aichi.jp/upload/site/events/6817f5a3adc15cc921d94ba16e00fc69.jpg" loading="lazy" class="tour-img" alt="Korankei Valley">
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://res.klook.com/image/upload/activities/xqkpfwlsschyeze3mizw.jpg" loading="lazy" alt="Korankei Valley 1"></div>
+              <div class="img-slide"><img src="https://aichinow.pref.aichi.jp/upload/site/events/6817f5a3adc15cc921d94ba16e00fc69.jpg" loading="lazy" alt="Korankei Valley 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
         </div>
       </div>
@@ -836,7 +849,6 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร</p>
           <div class="mt-3 flex gap-3">
-            <img src="https://thumbs.dreamstime.com/b/tba-rubber-stamp-red-over-white-background-86702705.jpg" class="w-1/2 rounded-lg object-cover aspect-video" alt="TBA">
           </div>
         </div>
       </div>
@@ -852,26 +864,20 @@ body { font-family: 'Prompt', sans-serif; }
         </div>
       </div>
 
-      <div class="relative">
-        <div class="timeline-dot absolute -left-[31px] top-1"></div>
-        <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Jojoen Nagoya Sakae</p>
-          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
-            <p class="font-medium text-brand-dark mb-1">Menu:</p>
-            <p>Yuki (snow) Kaiseki course</p>
-            <div class="mt-3 flex gap-3">
-              <img src="https://scontent.fbkk8-2.fna.fbcdn.net/v/t39.30808-6/495335766_10232914097988769_3502532895071375816_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x676&ctp=s960x676&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ggN3VWy1pEQQ7kNvwHm22gt&_nc_oc=AdqfZ0dBsz_B80lriD4VJal8Eu6e3hUO88RvyJTyhd1N3RbwM4mAwOixnbco4aSdEkeYtIkbhGUI42AH8NbNNQKn&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&_nc_gid=tAvBXlE8407fkKkGm7muJw&_nc_ss=7b2a8&oh=00_Af8AC2NwC39W_b5NWCqGp_OJfoTjv47YNz5wOFWP9fHGkA&oe=6A44073C" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 1">
-              <img src="https://scontent.fbkk8-4.fna.fbcdn.net/v/t39.30808-6/494713879_10232914097868766_2683198103901847154_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x720&ctp=s960x720&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=k1uMqkTiGywQ7kNvwHcXuvr&_nc_oc=Adoh9UaBzJWB92AHmnX5n_SCMHV4ROcwXOsY_j1n0tiT8PIVQGHm6m07HadtRSIk4vMtXNva0UKPC2BPIDSV0wz1&_nc_zt=23&_nc_ht=scontent.fbkk8-4.fna&_nc_gid=kQJY3qpmi5sAcDH6hXKuIg&_nc_ss=7b2a8&oh=00_Af8wuR93AITP_5R0Xe75P6JPnDfBVCGvEf6DcnmM_1g0QA&oe=6A43F9FB" class="w-1/2 rounded-lg object-cover aspect-video" alt="Dinner 2">
-            </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
+           <div class="mt-3 flex gap-3">
+           </div>
           </div>
-        </div>
-      </div>
+         </div>
 
-    </div>
     <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
       <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Nagoya Tokyu Hotel หรือเทียบเท่า ★★★★</strong>
-    </div>
   </div>
+  </div>  
+    </div>
 </div><!-- /day-6 -->
 
 <!-- ===== DAY 7 ===== -->
@@ -969,7 +975,7 @@ body { font-family: 'Prompt', sans-serif; }
     <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
       <h4 class="font-semibold text-brand-dark mb-3">📱 การสื่อสารและอินเทอร์เน็ต</h4>
       <ul class="text-sm text-subtle space-y-2">
-        <li>• <strong>eSIM / Pocket WiFi:</strong> แนะนำซื้อ eSIM หรือ Roaming ก่อนเดินทาง</li>
+        <li>• <strong>eSIM / Roaming:</strong> แนะนำซื้อ eSIM หรือ Roaming ก่อนเดินทาง</li>
         <li>• <strong>สถานเอกอัครราชทูตไทย ณ กรุงโตเกียว:</strong> +81-3-3447-2247</li>
         <li>• <strong>สายด่วนฉุกเฉินสำหรับชาวต่างชาติ:</strong> #9110 (ตำรวจ)</li>
       </ul>
@@ -1145,28 +1151,74 @@ body { font-family: 'Prompt', sans-serif; }
         .room-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
         .badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
         .dietary-badge { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .dietary-badge2 { background: #c0392b; color: #ffffff; border: 1px solid #c0392b; }                
         .room-badge { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+        .room-badge2 { background: #FF99FF; color: #9900FF; border: 1px solid #FF99FF; }        
+        .room-badge3 { background: #99FFCC; color: #336600; border: 1px solid #99FFCC; }        
         .guest-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
         .guest-row + .guest-row { border-top: 1px dashed #e5e7eb; }
         .avatar { width: 33px; height: 33px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; color: #fff; }
        </style>
        <div class="rooms-grid mb-6">
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 1</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">1</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. THANAKRIT ITTIANAN</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">2</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS POPPORN INGKATAWEERUT</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 2</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">3</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. NIKOM TORRUNGRUEANGKIT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">4</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS PAWEENA BOONNAK</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 3</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">5</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. SORACHAI CHIAMSIRIWATTANA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">6</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS TARA KARNTARA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 4</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6,#0d9488);">7</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS AURAPAN CHANTAROJVANICH</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f43f5e,#e11d48);">8</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS THAWANRATH PHACHARAWITKAMON</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 5</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#a855f7,#9333ea);">9</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. NARIN BOVONRATTANAKOSOL</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#7c3aed,#6d28d9);">10</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">NAN MYA HNIN OO</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง (เมียนม่า)</span><span class="badge" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;"><i data-lucide="tv" style="width:12px;height:12px;"></i>ไม่ดูบอล</span></div></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 6</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">11</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. KITTISAK SUVISUTTIMONTRE</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">12</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS ISSADAORN PAKTAWEE</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;"><i data-lucide="tv" style="width:12px;height:12px;"></i>ไม่ดูบอล</span></div></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 7</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">13</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. APICHA CHANTARAWARAROJ</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">14</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS TANYALUK HIRANKAIPHOT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 8</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">15</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. TEERATAN THAMMANICHANONT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6,#0d9488);">16</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MRS. SARANPHAT THAMMANICHANONT</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 9</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f43f5e,#e11d48);">17</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS PANNAPHAT SUWANNAPHAN</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"><i data-lucide="leaf" style="width:12px;height:12px;"></i>ไม่ทานเนื้อ</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">18</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MISS THIDA NARKNIYOM</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 10</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#a855f7,#9333ea);">19</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MASTER PATTRADIT CHANTAROJVANICH</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">20</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">MR. SIRICHAI PUMKRACHANG</p><p class="text-xs text-gray-400">ผู้เดินทาง</p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 1</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">1</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ไขศรี อุทัยวรรณ์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 2</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">2</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ฐิติมา อุดม</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 แพ้เนื้อวัว</span><span class="badge dietary-badge"></i>🐋 อสุจิปลาวาฬ</span><span class="badge dietary-badge"></i>🐎 ไม่ทานเนื้อม้า</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 3</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">3</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ วิเชียร หาญประวีณ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 4</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">4</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ นภารัตน์ ศรีวรรณวิทย์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🦑 ไม่ทานปลาหมึก</span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 5</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#9933FF,#9900CC);">5</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ บุรินทร์ เหมทัต</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🐟 ไม่ทานปลาไหล</span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 6</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCC00, #FF3300);">6</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ จักรชัย บุญยะวัตร</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 7</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6, #0d9488);">7</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ กนกนุช จินดาโชตสิริ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🍣 ไม่ทานปลาดิบ</span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 8</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6, #1d4ed8);">8</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สมเกียรติ เมสันธสุวรรณ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนคณะ พัก DORMY INN NAGOYA SAKAE HOTEL และ กลับหลังคณะ</span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 9</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">9</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ปัญชนิติ (ครอบครัวคุณธิติ)</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 10</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCCFF,#FF33FF);">10</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สัณห์นิติ (ครอบครัวคุณธิติ)</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 11</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899, #be185d);">11</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ วรวุฒิ กาญจนกูล</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">12</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ นัยนา กาญจนกูล</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></p></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 12</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">13</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สุชาติ มโนยางกูร</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f43f5e, #e11d48);">14</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">ผู้ติดตาม</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 13</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCC00, #FF3300);">15</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สุมิตร เพชราภิรัชต์</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🐔 ไม่ทานเนื้อไก่</span><span class="badge dietary-badge"></i>🎋 ไม่ทานหน่อไม้</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#33CCFF, #3333FF);">16</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ รุ่งนภา</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 14</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFD700, #CD5C5C);">17</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ธิติ โตวิวัฒน์</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#DB7093, #9400D3);">18</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">ผู้ติดตาม</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 15</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#00FF00, #228B22);">19</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ชัยวัฒน์ โควาวิสารัช</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#DB7093, #9400D3);">20</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ศศินี โควาวิสารัช</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 16</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#C71585,#B03060);">21</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สุวรรณา แสงอรุณศิริ</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🐟 ไม่ทานปลาไหล</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">22</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ดวงกมล ทรงวุฒิวิชัย</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 17</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">23</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">พล.อ. หัสพงศ์ ยุวนวรรธนะ</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">24</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ มาริสา</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 18</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCCFF,#FF33FF);">25</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ อโณทัย บุญยะลีพรรณ</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">26</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ พัฒนพร ไตรพิพัฒน์</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 19</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899, #be185d);">27</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ วริน อินธิโรจนกุล</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">28</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ATCHARA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></div></div></div></div>
+
        </div>
        <div class="rounded-xl p-4 stats-bar text-sm" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
-        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="users" style="width:16px;height:16px;"></i><span>ผู้เดินทางทั้งหมด <strong class="text-white">20</strong> ท่าน</span></div>
-        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="bed-double" style="width:16px;height:16px;"></i><span>ห้องพัก <strong class="text-white">10</strong> ห้อง</span></div>
-        <div class="flex items-center gap-2 text-amber-300"><i data-lucide="utensils" style="width:16px;height:16px;"></i><span>ไม่ทานเนื้อ <strong class="text-white">6</strong> ท่าน</span></div>
-        <div class="flex items-center gap-2 text-cyan-300"><i data-lucide="tv" style="width:16px;height:16px;"></i><span>ไม่ดูบอล <strong class="text-white">2</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="users" style="width:16px;height:16px;"></i><span>ผู้เดินทางทั้งหมด <strong class="text-white">28</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="bed-double" style="width:16px;height:16px;"></i><span>ห้องพัก <strong class="text-white">19</strong> ห้อง (10 SGL + 4 TWN + 5 DBL)</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🐟 ไม่ทานปลาไหล <strong class="text-white">2</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🥩 ไม่ทานเนื้อวัว <strong class="text-white">8</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🐎 ไม่ทานเนื้อม้า <strong class="text-white">1</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🦑 ไม่ทานปลาหมึก <strong class="text-white">1</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🍣 ไม่ทานปลาดิบ <strong class="text-white">1</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🐔 ไม่ทานไก่ <strong class="text-white">1</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🎋 ไม่ทานหน่อไม้ <strong class="text-white">1</strong> ท่าน</span></div>
        </div>
       </div>
      </div>
@@ -1197,6 +1249,57 @@ function showDay(n) {
   if (dayEl) { dayEl.style.display = 'block'; dayEl.classList.remove('fade-in'); void dayEl.offsetWidth; dayEl.classList.add('fade-in'); }
   document.querySelectorAll('.day-tab')[n - 1]?.classList.add('active-day');
 }
+// Initialize swipeable image sliders: sync dots + counter on scroll,
+// and expose a scrollBySlide() helper for future prev/next controls.
+function initImgSliders(root) {
+  const sliders = (root || document).querySelectorAll('.img-slider');
+  sliders.forEach(slider => {
+    if (slider.dataset.sliderInit) return; // avoid double-binding
+    slider.dataset.sliderInit = '1';
+
+    const track = slider.querySelector('.img-slider-track');
+    const dots = slider.querySelectorAll('.img-slider-dots span');
+    const counter = slider.querySelector('.img-slider-counter');
+    const slideCount = slider.querySelectorAll('.img-slide').length;
+    if (!track || slideCount === 0) return;
+
+    let ticking = false;
+    const updateActive = () => {
+      const slideWidth = track.clientWidth || 1;
+      const idx = Math.round(track.scrollLeft / slideWidth);
+      const clamped = Math.max(0, Math.min(idx, slideCount - 1));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === clamped));
+      if (counter) counter.textContent = (clamped + 1) + '/' + slideCount;
+      ticking = false;
+    };
+
+    track.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateActive);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Tapping a dot jumps to that slide
+    dots.forEach((dot, i) => {
+      dot.style.pointerEvents = 'auto';
+      dot.style.cursor = 'pointer';
+      dot.addEventListener('click', () => {
+        track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+      });
+    });
+
+    // Keep the correct slide in view on resize/orientation change
+    window.addEventListener('resize', () => {
+      const idx = Math.round(track.scrollLeft / (track.clientWidth || 1));
+      track.scrollTo({ left: idx * track.clientWidth, behavior: 'auto' });
+    });
+
+    updateActive();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => initImgSliders(document));
 
 const defaultConfig = {
   main_title: 'SPAIN EXPLORER',
