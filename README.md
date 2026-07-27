@@ -681,7 +681,7 @@ body { font-family: 'Prompt', sans-serif; }
 ด้วยทัศนียภาพอันทันสมัยและเงียบสงบ โดยมีสะพานเท็มมง (Tenmon Bridge) เป็นแลนด์มาร์คสำคัญที่เชื่อมต่อพื้นที่สองฝั่งน้ำเข้าด้วยกัน ภายในสวนเป็นที่ตั้งของร้านสตาร์บัคส์ ดีไซน์สวยระดับโลก จิบกาแฟพร้อมดื่มด่ำกับวิวสวน และสายน้ำได้อย่างผ่อนคลาย</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://scontent.fbkk12-4.fna.fbcdn.net/v/t39.30808-6/490980334_2582682042063597_7322626551184462155_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx960x720&ctp=s960x720&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YzXpDfhcGP0Q7kNvwGYGpjS&_nc_oc=AdoRqettaJ6PHh4K12RQaJYAUIDUw0eNrI8J6lbB0ZIuYMAFXAqtkgPcQnQPFGZEAeVQ2Yy2AwLw6RSJmmsbYV7n&_nc_zt=23&_nc_ht=scontent.fbkk12-4.fna&_nc_gid=t9CCP2FaZYJ5Gge3Jq-COA&_nc_ss=7b2a8&oh=00_Af9JWxNIhw6ThGjwifjf7-M06zY9UF99wPm2cwYScveT5w&oe=6A42DF95" loading="lazy" alt="Kansui Park 1"></div>
+              <div class="img-slide"><img src="https://www.toyamashi-kankoukyoukai.jp/wp-content/uploads/2026/03/img_69afafe9de1e31.03308975-1024x683.jpg" loading="lazy" alt="Kansui Park 1"></div>
               <div class="img-slide"><img src="https://www.info-toyama.com/storage/tourism_attractions/11009/responsive_images/JE6tmpbNvOBGw4jwFoFpCSHlSfLvuL3Cm3kVSMQe__1673_1115.jpeg" loading="lazy" alt="Kansui Park 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
