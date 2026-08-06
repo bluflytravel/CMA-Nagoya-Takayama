@@ -241,6 +241,14 @@ body { font-family: 'Prompt', sans-serif; }
   border-radius: 0.75rem;
   scrollbar-width: none;
 }
+.img-slider-track2 {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.75rem;
+  scrollbar-width: none;
+}
 .img-slider-track::-webkit-scrollbar { display: none; }
 .img-slide {
   flex: 0 0 100%;
@@ -473,11 +481,17 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Hida Takayama</p>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.hidatakayama.or.jp/lsc/upfile/spot/0000/3020/3020_1_l.jpg" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://favy-tokyo.s3.ap-northeast-1.amazonaws.com/uploads/topic_item/image/704796/retina_402047961_835814101674777_4268915490597133159_n.jpeg" loading="lazy" alt="Hida Takayama 2"></div>              
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+            </div>
          </div>
+        </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -511,9 +525,15 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Ajino Yohei</p>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://kosherjapan.co.jp/wp-content/uploads/2018/06/co_photo1.jpg" loading="lazy" alt="Ajino Yohei 1"></div>
+              <div class="img-slide"><img src="https://rimage.savorjapan.com/svj/image/0031128572/photo/0031128572PKruCYUpbYEbjdtIH_1024x576d80.jpg?t=1748988360" loading="lazy" alt="Ajino Yohei 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+          </div>
           </div>
          </div>
 
@@ -556,9 +576,18 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Okuhida Garden Hotel Yakedake</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Hida Pork Shokado Bento</p>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.okuhida-gh.com/facilities/images/img_banquet_sl01.jpg" loading="lazy" alt="Ajino Yohei 1"></div>
+              <div class="img-slide"><img src="https://www.okuhida-gh.com/gallery/images/img_roby_l_03.jpg" loading="lazy" alt="Ajino Yohei 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+          </div>
           </div>
          </div>
 
@@ -578,8 +607,9 @@ body { font-family: 'Prompt', sans-serif; }
           </div>
         </div>
       </div>
+      </div>
 
-        <div class="relative">
+<div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🚌 นำคณะเดินทางกลับสู่ เมืองทาคายาม่า (Takayama)</p>
@@ -588,23 +618,24 @@ body { font-family: 'Prompt', sans-serif; }
          </div>
         </div>
 
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
-         </div>
-
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
         <span>🏨♨️</span> <strong>นำคณะเข้าสู่ที่พัก TOKYU STAY Hida-Takayama Musubi no Yu หรือเทียบเท่า ★★★★</strong>
        </div>
+
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6 mt-4">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำในโรงแรม </p>
+           <div class="mt-3 flex gap-3">
+           </div>
+          </div>
+         </div>
+       </div>
       </div>
-
+      
      </div><!-- /day-3 -->
-
 <!-- ===== DAY 4 ===== -->
 <div id="day-4" class="day-content" style="display:none;">
       <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
@@ -648,11 +679,22 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Kittokito-tei (Seafood)</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Kaio-don (Seafood Rice Bowl) A premium seafood bowl topped with approximately 12
+varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanese pickles.</p>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.andtrip.jp/images/DSC00482.JPG" loading="lazy" alt="Kittokito-tei 1"></div>
+              <div class="img-slide"><img src="https://svcstrg.cld.navitime.jp/travelguide/p16040005/p16040005_02.jpg" loading="lazy" alt="Kittokito-tei 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+          </div>
+          </div>
+          </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -698,11 +740,28 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Kajinicho Toyama (Private Dining) - Luxury Course</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>5-Kind Sashimi, Blackthroat Seaperch & Wagyu Beef Grilled on Magnolia Leaf 11 Dishes </p>
+           <p>Varieties of Local Sake + 2.5-Hour All-You-Can-Drink</p>
+           <p>[1st Dish] Moroq: Chilled Cucumber with Kinzanji Miso</p>
+           <p>[2nd Dish] Homemade Miso-Marinated Cream Cheese</p>
+           <p>[3rd Dish] 5-Kind Sashimi Platter featuring Toyama's Famous Yellowtail</p>
+           <p>[4th Dish] Japanese-Style Salad with Whitebait and Tofu in Saikyo Miso Dressing</p>
+           <p>[5th Dish] Stewed Beef Sinew: Homemade Wagyu Stewed in Miso</p>
+           <p>[6th Dish] Deep-Fried Sweet Corn in Dashi Broth</p>
+           <p>[7th Dish] Toyama Specialty! Salt-Grilled Blackthroat Seaperch</p>
+           <p>[8th Dish] Wagyu Rump Steak Grilled on a Magnolia Leaf with Dengaku Miso</p>
+           <p>[9th Dish] Deep-Fried Oden Daikon Radish with Yuzu Miso</p>
+           <p>[10th Dish] Iron Pot Rice with Clams and Whitebait, Topped with Salmon Roe</p>
+           <p>[11th Dish] Frozen Cheesecake</p>
+          <div class="mt-3">
+           <img src="https://restaurant.img-ikyu.com/rsDatas/rsData133500/r133273/orig/133273ga10000004.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
           </div>
-         </div>
+          </div>
+          </div>
+          </div>
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
@@ -740,6 +799,16 @@ body { font-family: 'Prompt', sans-serif; }
           </div>
         </div>
       </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Japanese Restaurant Taian </p>
+          <div class="mt-3">
+           <img src="https://inuyama.gr.jp/upload/site/gourmets/large/5d411c1dccf8c4726b8e152b105c3fa3.jpg" loading="lazy" class="tour-img" alt="Taian">
+          </div>
+         </div>
+        </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -782,11 +851,29 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Neo-Robata Donan Norin Suisanbu (Sakae Branch) </p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Fatty Tuna (Otoro) Shabu-Shabu & Seafood Course (Includes 2-Hour All-You-Can-Drink)</p>
+           <p>・Dynamic! Fatty Tuna (Otoro) Shabu-Shabu</p>
+           <p>・Crispy Seasonal Vegetable Salad with Refreshing Plum-Perilla (Ume-Jiso) Dressing</p>
+           <p>・Straight from the Fishing Port! 5-Piece Assorted Fresh Sashimi Platter</p>
+           <p>・Hokkaido’s Famous Deep-Fried Chicken "Zangi"</p>
+           <p>・Everyone's Favorite French Fries</p>
+           <p>・Rolled Dashi Omelet with Aromatic Thick Broth (Ankake)</p>
+           <p>・Finishing Rice Porridge (Zosui)</p>
+         
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://qatawiydwofbhfjtxvdk.supabase.co/storage/v1/object/public/uploads/donan-sakae/imported/images/store-zashiki.webp" loading="lazy" alt="Neo-Robata Donan Norin Suisanbu 1"></div>
+              <div class="img-slide"><img src="https://media-01.cmosite.com/wp-content/uploads/sites/568/2025/11/20135827/ejfs_25-4-27_%E6%96%B0%E6%A0%84014-1.jpg" loading="lazy" alt="Neo-Robata Donan Norin Suisanbu 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+          </div>
+          </div>
+          </div>
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -852,8 +939,9 @@ body { font-family: 'Prompt', sans-serif; }
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร</p>
-          <div class="mt-3 flex gap-3">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Korankei Ichinoti</p>
+          <div class="mt-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6EZ3AIluz5XM1wgqvxTy6KCIKJ-vcboq6AxzjekP9fzerKkl8LMi29pWW&s=10" loading="lazy" class="tour-img" alt="Sakae Nagoya">
           </div>
         </div>
       </div>
@@ -872,11 +960,20 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
-           <div class="mt-3 flex gap-3">
-           </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Jojoen yakiniku</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Yuki Kaiseki</p>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://d1grca2t3zpuug.cloudfront.net/2025/06/jojoinnyakiniku25ajss13-870x500-1749514028.webp" loading="lazy" alt="Jojoen 1"></div>
+              <div class="img-slide"><img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000342/img/basic/a0000342_main.jpg" loading="lazy" alt="Jojoen 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
-         </div>
+        </div>
+      </div>
 
     <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
       <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Nagoya Tokyu Hotel หรือเทียบเท่า ★★★★</strong>
@@ -948,6 +1045,40 @@ body { font-family: 'Prompt', sans-serif; }
       </div>
     </div>
   </div>
+
+     <h3 class="font-semibold text-brand-dark text-lg mb-3">💊 ยาห้ามนําเข้าประเทศญี่ปุ่น</h3>
+         <div class="mt-3">
+           <img src="https://ustatic.priceza.com/img/upload/pic-2880.jpg" loading="lazy" class="tour-img3" alt="Garuda Wisnu Kencana">
+          </div>
+     <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">กลุ่มที่ 1 ยาที่มีส่วนผสมซูโดอีเฟดรีน จำพวกยาแก้หวัด แก้แพ้ ลดน้ำมูก</h4>
+       <ul class="text-sm space-y-2">
+        <li class="flex items-start gap-2"><span>❌</span> TYLENOL COLD</li>
+        <li class="flex items-start gap-2"><span>❌</span> SUDAFED</li>
+        <li class="flex items-start gap-2"><span>❌</span> ADVIL COLD & SINUS</li>
+        <li class="flex items-start gap-2"><span>❌</span> ACTIFED</li>
+        <li class="flex items-start gap-2"><span>❌</span> DRISTAN COLD/ “NO DROWSINESS</li>
+        <li class="flex items-start gap-2"><span>❌</span> DRISTAN SINUS</li>
+        <li class="flex items-start gap-2"><span>❌</span> DRIXORAL SINUS</li>
+       </ul>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">กลุ่มที่ 2 ยาแก้หวัดที่ไม่ได้ขึ้นทะเบียนในประเทศไทย</h4>
+       <ul class="text-sm space-y-2">
+        <li class="flex items-start gap-2"><span>❌</span> NYQUIL</li>
+        <li class="flex items-start gap-2"><span>❌</span> NYQUIL LIQUICAPS</li>
+        <li class="flex items-start gap-2"><span>❌</span> VICKS INHALER</li>
+       </ul>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">กลุ่ม 3 ยาแก้ท้องเสีย ที่มีการยกเลิกการขึ้นทะเบียนในประเทศไทยแล้ว</h4>
+       <ul class="text-sm space-y-2">
+        <li class="flex items-start gap-2"><span>❌</span> LOMOTIL</li>
+       </ul>
+      </div>
+      
+     </div>
 
   <div class="mt-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
     <h4 class="font-semibold text-amber-800 mb-3">⚠️ สิ่งที่ควรรู้และมารยาททางวัฒนธรรม</h4>
