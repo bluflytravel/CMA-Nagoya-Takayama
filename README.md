@@ -979,6 +979,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
       <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Nagoya Tokyu Hotel หรือเทียบเท่า ★★★★</strong>
   </div>
   </div>  
+  </div>  
     </div>
 </div><!-- /day-6 -->
 
