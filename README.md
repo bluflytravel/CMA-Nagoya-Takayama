@@ -337,6 +337,17 @@ body { font-family: 'Prompt', sans-serif; }
     <section id="sec-flights" class="tab-section active fade-in">
      <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">✈️ ข้อมูลเที่ยวบิน</h2>
 
+     <div class="bg-brand-50 border border-brand/20 rounded-2xl p-5 mb-6">
+      <h4 class="font-semibold text-brand-dark mb-2">📍 จุดนัดหมาย</h4>
+      <p class="text-sm text-subtle">21.00 น. คณะพบกันที่ สนามบินสุวรรณภูมิ อาคารผู้โดยสารขาออกระหว่างประเทศ ชั้น 4 ประตู 4 เคาน์เตอร์ H สายการบินไทย เจ้าหน้าที่บริษัทบลูฟลาย ทราเวิลคอยให้การต้อนรับและอำนวยความสะดวก</p>
+     </div>
+
+     <div class="bg-brand-50 border border-brand/20 rounded-2xl p-5 mb-6">
+      <h4 class="font-semibold text-brand-dark mb-2">📞 หัวหน้าทัวร์</h4>
+  <p class="text-sm text-subtle">นาย เรืองฤทธิ์ สิงห์สิกุล (แมน) — โทร. 089-356-5366</p>
+ <p class="text-sm text-subtle">บริษัท Bluefly Travel — โทร. 02-164-1888 / 081-815-5599</p>
+</div>
+
      <h3 class="font-semibold text-brand mb-3">🛫 ขาไป — 1 ตุลาคม 2569</h3>
      <div class="space-y-4 mb-8">
       <div class="bg-white border border-brand/20 rounded-2xl p-5 card-hover">
@@ -481,17 +492,21 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Hida Takayama</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Oshokujidokoro Taiju</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Hida Beef Steak Set (Premium A5 Grade)</p>        
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.hidatakayama.or.jp/lsc/upfile/spot/0000/3020/3020_1_l.jpg" loading="lazy" alt="Hida Takayama 1"></div>
-              <div class="img-slide"><img src="https://favy-tokyo.s3.ap-northeast-1.amazonaws.com/uploads/topic_item/image/704796/retina_402047961_835814101674777_4268915490597133159_n.jpeg" loading="lazy" alt="Hida Takayama 2"></div>              
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk6T7_Z9rfp5_HiVNThTXq7xsSN5W0lwXmR8Z6MDRLrwGHikO571IgoIHuIOmBa0WTJBYwkttircOWDlRPRQBgBLKAfj_O6gSytraILy8siBkEihLCoEjxyBODh9xFL_Oe5FKdB=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 1"></div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn2op5iKWOn0oysV6gPPsQ_9jaxhGbQ855hJ65-xYUDmc6KabJoli_iGJj6CkGPexgDBZcQ_hbUzF76jYb5Qzr4GZXbpkdEOH_2Bw9FIAbLamUQwuy1xQQDSakdFjOm5lgjB7bYMFhXchfN=s680-w680-h510-rw" loading="lazy" alt="Hida Takayama 2"></div>              
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
-            </div>
-         </div>
-        </div>
+            </div><!-- /img-slider -->
+           </div><!-- /meal-card -->
+          </div><!-- /text-sm -->
+         </div><!-- /relative -->
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
@@ -500,7 +515,7 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="text-subtle mt-1">นำคณะชม เมืองเก่าฮิดะฟุรุคาวะ (Hida-Furukawa) เป็นเมืองสงบที่มีเสน่ห์ด้วยทางเดินเลียบคลองเซโตะซึ่งเต็มไป
 ด้วยปลาคาร์ปหลากสีและโกดังผนังสีขาวแบบโบราณ โด่งดังจากการเป็นสถานที่ต้นแบบในอนิเมะเรื่อง Your Name และมีงานเทศกาลตีกลองประจำปีที่ได้รับการยกย่องจาก UNESCO เหมาะสำหรับการเดินเที่ยวชมสถาปัตยกรรมไม้พื้นเมืองและสัมผัสวัฒนธรรมช่างไม้ฮิดะอันประณีต 
           <div class="mt-3">
-           <img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2023/10/27212654_m-1024x683.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2023/10/27212654_m-1024x683.jpg" loading="lazy" class="tour-img" alt="Hida-Furukawa">
           </div>
          </div>
         </div>
@@ -526,6 +541,9 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Ajino Yohei</p>
+          <div class="meal-card rounded-lg p-3 mt-2 text-xs">
+           <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
+           <p>Hida Beef Set</p>        
           <div class="img-slider">
             <div class="img-slider-track">
               <div class="img-slide"><img src="https://kosherjapan.co.jp/wp-content/uploads/2018/06/co_photo1.jpg" loading="lazy" alt="Ajino Yohei 1"></div>
@@ -533,13 +551,14 @@ body { font-family: 'Prompt', sans-serif; }
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
-          </div>
-          </div>
-         </div>
+          </div><!-- /img-slider -->
+          </div><!-- /meal-card -->
+         </div><!-- /text-sm -->
+        </div><!-- /relative -->
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨 ♨️ </span> <strong>นำคณะเข้าสู่ที่พัก TOKYU STAY Hida-Takayama Musubi no Yu หรือเทียบเท่า ★★★★</strong>
+        <span>🏨 ♨️ </span> <strong>นำคณะเข้าสู่ที่พัก Takayama Green Hotel ★★★★</strong>
        </div>
       </div>
      </div><!-- /day-2 -->
@@ -576,17 +595,14 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Okuhida Garden Hotel Yakedake</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Alps Kaido Hirayu</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>Hida Pork Shokado Bento</p>
+           <p>Hida Beef Grilled with Hoba Miso</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.okuhida-gh.com/facilities/images/img_banquet_sl01.jpg" loading="lazy" alt="Ajino Yohei 1"></div>
-              <div class="img-slide"><img src="https://www.okuhida-gh.com/gallery/images/img_roby_l_03.jpg" loading="lazy" alt="Ajino Yohei 2"></div>
-            </div>
-            <div class="img-slider-dots"><span class="active"></span><span></span></div>
-            <div class="img-slider-counter">1/2</div>
+              <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnYHolnr10FUR7eyfEada8TWE68G7dzN4sOIFHK4m-JNhEVFdguo6iSPl82oPQpm0uPOILmZxo82EWh0QmfT1dlWVhHELgkl4TBvBxArM0u0uO7d7twVEy2GctblvgDBJkHrwULXzE1Ucmr=s680-w680-h510-rw" loading="lazy" alt="Okuhida Garden Hotel 1"></div>
+          </div>
           </div>
           </div>
          </div>
@@ -599,8 +615,8 @@ body { font-family: 'Prompt', sans-serif; }
 "สวิตเซอร์แลนด์แห่งญี่ปุ่น" ด้วยทัศนียภาพอันบริสุทธิ์ของเทือกเขาแอลป์ตอนเหนือที่ตั้งตระหง่านเป็นฉากหลังอย่างยิ่งใหญ่ ชม สะพานกัปปะบาชิ สะพานไม้แขวนสัญลักษณ์ของอุทยาน ซึ่งเป็นจุดชมวิวที่สวยงามที่สุดในการมองเห็นยอดเขาโฮทากะ นอกจากนี้จะได้พบกับความสงบนิ่งของ บึงทาชิโระ พื้นที่ชุ่มน ้าอันทรงเสน่ห์ที่สะท้อนภาพธรรมชาติรอบตัวได้อย่างละมุนตา ในบรรยากาศที่อากาศเย็นสบายและสดชื่นตลอดวัน</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2020/06/26612277_m.jpg" loading="lazy" alt="Shinhotaka Ropeway 1"></div>
-              <div class="img-slide"><img src="https://cdn.mushroomtravel.com/destination/Japan/Nagono/Kamikochi/Kamikochi-22.jpg" loading="lazy" alt="Shinhotaka Ropeway 2"></div>
+              <div class="img-slide"><img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2020/06/26612277_m.jpg" loading="lazy" alt="Kamikochi 1"></div>
+              <div class="img-slide"><img src="https://cdn.mushroomtravel.com/destination/Japan/Nagono/Kamikochi/Kamikochi-22.jpg" loading="lazy" alt="Kamikochi 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -620,7 +636,7 @@ body { font-family: 'Prompt', sans-serif; }
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨♨️</span> <strong>นำคณะเข้าสู่ที่พัก TOKYU STAY Hida-Takayama Musubi no Yu หรือเทียบเท่า ★★★★</strong>
+        <span>🏨♨️</span> <strong>นำคณะเข้าสู่ที่พัก Takayama Green Hotel ★★★★</strong>
        </div>
 
        <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6 mt-4">
@@ -628,14 +644,13 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำในโรงแรม </p>
-           <div class="mt-3 flex gap-3">
-           </div>
-          </div>
-         </div>
-       </div>
-      </div>
+          </div><!-- /img-slider -->
+          </div><!-- /meal-card -->
+         </div><!-- /text-sm -->
+        </div><!-- /relative -->
       
      </div><!-- /day-3 -->
+
 <!-- ===== DAY 4 ===== -->
 <div id="day-4" class="day-content" style="display:none;">
       <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
@@ -655,7 +670,7 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🧺 ตลาดเช้ามิยากาวะ (Miyagawa Morning Market)</p>
           <p class="text-subtle mt-1">ตลาดเก่าแก่ที่เต็มไปด้วยเสน่ห์ของชาวเมืองทาคายามะ ผลผลิตสดใหม่จากไร่ ชิมขนมพื้นเมือง และเลือกซื้อสินค้าทำมือที่เป็นเอกลักษณ์ ท่ามกลางบรรยากาศเรียบง่ายและเป็นกันเอง
           <div class="mt-3">
-           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/83/36/01/shops-selling-local-products.jpg?w=900&h=500&s=1" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/83/36/01/shops-selling-local-products.jpg?w=900&h=500&s=1" loading="lazy" class="tour-img" alt="Miyagawa Morning Market">
           </div>
          </div>
         </div>
@@ -679,7 +694,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Kittokito-tei (Seafood)</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Kaio-don (Seafood)</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
            <p>Kaio-don (Seafood Rice Bowl) A premium seafood bowl topped with approximately 12
@@ -704,7 +719,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
 คราฟต์อันประณีต โดดเด่นด้วยการเป็นเมืองแห่งการหล่อโลหะที่สืบทอดมาอย่างยาวนาน จากนั้นเข้าชม วัดซุยริวจิ (Zuiryuji Temple) วัดพุทธนิกายเซนที่ได้รับการยกย่องให้เป็นสมบัติชาติของญี่ปุ่น โดดเด่นด้วยสถาปัตยกรรมแบบดั้งเดิมที่สมบูรณ์แบบและการวางผังอาคารที่สมมาตรอย่างสวยงาม ภายในบริเวณวัดท่านจะได้พบกับความสงบนิ่งของลานหินสีขาวสะอาดตา ตัดกับอาคารไม้เก่าแก่ที่แสดงถึงความรุ่งเรืองของตระกูลมาเอดะในอดีต มอบบรรยากาศ
 ที่เปี่ยมไปด้วยมนต์ขลังและความศรัทธาที่สืบทอดมาอย่างยาวนาน
           <div class="mt-3">
-           <img src="https://cdn.gaijinpot.com/app/uploads/sites/6/2023/01/pixta_48294663_M-copy-800x500.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://cdn.gaijinpot.com/app/uploads/sites/6/2023/01/pixta_48294663_M-copy-800x500.jpg" loading="lazy" class="tour-img" alt="Zuiryuji Temple">
           </div>
          </div>
         </div>
@@ -715,7 +730,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
           <p class="font-semibold">🛕 พระใหญ่ทาคาโอกะ (Takaoka Daibutsu)</p>
           <p class="text-subtle mt-1"> ได้รับการยกย่องให้เป็น 1 ใน 3 พระพุทธรูปองค์ใหญ่ที่สุดในญี่ปุ่น องค์พระหล่อจากทองเหลืองด้วยฝีมืออันประณีตของช่างหล่อโลหะท้องถิ่นที่มีชื่อเสียงระดับโลก เดินชมผลงานจิตรกรรมด้านในฐานองค์พระที่เงียบสงบและเปี่ยมด้วยศรัทธา นับเป็นสัญลักษณ์สำคัญที่แสดงถึงความรุ่งเรืองทางศิลปะและจิตวิญญาณของเมืองทาคาโอกะ
           <div class="mt-3">
-           <img src="https://www.info-toyama.com/storage/tourism_attractions/21108/responsive_images/9LWCkc2twED3VeQrjm65L5JFtYDzFTn5aWXX96h6__1673_1115.jpeg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://www.info-toyama.com/storage/tourism_attractions/21108/responsive_images/9LWCkc2twED3VeQrjm65L5JFtYDzFTn5aWXX96h6__1673_1115.jpeg" loading="lazy" class="tour-img" alt="Takaoka Daibutsu">
           </div>
          </div>
         </div>
@@ -740,24 +755,20 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Kajinicho Toyama (Private Dining) - Luxury Course</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Toyama Station Izakaya Keyaki-tei</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>5-Kind Sashimi, Blackthroat Seaperch & Wagyu Beef Grilled on Magnolia Leaf 11 Dishes </p>
-           <p>Varieties of Local Sake + 2.5-Hour All-You-Can-Drink</p>
-           <p>[1st Dish] Moroq: Chilled Cucumber with Kinzanji Miso</p>
-           <p>[2nd Dish] Homemade Miso-Marinated Cream Cheese</p>
-           <p>[3rd Dish] 5-Kind Sashimi Platter featuring Toyama's Famous Yellowtail</p>
-           <p>[4th Dish] Japanese-Style Salad with Whitebait and Tofu in Saikyo Miso Dressing</p>
-           <p>[5th Dish] Stewed Beef Sinew: Homemade Wagyu Stewed in Miso</p>
-           <p>[6th Dish] Deep-Fried Sweet Corn in Dashi Broth</p>
-           <p>[7th Dish] Toyama Specialty! Salt-Grilled Blackthroat Seaperch</p>
-           <p>[8th Dish] Wagyu Rump Steak Grilled on a Magnolia Leaf with Dengaku Miso</p>
-           <p>[9th Dish] Deep-Fried Oden Daikon Radish with Yuzu Miso</p>
-           <p>[10th Dish] Iron Pot Rice with Clams and Whitebait, Topped with Salmon Roe</p>
-           <p>[11th Dish] Frozen Cheesecake</p>
+           <p>Seasonal Delights Course</p>
+           <p>Two Small Appetizers</p>
+           <p>Savory Egg Custard (Chawanmushi)</p>
+           <p>Sashimi </p>
+           <p>Grilled Seasonal Fish</p>
+           <p>Seasonal Salad</p>
+           <p>Seasonal Tempura & Fried Dishes</p>
+           <p>Choice of Soba or Udon Noodles</p>
+           <p>Dessert</p>
           <div class="mt-3">
-           <img src="https://restaurant.img-ikyu.com/rsDatas/rsData133500/r133273/orig/133273ga10000004.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmKcQcEZFbIgkesD97pEnsIc9ZVYxlPsmubaMZou_1EsiYJcqWxW8TCNiLGyTY-TDqe1LQfAKeLq46ROwOYod4lPW2XPQrRicdR28T5JerQXh1sCnhjrp3FOEdJisAZSz2hw5A=s680-w680-h510-rw" loading="lazy" class="tour-img" alt="Kajinicho Toyama">
           </div>
           </div>
           </div>
@@ -765,7 +776,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
 
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
-        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก ANA Crowne Plaza Toyama หรือเทียบเท่า ★★★★</strong>
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก ANA Crowne Plaza Toyama ★★★★</strong>
        </div>
       </div>
      </div><!-- /day-4 -->
@@ -803,7 +814,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Japanese Restaurant Taian </p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Daian </p>
           <div class="mt-3">
            <img src="https://inuyama.gr.jp/upload/site/gourmets/large/5d411c1dccf8c4726b8e152b105c3fa3.jpg" loading="lazy" class="tour-img" alt="Taian">
           </div>
@@ -816,7 +827,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
           <p class="font-semibold">🏰 ปราสาทอินุยามา (Inuyama Castle)  </p>
           <p class="text-subtle mt-1">เดินทางสู่ ปราสาทอินุยามา (Inuyama Castle) (ใช้เวลาเดินทางประมาณ 2 ชั่วโมง) เป็นหนึ่งในห้าปราสาทของญี่ปุ่นที่ได้รับการขึ้นทะเบียนเป็นสมบัติชาติ โดยมีความโดดเด่นที่ตัวหอคอยหลัก (Tenshu) จังหวัดไอจิ สามารถเดินขึ้นไปยังชั้นบนสุดเพื่อชมวิวทิวทัศน์แบบพาโนรามาที่สวยงาม รวมถึงสัมผัสกลิ่นอายประวัติศาสตร์อันทรงพลังผ่านสถาปัตยกรรมยุคเซ็นโกคุที่ยังคงความสมบูรณ์มาจนถึงปัจจุบัน</p>
           <div class="mt-3">
-           <img src="https://centrip-japan.com/sites/default/files/inuyama-castle-ogp.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://centrip-japan.com/sites/default/files/inuyama-castle-ogp.jpg" loading="lazy" class="tour-img" alt="Inuyama Castle">
           </div>
          </div>
         </div>
@@ -827,7 +838,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
           <p class="font-semibold">🏚️ ย่านเมืองเก่าอินุยามา (Inuyama Castle Town)</p>
           <p class="text-subtle mt-1">ย่านเมืองเก่าอินุยามา (Inuyama Castle Town) ในจังหวัดไอจิ เป็นถนนสายประวัติศาสตร์ที่เต็มไปด้วยบรรยากาศย้อนยุคสมัยเอโดะ เรียงรายด้วยอาคารไม้โบราณที่ดัดแปลงเป็นร้านขนมและคาเฟ่ ไฮไลต์ที่ห้ามพลาดคือการชิมสตรีทฟู้ดหน้าตาสวยงามและการเดินชมวิวทอดยาวไปจนถึงปราสาทอินุยามา
           <div class="mt-3">
-           <img src="https://muza-chan.net/aj/poze-weblog6/traditional-street-inuyama-castle-big.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+           <img src="https://muza-chan.net/aj/poze-weblog6/traditional-street-inuyama-castle-big.jpg" loading="lazy" class="tour-img" alt="Inuyama Castle Town">
           </div>
          </div>
         </div>
@@ -851,15 +862,15 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Neo-Robata Donan Norin Suisanbu (Sakae Branch) </p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Neo-Robata Donan Norin Suisanbu</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>Fatty Tuna (Otoro) Shabu-Shabu & Seafood Course (Includes 2-Hour All-You-Can-Drink)</p>
+           <p>Fatty Tuna (Otoro) Shabu-Shabu & Seafood Course (Includes 2-Hour All-You-Can-Drink) </p>
            <p>・Dynamic! Fatty Tuna (Otoro) Shabu-Shabu</p>
            <p>・Crispy Seasonal Vegetable Salad with Refreshing Plum-Perilla (Ume-Jiso) Dressing</p>
            <p>・Straight from the Fishing Port! 5-Piece Assorted Fresh Sashimi Platter</p>
            <p>・Hokkaido’s Famous Deep-Fried Chicken "Zangi"</p>
-           <p>・Everyone's Favorite French Fries</p>
+           <p>・French Fries</p>
            <p>・Rolled Dashi Omelet with Aromatic Thick Broth (Ankake)</p>
            <p>・Finishing Rice Porridge (Zosui)</p>
          
@@ -939,10 +950,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
       <div class="relative">
         <div class="timeline-dot absolute -left-[31px] top-1"></div>
         <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Korankei Ichinoti</p>
-          <div class="mt-3">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6EZ3AIluz5XM1wgqvxTy6KCIKJ-vcboq6AxzjekP9fzerKkl8LMi29pWW&s=10" loading="lazy" class="tour-img" alt="Sakae Nagoya">
-          </div>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
         </div>
       </div>
 
@@ -960,7 +968,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Jojoen yakiniku</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Jojoen Yakiniku</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
            <p>Yuki Kaiseki</p>
@@ -1037,11 +1045,11 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
     <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
       <h3 class="font-semibold text-brand-dark mb-3 text-lg">💴 สกุลเงินและค่าใช้จ่าย</h3>
       <div class="space-y-2 text-sm">
-        <div class="flex justify-between items-start"><span class="text-subtle">อัตราแลกเปลี่ยน (โดยประมาณ)</span><span class="font-medium text-right">1 THB ≈ 4.84 JPY<br></span></div>
-        <div class="flex justify-between"><span class="text-subtle">100 JPY ≈</span><span class="font-medium">~20.7 บาท</span></div>
-        <div class="flex justify-between"><span class="text-subtle">1,000 JPY ≈</span><span class="font-medium">~207 บาท</span></div>
-        <div class="flex justify-between"><span class="text-subtle">5,000 JPY ≈</span><span class="font-medium">~1,035 บาท</span></div>
-        <div class="flex justify-between"><span class="text-subtle">10,000 JPY ≈</span><span class="font-medium">~2,070 บาท</span></div>
+        <div class="flex justify-between items-start"><span class="text-subtle">อัตราแลกเปลี่ยน (โดยประมาณ)</span><span class="font-medium text-right">1 JPY ≈ 0.215 THB<br><span class="text-xs text-subtle">(ข้อมูล ณ 17 ก.ย. 2569)</span></span></div>
+        <div class="flex justify-between"><span class="text-subtle">100 JPY ≈</span><span class="font-medium">~21.5 THB</span></div>
+        <div class="flex justify-between"><span class="text-subtle">1,000 JPY ≈</span><span class="font-medium">~215 THB</span></div>
+        <div class="flex justify-between"><span class="text-subtle">5,000 JPY ≈</span><span class="font-medium">~1,075 THB</span></div>
+        <div class="flex justify-between"><span class="text-subtle">10,000 JPY ≈</span><span class="font-medium">~2,150 THB</span></div>
         <div class="mt-2 bg-white/60 rounded-lg p-2 text-xs text-subtle">💡 แนะนำแลกเงินเยนจากไทยก่อนเดินทาง หรือกดจากตู้ ATM Japan Post / 7-Eleven ในญี่ปุ่น เนื่องจากหลายร้านยังรับเฉพาะเงินสด</div>
       </div>
     </div>
@@ -1049,7 +1057,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
 
      <h3 class="font-semibold text-brand-dark text-lg mb-3">💊 ยาห้ามนําเข้าประเทศญี่ปุ่น</h3>
          <div class="mt-3">
-           <img src="https://ustatic.priceza.com/img/upload/pic-2880.jpg" loading="lazy" class="tour-img3" alt="Garuda Wisnu Kencana">
+           <img src="https://ustatic.priceza.com/img/upload/pic-2880.jpg" loading="lazy" class="tour-img3" alt="ยาห้ามนำเข้าญี่ปุ่น">
           </div>
      <div class="grid md:grid-cols-2 gap-4 mb-6">
       <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
@@ -1123,61 +1131,65 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
 <!-- ========== WEATHER ========== -->
 <section id="sec-weather" class="tab-section fade-in">
   <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-2">🌤️ สภาพอากาศ</h2>
-  <p class="text-sm text-subtle mb-6">คาดการณ์สภาพอากาศช่วง 30 ก.ย. – 6 ต.ค. 2569 • อ้างอิง: <a href="https://www.accuweather.com" target="_blank" rel="noopener noreferrer" class="text-brand underline">accuweather.com</a></p>
+  <p class="text-sm text-subtle mb-6">คาดการณ์สภาพอากาศช่วง 30 ก.ย. – 6 ต.ค. 2569 • อัปเดต 17 ก.ย. 2569 • อ้างอิง: <a href="https://www.accuweather.com" target="_blank" rel="noopener noreferrer" class="text-brand underline">accuweather.com</a> และพยากรณ์ระยะ 1 เดือนของกรมอุตุนิยมวิทยาญี่ปุ่น (JMA)</p>
 
-  <h3 class="font-semibold text-brand-dark mb-3">🏔️ ทาคายาม่า / คามิโกจิ (วันที่ 2–4)</h3>
+  <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-6 text-sm text-amber-800">
+    <strong>🔥 ปีนี้อากาศอุ่นกว่าค่าเฉลี่ย</strong> — พยากรณ์ระยะ 1 เดือนของ JMA ระบุว่าภาคโทไก (นาโกย่า/ไอจิ) และภาคโฮคุริคุ (โทยาม่า) มีแนวโน้มอุณหภูมิ <strong>สูงกว่าปกติ</strong> ต่อเนื่องถึงต้นเดือนตุลาคม (ร้อนทิ้งท้ายฤดู) กลางวันในเมืองยังอยู่ระดับ 23–27°C ไม่หนาวอย่างที่หลายท่านเข้าใจ แต่ <strong>บนภูเขาและช่วงกลางคืนยังเย็น</strong> และมีโอกาสฝนค่อนข้างสูงในช่วง 1–4 ต.ค.
+  </div>
+
+  <h3 class="font-semibold text-brand-dark mb-3">🏔️ ทาคายาม่า / คามิโกจิ / โทยาม่า (วันที่ 2–4)</h3>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">1 ต.ค. (วันที่ 2)</p>
-      <p class="font-semibold text-sm">ทาคายาม่า</p>
-      <div class="weather-icon my-2">⛅</div>
-      <p class="text-2xl font-bold text-brand-dark">18°<span class="text-base font-normal text-subtle">/8°C</span></p>
-      <p class="text-xs text-subtle mt-1">มีเมฆบางส่วน เย็นในตอนเย็น</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 70%</span><span>🌧️ 30%</span></div>
+      <p class="font-semibold text-sm">ทาคายาม่า / ฮิดะฟุรุคาวะ</p>
+      <div class="weather-icon my-2">🌧️</div>
+      <p class="text-2xl font-bold text-brand-dark">23°<span class="text-base font-normal text-subtle">/14°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีฝนเป็นช่วงๆ อากาศชื้น กลางคืนเย็น</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 80%</span><span>🌧️ 70%</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">2 ต.ค. (วันที่ 3)</p>
       <p class="font-semibold text-sm">ชินโฮทากะ / คามิโกจิ</p>
-      <div class="weather-icon my-2">🌤️</div>
-      <p class="text-2xl font-bold text-brand-dark">16°<span class="text-base font-normal text-subtle">/6°C</span></p>
-      <p class="text-xs text-subtle mt-1">แดดบางส่วน เย็นบนยอดเขา</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 65%</span><span>🌧️ 25%</span></div>
+      <div class="weather-icon my-2">⛅</div>
+      <p class="text-2xl font-bold text-brand-dark">17°<span class="text-base font-normal text-subtle">/8°C</span></p>
+      <p class="text-xs text-subtle mt-1">เมฆเป็นส่วนมาก มีฝนเล็กน้อย<br><strong>ยอดกระเช้า 2,156 ม. ≈ 8–10°C</strong></p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 75%</span><span>🌧️ 45%</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">3 ต.ค. (วันที่ 4)</p>
       <p class="font-semibold text-sm">โทยาม่า / ทาคาโอกะ</p>
-      <div class="weather-icon my-2">🌥️</div>
-      <p class="text-2xl font-bold text-brand-dark">19°<span class="text-base font-normal text-subtle">/10°C</span></p>
-      <p class="text-xs text-subtle mt-1">มีเมฆมาก อาจมีฝนสั้นๆ</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 72%</span><span>🌧️ 35%</span></div>
+      <div class="weather-icon my-2">🌧️</div>
+      <p class="text-2xl font-bold text-brand-dark">22°<span class="text-base font-normal text-subtle">/17°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆมากและมีฝน อากาศชื้น</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 82%</span><span>🌧️ 65%</span></div>
     </div>
   </div>
 
-  <h3 class="font-semibold text-brand-dark mb-3">🏙️ นาโกย่า / ไอจิ (วันที่ 5–7)</h3>
+  <h3 class="font-semibold text-brand-dark mb-3">🏙️ ชิราคาวาโกะ / นาโกย่า / ไอจิ (วันที่ 5–7)</h3>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">4 ต.ค. (วันที่ 5)</p>
-      <p class="font-semibold text-sm">นาโกย่า / อินุยามา</p>
-      <div class="weather-icon my-2">☀️</div>
-      <p class="text-2xl font-bold text-brand-dark">22°<span class="text-base font-normal text-subtle">/14°C</span></p>
-      <p class="text-xs text-subtle mt-1">แดดออก อากาศดี</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 60%</span><span>🌧️ 10%</span></div>
+      <p class="font-semibold text-sm">ชิราคาวาโกะ / อินุยามา / นาโกย่า</p>
+      <div class="weather-icon my-2">🌥️</div>
+      <p class="text-2xl font-bold text-brand-dark">24°<span class="text-base font-normal text-subtle">/19°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆมาก อาจมีฝนเป็นช่วง<br><strong>ชิราคาวาโกะ ≈ 21°/14°C</strong></p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 75%</span><span>🌧️ 40%</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">5 ต.ค. (วันที่ 6)</p>
       <p class="font-semibold text-sm">โครังเค / นาโกย่า</p>
       <div class="weather-icon my-2">☀️</div>
-      <p class="text-2xl font-bold text-brand-dark">21°<span class="text-base font-normal text-subtle">/13°C</span></p>
-      <p class="text-xs text-subtle mt-1">มีแดดออก</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 55%</span><span>🌧️ 10%</span></div>
+      <p class="text-2xl font-bold text-brand-dark">26°<span class="text-base font-normal text-subtle">/16°C</span></p>
+      <p class="text-xs text-subtle mt-1">แดดออก อากาศดี กลางวันค่อนข้างอุ่น</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 62%</span><span>🌧️ 20%</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">6 ต.ค. (วันที่ 7)</p>
       <p class="font-semibold text-sm">นาโกย่า → กรุงเทพฯ</p>
       <div class="weather-icon my-2">🌤️</div>
-      <p class="text-2xl font-bold text-brand-dark">21°<span class="text-base font-normal text-subtle">/14°C</span></p>
-      <p class="text-xs text-subtle mt-1">มีเมฆบางส่วน อากาศดี</p>
-      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 58%</span><span>🌧️ 15%</span></div>
+      <p class="text-2xl font-bold text-brand-dark">23°<span class="text-base font-normal text-subtle">/14°C</span></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆบางส่วน อากาศเย็นสบาย</p>
+      <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 60%</span><span>🌧️ 20%</span></div>
     </div>
   </div>
 
@@ -1185,20 +1197,20 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
     <h4 class="font-semibold text-brand-dark mb-3">📊 สรุปอากาศช่วง 30 ก.ย. – 6 ต.ค. 2569</h4>
     <div class="grid md:grid-cols-2 gap-4 text-sm">
       <div>
-        <p class="font-medium">🏔️ ทาคายาม่า / คามิโกจิ / ชินโฮทากะ</p>
-        <p class="text-subtle mt-1">อุณหภูมิกลางวันประมาณ 14–18°C กลางคืนเย็นจัดประมาณ 6–10°C โดยเฉพาะบนเขาและในหุบเขาจะเย็นกว่า อาจมีฝนระหว่างวัน</p>
+        <p class="font-medium">🏔️ ทาคายาม่า / คามิโกจิ / ชินโฮทากะ / โทยาม่า</p>
+        <p class="text-subtle mt-1">ในตัวเมืองทาคายาม่าและโทยาม่ากลางวันประมาณ 22–23°C กลางคืนลงมาที่ 13–17°C ส่วนคามิโกจิ (สูง ~1,500 ม.) กลางวันราว 17°C เช้า-เย็นเหลือ 7–8°C และยอดกระเช้าชินโฮทากะราว 8–10°C (ลมแรงจะรู้สึกเย็นกว่านั้นมาก) ช่วง 1–4 ต.ค. มีโอกาสฝนค่อนข้างสูง ควรพกร่ม/เสื้อกันฝนติดตัวทุกวัน</p>
       </div>
       <div>
-        <p class="font-medium">🏙️ โทยาม่า / นาโกย่า / ไอจิ</p>
-        <p class="text-subtle mt-1">อุณหภูมิกลางวันสบายประมาณ 19–22°C กลางคืนเย็นลงประมาณ 13–14°C เดือนตุลาคมถือเป็นช่วงที่อากาศดีที่สุด ฝนน้อย ท้องฟ้าโปร่ง เหมาะแก่การท่องเที่ยว</p>
+        <p class="font-medium">🏙️ นาโกย่า / ไอจิ / อินุยามา / โครังเค</p>
+        <p class="text-subtle mt-1">อุ่นกว่าค่าเฉลี่ยปกติของเดือนตุลาคม กลางวัน 23–27°C กลางคืน 14–19°C เดินเที่ยวทั้งวันได้สบายแต่กลางวันอาจร้อนเล็กน้อย ฝนน้อยลงในช่วงวันที่ 5–6 ต.ค. ท้องฟ้าเปิด ส่วนใบไม้เปลี่ยนสีที่โครังเคยังไม่เริ่ม (พีคปลายพฤศจิกายน)</p>
       </div>
     </div>
     <div class="mt-3 bg-blue-50 border border-blue-100 rounded-xl p-3 text-xs text-blue-700 flex items-start gap-2">
       <span>🌡️</span>
-      <span>ช่วงเวลาเดินทาง (1–6 ต.ค.) ความแตกต่างของอุณหภูมิกลางวัน-กลางคืนค่อนข้างมาก ควรเตรียมเสื้อกันหนาวและเสื้อกันลมสำหรับภาคเช้าและกลางคืน</span>
+      <span>ความต่างของอุณหภูมิระหว่างในเมือง (23–27°C) กับบนภูเขาคามิโกจิ/ชินโฮทากะ (8–17°C) สูงถึงเกือบ 20°C ในวันเดียว จึงควรแต่งตัวแบบ "หลายชั้น" ที่ถอด-ใส่ได้ง่ายระหว่างวัน</span>
     </div>
   </div>
-  <p class="text-xs text-subtle mt-4 italic">* ข้อมูลสภาพอากาศเป็นการคาดการณ์โดยประมาณ กรุณาตรวจสอบอีกครั้งก่อนเดินทางที่ accuweather.com</p>
+  <p class="text-xs text-subtle mt-4 italic">* ข้อมูลสภาพอากาศเป็นการคาดการณ์ล่วงหน้าโดยประมาณ (อัปเดต 17 ก.ย. 2569) กรุณาตรวจสอบอีกครั้งก่อนเดินทาง 3–5 วันที่ accuweather.com</p>
 </section>
 
 <!-- ========== CLOTHING ========== -->
@@ -1206,21 +1218,35 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
   <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">👔 คำแนะนำการแต่งกาย</h2>
   <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
     <h3 class="font-semibold text-brand-dark mb-2">🌡️ สภาพอากาศโดยรวม</h3>
-    <p class="text-sm text-subtle">ช่วงต้นเดือนตุลาคมในญี่ปุ่น (แถบกิฟุ–ไอจิ) กลางวันอากาศสบาย 18–22°C แต่กลางคืนเย็นจัดโดยเฉพาะในเมืองภูเขาอย่างทาคายาม่าและบนกระเช้าชินโฮทากะอาจเย็นถึง 6–8°C ต้องเตรียมเสื้อผ้าแบบ <strong>"Layering"</strong> (แต่งหลายชั้น) และพกร่มเผื่อฝน</p>
+    <p class="text-sm text-subtle">ต้นเดือนตุลาคมปีนี้ (แถบกิฟุ–โทยาม่า–ไอจิ) <strong>อุ่นกว่าค่าเฉลี่ยปกติ</strong> กลางวันในเมืองอยู่ที่ 22–27°C จึงไม่จำเป็นต้องเตรียมเสื้อผ้าหนา แต่กลางคืนลดลงเหลือ 13–19°C และวันขึ้น <strong>คามิโกจิ/กระเช้าชินโฮทากะเย็นถึง 8–10°C</strong> หลักการคือ <strong>"Layering"</strong> (แต่งหลายชั้นที่ถอด-ใส่ง่าย) และเนื่องจากช่วง 1–4 ต.ค. มีโอกาสฝนสูง <strong>ร่มพับและเสื้อกันฝนคือของที่ต้องพก</strong></p>
   </div>
 
   <div class="grid md:grid-cols-2 gap-4 mb-6">
     <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
       <h4 class="font-semibold text-brand-dark mb-3">🧥 เสื้อผ้าหลักที่ต้องเตรียม</h4>
       <ul class="text-sm space-y-2">
-        <li class="flex items-start gap-2"><span>👕</span> เสื้อแขนยาวหรือเสื้อเชิ้ต เนื้อผ้าระบายอากาศ (ชั้นใน)</li>
-        <li class="flex items-start gap-2"><span>🧥</span> เสื้อกันหนาวหรือแจ็คเก็ตบาง-กลาง ใส่ทับได้</li>
-        <li class="flex items-start gap-2"><span>🧣</span> ผ้าพันคอหรือผ้าโพก สำหรับตอนเช้าและกลางคืน</li>
-        <li class="flex items-start gap-2"><span>👖</span> กางเกงขายาวหรือจีนส์ ไม่แนะนำกางเกงขาสั้น</li>
-        <li class="flex items-start gap-2"><span>👟</span> รองเท้าผ้าใบหรือรองเท้าเดินป่าที่สวมสบาย กันลื่น</li>
-        <li class="flex items-start gap-2"><span>🧤</span> ถุงมือบาง (เผื่อขึ้นกระเช้าชินโฮทากะ)</li>
+        <li class="flex items-start gap-2"><span>👕</span> เสื้อแขนสั้น/แขนยาวเนื้อผ้าระบายอากาศ (กลางวันในเมืองค่อนข้างอุ่น)</li>
+        <li class="flex items-start gap-2"><span>🧥</span> แจ็คเก็ตบาง หรือเสื้อคลุมพับเก็บง่าย สำหรับเช้า-เย็นและห้องแอร์</li>
+        <li class="flex items-start gap-2"><span>🧶</span> เสื้อกันหนาว/ฟลีซ 1 ตัว เฉพาะวันขึ้นกระเช้าชินโฮทากะ–คามิโกจิ</li>
+        <li class="flex items-start gap-2"><span>🌧️</span> เสื้อกันฝนแบบมีฮู้ด หรือเสื้อกันลมกันน้ำ (ฝนมีโอกาสสูงหลายวัน)</li>
+        <li class="flex items-start gap-2"><span>🧣</span> ผ้าพันคอบาง สำหรับกลางคืนและบนเขา</li>
+        <li class="flex items-start gap-2"><span>👖</span> กางเกงขายาว ผ้าแห้งเร็ว ไม่แนะนำยีนส์หนาเพราะเปียกแล้วแห้งช้า</li>
+        <li class="flex items-start gap-2"><span>👟</span> รองเท้าผ้าใบกันลื่น พื้นยึดเกาะดี (ทางเดินคามิโกจิอาจเปียกลื่น)</li>
       </ul>
     </div>
+
+    <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+      <h4 class="font-semibold text-brand-dark mb-3">💡 เคล็ดลับการแต่งตัวทริปนี้</h4>
+      <ul class="text-sm space-y-2">
+        <li class="flex items-start gap-2"><span>1️⃣</span> <span><strong>ชั้นใน</strong> เสื้อยืด/เสื้อเชิ้ตบาง — ใส่ได้ทั้งวันในเมือง</span></li>
+        <li class="flex items-start gap-2"><span>2️⃣</span> <span><strong>ชั้นกลาง</strong> เสื้อกันหนาวบางหรือฟลีซ — ใส่เพิ่มบนภูเขาและกลางคืน</span></li>
+        <li class="flex items-start gap-2"><span>3️⃣</span> <span><strong>ชั้นนอก</strong> แจ็คเก็ตกันลม-กันฝน — ใส่เมื่อฝนตกหรือลมแรงบนยอดเขา</span></li>
+        <li class="flex items-start gap-2"><span>🎒</span> พกกระเป๋าเป้ใบเล็กไว้เก็บเสื้อคลุมที่ถอดออกระหว่างวัน</li>
+        <li class="flex items-start gap-2"><span>🚫</span> ไม่จำเป็นต้องพกเสื้อโค้ทขนเป็ดหรือเสื้อกันหนาวหนา ปีนี้ยังไม่หนาวขนาดนั้น</li>
+        <li class="flex items-start gap-2"><span>♨️</span> ที่พักทาคายาม่ามีออนเซ็น เตรียมชุดใส่สบาย/ชุดชั้นในสำรองไว้ด้วย</li>
+      </ul>
+    </div>
+  </div>
 
   <h3 class="font-semibold text-brand-dark text-lg mb-3">📅 แนะนำการแต่งกายตามรายวัน</h3>
   <div class="space-y-3">
@@ -1229,44 +1255,46 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
       <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับเดินทางกลางคืน / 🧥 พกเสื้อคลุมบางขึ้นเครื่อง อากาศเย็นในเครื่องบิน</p>
     </div>
     <div class="bg-white border-l-4 border-brand rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 2 | นาโกย่า → ฮิดะฟุรุคาวะ → ทาคายาม่า (1 ต.ค. | 8–18°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 เสื้อแขนยาว + แจ็คเก็ต / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบสวมสบาย / ☂️ พกร่มเผื่อฝน</p>
+      <p class="font-semibold text-sm">วันที่ 2 | นาโกย่า → ฮิดะฟุรุคาวะ → ทาคายาม่า (1 ต.ค. | 14–23°C · มีฝน)</p>
+      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนสั้นหรือแขนยาวบาง + 🧥 แจ็คเก็ตบางพับพก (กลางวัน 23°C สบายๆ) / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบกันลื่น / ☂️ <strong>ร่มหรือเสื้อกันฝนต้องพก — วันนี้ฝนมีโอกาสสูง</strong> กลางคืนที่ทาคายาม่าเหลือ 14°C ควรมีเสื้อคลุม</p>
     </div>
     <div class="bg-white border-l-4 border-blue-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 3 | ชินโฮทากะโรปเวย์ → คามิโกจิ (2 ต.ค. | 6–16°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 แต่งหนาเป็นพิเศษ! เสื้อแขนยาว + เสื้อกันหนาว + แจ็คเก็ตกันลม / 🧣 ผ้าพันคอ + ถุงมือ / 👟 รองเท้าเดินป่า / ☂️ ร่มหรือเสื้อกันฝน (บนเขาอาจหนาวและมีหมอก)</p>
+      <p class="font-semibold text-sm">วันที่ 3 | ชินโฮทากะโรปเวย์ → คามิโกจิ (2 ต.ค. | บนเขา 8–17°C)</p>
+      <p class="text-xs text-subtle mt-1">🧥 <strong>วันที่ต้องแต่งหนาที่สุดของทริป</strong> — เสื้อแขนยาว + เสื้อกันหนาว/ฟลีซ + แจ็คเก็ตกันลมกันฝน / 🧣 ผ้าพันคอ + หมวกหรือถุงมือบาง (ยอดกระเช้า 2,156 ม. ประมาณ 8–10°C ลมแรง) / 👟 รองเท้าเดินสบาย พื้นกันลื่น / ☂️ เสื้อกันฝนดีกว่าร่มเพราะลมแรงบนเขา</p>
     </div>
     <div class="bg-white border-l-4 border-teal-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 4 | โทยาม่า → ทาคาโอกะ (3 ต.ค. | 10–19°C)</p>
-      <p class="text-xs text-subtle mt-1">🧥 เสื้อแขนยาว + แจ็คเก็ตบาง / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบ / ☂️ พกร่มเผื่อฝนสั้นๆ</p>
+      <p class="font-semibold text-sm">วันที่ 4 | โทยาม่า → ทาคาโอกะ (3 ต.ค. | 17–22°C · มีฝน)</p>
+      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนยาวบาง + 🧥 แจ็คเก็ตบางกันน้ำ (อากาศชื้น) / 👖 กางเกงขายาว / 👟 รองเท้าที่เปียกแล้วไม่ลื่น / ☂️ <strong>ร่มติดตัวทั้งวัน</strong> เดินตลาดปลาและสวนคันซุยเป็นพื้นที่กลางแจ้ง</p>
     </div>
     <div class="bg-white border-l-4 border-orange-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 5 | ชิราคาวาโกะ → อินุยามา → นาโกย่า (4 ต.ค. | 14–22°C)</p>
-      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนยาวหรือสั้น + แจ็คเก็ตบางพับพก / 👖 กางเกงขายาว / 👟 รองเท้าผ้าใบ / 💡 กลางคืนชม Nabana no Sato ต้องใส่เสื้อกันหนาว อาจหนาว</p>
+      <p class="font-semibold text-sm">วันที่ 5 | ชิราคาวาโกะ → อินุยามา → นาโกย่า (4 ต.ค. | 14–24°C)</p>
+      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนสั้น/แขนยาวบาง (นาโกย่ากลางวัน 24°C) / 🧥 แจ็คเก็ตบางพับพก — ชิราคาวาโกะช่วงเช้าเย็นกว่าประมาณ 21°/14°C / 👟 รองเท้าเดินสบาย เดินเยอะทั้งหมู่บ้านและปราสาท / 💡 กลางคืนชม Nabana no Sato กลางแจ้ง ควรมีเสื้อคลุมติดตัว / ☂️ พกร่มเผื่อฝนเป็นช่วง</p>
     </div>
     <div class="bg-white border-l-4 border-red-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 6 | โครังเค → ซากาเอะ (5 ต.ค. | 13–21°C)</p>
-      <p class="text-xs text-subtle mt-1">🥼 เสื้อแขนยาว + แจ็คเก็ต / 👖 กางเกงขายาว / 👟 รองเท้าสบายสำหรับเดินช้อปปิ้ง</p>
+      <p class="font-semibold text-sm">วันที่ 6 | โครังเค → ซากาเอะ (5 ต.ค. | 16–26°C · แดดออก)</p>
+      <p class="text-xs text-subtle mt-1">👕 <strong>วันที่อุ่นที่สุด</strong> เสื้อแขนสั้นหรือเชิ้ตบางพอ / 🧥 เสื้อคลุมบางไว้ตอนเย็น / 🧴 ครีมกันแดด + แว่นกันแดด แดดแรงที่หุบเขาโครังเค / 👟 รองเท้าเดินสบายสำหรับทางเดินในหุบเขาและช้อปปิ้งซากาเอะ</p>
     </div>
     <div class="bg-white border-l-4 border-brand-dark rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 7 | นาโกย่า → กรุงเทพฯ (6 ต.ค. | 14–21°C)</p>
-      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับวันเดินทาง / 🧥 เสื้อคลุมบางขึ้นเครื่อง </p>
+      <p class="font-semibold text-sm">วันที่ 7 | นาโกย่า → กรุงเทพฯ (6 ต.ค. | 14–23°C)</p>
+      <p class="text-xs text-subtle mt-1">👕 แต่งกายสบายสำหรับวันเดินทาง เช้าที่นาโกย่าเย็น 14°C / 🧥 เสื้อคลุมบางขึ้นเครื่อง และถอดได้เมื่อถึงกรุงเทพฯ</p>
     </div>
   </div>
 
   <div class="mt-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
     <h4 class="font-semibold text-amber-800 mb-3">🎒 สิ่งที่ควรพกติดตัว</h4>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+      <div class="flex items-center gap-2"><span>☂️</span> ร่มพับขนาดเล็ก (สำคัญมาก)</div>
+      <div class="flex items-center gap-2"><span>🧥</span> เสื้อกันฝน / เสื้อกันลม</div>
       <div class="flex items-center gap-2"><span>🧴</span> ครีมกันแดด SPF 50+</div>
-      <div class="flex items-center gap-2"><span>🧥</span> เสื้อกันลม / กันฝน</div>
-      <div class="flex items-center gap-2"><span>☂️</span> ร่มพับขนาดเล็ก</div>
-      <div class="flex items-center gap-2"><span>🔌</span> Adapter ปลั๊กแบบ A (ขา แบน 2 ขา)</div>
-      <div class="flex items-center gap-2"><span>💊</span> ยาประจำตัว </div>
+      <div class="flex items-center gap-2"><span>🔌</span> Adapter ปลั๊กแบบ A (ขาแบน 2 ขา)</div>
+      <div class="flex items-center gap-2"><span>💊</span> ยาประจำตัว</div>
       <div class="flex items-center gap-2"><span>🎒</span> กระเป๋าเป้เล็กสำหรับเดินทาง</div>
       <div class="flex items-center gap-2"><span>💴</span> เงินสดเยน (หลายร้านไม่รับบัตร)</div>
-      <div class="flex items-center gap-2"><span>🧣</span> ผ้าพันคอ / ถุงมือบาง</div>
+      <div class="flex items-center gap-2"><span>🧣</span> ผ้าพันคอ / ถุงมือบาง (วันขึ้นเขา)</div>
       <div class="flex items-center gap-2"><span>👟</span> รองเท้าที่เดินสบายทั้งวัน</div>
       <div class="flex items-center gap-2"><span>🛍️</span> ถุงผ้าพับได้ (ห้างญี่ปุ่นคิดค่าถุงเพิ่ม)</div>
+      <div class="flex items-center gap-2"><span>🧦</span> ถุงเท้าสำรอง (เผื่อเปียกฝน)</div>
+      <div class="flex items-center gap-2"><span>🔋</span> แบตเตอรี่สำรอง (Power Bank)</div>
     </div>
   </div>
 </section>
@@ -1286,40 +1314,40 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
        <style>
         .room-card { background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 1rem; padding: 1.25rem; }
         .room-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
-        .badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .badge { display: inline-flex; align-items: flex-start; gap: 4px; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
         .dietary-badge { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
         .dietary-badge2 { background: #c0392b; color: #ffffff; border: 1px solid #c0392b; }                
         .room-badge { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
         .room-badge2 { background: #FF99FF; color: #9900FF; border: 1px solid #FF99FF; }        
         .room-badge3 { background: #99FFCC; color: #336600; border: 1px solid #99FFCC; }        
-        .guest-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+        .guest-row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; }
         .guest-row + .guest-row { border-top: 1px dashed #e5e7eb; }
         .avatar { width: 33px; height: 33px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; color: #fff; }
        </style>
        <div class="rooms-grid mb-6">
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 1</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">1</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ไขศรี อุทัยวรรณ์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">1</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นางสาว ไขศรี อุทัยวรรณ์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 2</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">2</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ฐิติมา อุดม</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 แพ้เนื้อวัว</span><span class="badge dietary-badge"></i>🐋 อสุจิปลาวาฬ</span><span class="badge dietary-badge"></i>🐎 ไม่ทานเนื้อม้า</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></p></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">2</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นางสาว ฐิติมา อุดม</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 แพ้เนื้อวัว</span><span class="badge dietary-badge"></i>🐋 อสุจิปลาวาฬ</span><span class="badge dietary-badge"></i>🐎 ไม่ทานเนื้อม้า</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30/9/2026 พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 3</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">3</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ วิเชียร หาญประวีณ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></p></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#be185d);">3</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย วิเชียร หาญประวีณ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30/9/2026 (BKK-KIX) พัก DORMY INN NAGOYA SAKAE HOTEL กลับพร้อมคณะ</span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 4</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">4</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ นภารัตน์ ศรีวรรณวิทย์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🦑 ไม่ทานปลาหมึก</span></p></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">4</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย นภารัตน์ ศรีวรรณวิทย์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🦑 ไม่ทานปลาหมึก</span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 5</span>
         <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#9933FF,#9900CC);">5</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ บุรินทร์ เหมทัต</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🐟 ไม่ทานปลาไหล</span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 6</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCC00, #FF3300);">6</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ จักรชัย บุญยะวัตร</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCC00, #FF3300);">6</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย จักรชัย บุญยะวัตร</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 7</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6, #0d9488);">7</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ กนกนุช จินดาโชตสิริ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🍣 ไม่ทานปลาดิบ</span></p></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#14b8a6, #0d9488);">7</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นางสาว กนกนุช จินดาโชตสิริ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🍣 ไม่ทานปลาดิบ</span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 8</span>
-        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6, #1d4ed8);">8</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สมเกียรติ เมสันธสุวรรณ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนคณะ พัก DORMY INN NAGOYA SAKAE HOTEL และ กลับหลังคณะ</span></p></div></div></div>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6, #1d4ed8);">8</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย สมเกียรติ เมสันธสุวรรณ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30/9/2026 (BKK-KIX) พัก DORMY INN NAGOYA SAKAE HOTEL</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลัง วันที่ 10/10/2026 (KIX-BKK)</span></p></div></div></div>
 
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 9</span>
         <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">9</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นางสาว ปัญชนิติ โตวิวัฒน์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
@@ -1327,28 +1355,33 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 10</span>
         <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCCFF,#FF33FF);">10</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย สัญห์นิติ โตวิวัฒน์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 11</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899, #be185d);">11</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ วรวุฒิ กาญจนกูล</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">12</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ นัยนา กาญจนกูล</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></p></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 11</span>
+        <span class="badge room-badge3"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Single Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">11</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นางสาว นันท์สินี เพชราภิรัชต์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 12</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">13</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สุชาติ มโนยางกูร</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f43f5e, #e11d48);">14</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ จุฑาภรณ์ มโนมยางกูร</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 12</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899, #be185d);">12</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นางสาว สุวรรณา แสงอรุณศิริ</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🐟 ไม่ทานปลาไหล</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">13</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง ดวงกมล ทรงวุฒิวิชัย</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 13</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCC00, #FF3300);">15</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สุมิตร เพชราภิรัชต์</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🐔 ไม่ทานเนื้อไก่</span><span class="badge dietary-badge"></i>🎋 ไม่ทานหน่อไม้</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#33CCFF, #3333FF);">16</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ รุ่งนภา</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 13</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">14</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">พล.อ. หัสพงศ์ ยุวนวรรธนะ</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f43f5e, #e11d48);">15</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง มาริสา ยุวนวรรธนะ</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 14</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFD700, #CD5C5C);">17</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ธิติ โตวิวัฒน์</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#DB7093, #9400D3);">18</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง อัจฉรา โตวิวัฒน์</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 14</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCC00, #FF3300);">16</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง อโณทัย บุญยะลีพรรณ</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#33CCFF, #3333FF);">17</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง พัฒนพร ไตรพิพัฒน์</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 15</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#00FF00, #228B22);">19</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ชัยวัฒน์ โควาวิสารัช</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#DB7093, #9400D3);">20</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ศศินี โควาวิสารัช</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 15</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFD700, #CD5C5C);">18</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย วริน อิทธิโรจนกุล</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 29/9/2026 พัก DORMY INN NAGOYA SAKAE HOTEL</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลัง วันที่ 7/10/2026 </span></div></div></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#DB7093, #9400D3);">19</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง อัจฉรา อิทธิโรจนกุล</p><p class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 29/9/2026 พัก DORMY INN NAGOYA SAKAE HOTEL</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>กลับหลัง วันที่ 7/10/2026 </span></p></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 16</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#C71585,#B03060);">21</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ สุวรรณา แสงอรุณศิริ</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🐟 ไม่ทานปลาไหล</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">22</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ดวงกมล ทรงวุฒิวิชัย</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 17</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">23</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">พล.อ. หัสพงศ์ ยุวนวรรธนะ</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">24</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ มาริสา</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 18</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCCFF,#FF33FF);">25</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ อโณทัย บุญยะลีพรรณ</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);">26</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ พัฒนพร ไตรพิพัฒน์</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 16</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#00FF00, #228B22);">20</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย วรวุฒิ กาญจนกูล</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#DB7093, #9400D3);">21</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง นัยนา กาญจนกูล</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div></div>
 
-        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 19</span><span class="badge room-badge"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Twin Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#ec4899, #be185d);">27</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ วริน อินธิโรจนกุล</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6, #6d28d9);">28</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">คุณ ATCHARA</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge2"><i data-lucide="plane" style="width:12px;height:12px;"></i>ไปก่อนวันที่ 30 กันยายน 2569 พัก DORMY INN NAGOYA SAKAE HOTEL</span></div></div></div></div>
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 17</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#00FF00, #228B22);">22</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย สุชาติ มโนยางกูร</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#DB7093, #9400D3);">23</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง จุฑาภรณ์ มโนมยางกูร</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></p></div></div></div></div>
+
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 18</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#87CEFA,#00CED1);">24</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย สุมิตร เพชราภิรัชต์</p><p class="text-xs text-gray-400">ผู้เดินทาง</span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span><span class="badge dietary-badge"></i>🐔 ไม่ทานเนื้อไก่</span><span class="badge dietary-badge"></i>🎋 ไม่ทานหน่อไม้</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#FFCCFF,#FF33FF);">25</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง รุ่งนภา เพชราภิรัชต์</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span><span class="badge dietary-badge"></i>🥩 ไม่ทานเนื้อวัว</span></div></div></div></div>
+
+        <div class="room-card"><div class="flex flex-wrap items-center gap-2 mb-4"><i data-lucide="bed-double" style="width:20px;height:20px;color:#1e40af;"></i><span class="font-bold text-gray-800 text-lg">ห้องที่ 18</span><span class="badge room-badge2"><i data-lucide="door-open" style="width:12px;height:12px;"></i>Double Room</span></div><div class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">26</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาย  ธิติ โตวิวัฒน์</p><p class="text-xs text-gray-400">ผู้เดินทาง</span></p></div></div><div  class="guest-row"><div class="avatar" style="background:linear-gradient(135deg,#10b981,#047857);">27</div><div class="flex-1 min-w-0"><p class="font-semibold text-gray-800 text-sm md:text-base">นาง อัจฉรา โตวิวัฒน์</p><div class="flex flex-wrap items-center gap-2 mt-1"><span class="text-xs text-gray-400">ผู้เดินทาง  </span></div></div></div></div>
+
 
        </div>
        <div class="rounded-xl p-4 stats-bar text-sm" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
-        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="users" style="width:16px;height:16px;"></i><span>ผู้เดินทางทั้งหมด <strong class="text-white">28</strong> ท่าน</span></div>
-        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="bed-double" style="width:16px;height:16px;"></i><span>ห้องพัก <strong class="text-white">19</strong> ห้อง (10 SGL + 4 TWN + 5 DBL)</span></div>
+        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="users" style="width:16px;height:16px;"></i><span>ผู้เดินทางทั้งหมด <strong class="text-white">27+1 TL</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-blue-300"><i data-lucide="bed-double" style="width:16px;height:16px;"></i><span>ห้องพัก <strong class="text-white">19</strong> ห้อง (11 SGL + 4 TWN + 4 DBL)</span></div>
         <div class="flex items-center gap-2 text-amber-300"><span>🐟 ไม่ทานปลาไหล <strong class="text-white">2</strong> ท่าน</span></div>
         <div class="flex items-center gap-2 text-amber-300"><span>🥩 ไม่ทานเนื้อวัว <strong class="text-white">8</strong> ท่าน</span></div>
         <div class="flex items-center gap-2 text-amber-300"><span>🐎 ไม่ทานเนื้อม้า <strong class="text-white">1</strong> ท่าน</span></div>
@@ -1356,6 +1389,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="flex items-center gap-2 text-amber-300"><span>🍣 ไม่ทานปลาดิบ <strong class="text-white">1</strong> ท่าน</span></div>
         <div class="flex items-center gap-2 text-amber-300"><span>🐔 ไม่ทานไก่ <strong class="text-white">1</strong> ท่าน</span></div>
         <div class="flex items-center gap-2 text-amber-300"><span>🎋 ไม่ทานหน่อไม้ <strong class="text-white">1</strong> ท่าน</span></div>
+        <div class="flex items-center gap-2 text-amber-300"><span>🐋 อสุจิปลาวาฬ <strong class="text-white">1</strong> ท่าน</span></div>        
        </div>
       </div>
      </div>
