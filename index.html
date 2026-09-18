@@ -719,7 +719,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
 คราฟต์อันประณีต โดดเด่นด้วยการเป็นเมืองแห่งการหล่อโลหะที่สืบทอดมาอย่างยาวนาน จากนั้นเข้าชม วัดซุยริวจิ (Zuiryuji Temple) วัดพุทธนิกายเซนที่ได้รับการยกย่องให้เป็นสมบัติชาติของญี่ปุ่น โดดเด่นด้วยสถาปัตยกรรมแบบดั้งเดิมที่สมบูรณ์แบบและการวางผังอาคารที่สมมาตรอย่างสวยงาม ภายในบริเวณวัดท่านจะได้พบกับความสงบนิ่งของลานหินสีขาวสะอาดตา ตัดกับอาคารไม้เก่าแก่ที่แสดงถึงความรุ่งเรืองของตระกูลมาเอดะในอดีต มอบบรรยากาศ
 ที่เปี่ยมไปด้วยมนต์ขลังและความศรัทธาที่สืบทอดมาอย่างยาวนาน
           <div class="mt-3">
-           <img src="https://cdn.gaijinpot.com/app/uploads/sites/6/2023/01/pixta_48294663_M-copy-800x500.jpg" loading="lazy" class="tour-img" alt="Zuiryuji Temple">
+           <img src="https://travel.gaijinpot.com/app/uploads/sites/6/2023/01/pixta_48294663_M-copy.jpg" loading="lazy" class="tour-img" alt="Zuiryuji Temple">
           </div>
          </div>
         </div>
@@ -730,7 +730,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
           <p class="font-semibold">🛕 พระใหญ่ทาคาโอกะ (Takaoka Daibutsu)</p>
           <p class="text-subtle mt-1"> ได้รับการยกย่องให้เป็น 1 ใน 3 พระพุทธรูปองค์ใหญ่ที่สุดในญี่ปุ่น องค์พระหล่อจากทองเหลืองด้วยฝีมืออันประณีตของช่างหล่อโลหะท้องถิ่นที่มีชื่อเสียงระดับโลก เดินชมผลงานจิตรกรรมด้านในฐานองค์พระที่เงียบสงบและเปี่ยมด้วยศรัทธา นับเป็นสัญลักษณ์สำคัญที่แสดงถึงความรุ่งเรืองทางศิลปะและจิตวิญญาณของเมืองทาคาโอกะ
           <div class="mt-3">
-           <img src="https://www.info-toyama.com/storage/tourism_attractions/21108/responsive_images/9LWCkc2twED3VeQrjm65L5JFtYDzFTn5aWXX96h6__1673_1115.jpeg" loading="lazy" class="tour-img" alt="Takaoka Daibutsu">
+           <img src="https://chillchilljapan.com/wp-content/uploads/2025/01/LINE_ALBUM_Takaoka-Great-Buddha_250115_13-760x506.jpg" loading="lazy" class="tour-img" alt="Takaoka Daibutsu">
           </div>
          </div>
         </div>
@@ -743,7 +743,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
 ด้วยทัศนียภาพอันทันสมัยและเงียบสงบ โดยมีสะพานเท็มมง (Tenmon Bridge) เป็นแลนด์มาร์คสำคัญที่เชื่อมต่อพื้นที่สองฝั่งน้ำเข้าด้วยกัน ภายในสวนเป็นที่ตั้งของร้านสตาร์บัคส์ ดีไซน์สวยระดับโลก จิบกาแฟพร้อมดื่มด่ำกับวิวสวน และสายน้ำได้อย่างผ่อนคลาย</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.info-toyama.com/storage/tourism_attractions/11009/responsive_images/JE6tmpbNvOBGw4jwFoFpCSHlSfLvuL3Cm3kVSMQe__1673_1115.jpeg" loading="lazy" alt="Kansui Park 1"></div>
+              <div class="img-slide"><img src="https://www.westjr.co.jp/global/en/ticket/hokuriku-arch-pass/Explore_Japan/wp-content/uploads/2017/01/img_kansuipark.jpg" loading="lazy" alt="Kansui Park 1"></div>
               <div class="img-slide"><img src="https://svcstrg.cld.navitime.jp/travelguide/p16010001/p16010001_03.jpg" loading="lazy" alt="Kansui Park 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
