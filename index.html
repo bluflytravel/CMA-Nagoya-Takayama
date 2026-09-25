@@ -511,11 +511,11 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🏚️ เมืองเก่าฮิดะฟุรุคาวะ (Hida-Furukawa)</p>
-          <p class="text-subtle mt-1">นำคณะชม เมืองเก่าฮิดะฟุรุคาวะ (Hida-Furukawa) เป็นเมืองสงบที่มีเสน่ห์ด้วยทางเดินเลียบคลองเซโตะซึ่งเต็มไป
-ด้วยปลาคาร์ปหลากสีและโกดังผนังสีขาวแบบโบราณ โด่งดังจากการเป็นสถานที่ต้นแบบในอนิเมะเรื่อง Your Name และมีงานเทศกาลตีกลองประจำปีที่ได้รับการยกย่องจาก UNESCO เหมาะสำหรับการเดินเที่ยวชมสถาปัตยกรรมไม้พื้นเมืองและสัมผัสวัฒนธรรมช่างไม้ฮิดะอันประณีต 
+          <p class="font-semibold"> ทาคายามะจินยะ (Takayama Jinya)</p>
+          <p class="text-subtle mt-1">นำคณะชม ทาคายามะจินยะ (Takayama Jinya) อดีตที่ทำการรัฐบาลและที่พักของเจ้าเมืองในยุคโชกุนโทกุงาวะ ซึ่งถือเป็นจวนผู้ว่าเก่าแก่เพียงแห่งเดียวที่ยังหลงเหลืออยู่ในญี่ปุ่น ภายในจัดแสดงห้องโถง
+ไม้ที่ประณีต คลังเก็บข้าวสารโบราณ รวมถึงโบราณวัตถุและอาวุธที่สะท้อนถึงประวัติศาสตร์การปกครองอันยาวนานกว่าร้อยปีได้อย่างน่าประทับใจ 
           <div class="mt-3">
-           <img src="https://www.snowmonkeyresorts.com/wp-content/uploads/2023/10/27212654_m-1024x683.jpg" loading="lazy" class="tour-img" alt="Hida-Furukawa">
+           <img src="https://images.trvl-media.com/place/6104068/9609d626-8b17-4e75-9aad-eba35ec1b63a.jpg" loading="lazy" class="tour-img" alt="Hida-Furukawa">
           </div>
          </div>
         </div>
@@ -523,13 +523,12 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🏬 ย่านเมืองเก่าทาคายามะ (Takayama Old Town)  - ทาคายามะจินยะ (Takayama Jinya) </p>
-          <p class="text-subtle mt-1">เดินทางสู่ ฮิดะทาคายามะ (Hida Takayama) เมืองเก่ากลางหุบเขาในจังหวัดกิฟุที่เปรียบเสมือนพิพิธภัณฑ์มีชีวิต ด้วยการรักษาสถาปัตยกรรมไม้และบรรยากาศย้อนยุคสมัยเอโดะไว้อย่างสมบูรณ์ สัมผัสวิถีชีวิตดั้งเดิมผ่านการชม ย่านเมืองเก่าทาคายาม่า จากนั้นเข้าชม ทาคายามะจินยะ (Takayama Jinya) อดีตที่ทำการรัฐบาลและที่พักของเจ้าเมืองในยุคโชกุนโทกุงาวะ ซึ่งถือเป็นจวนผู้ว่าเก่าแก่เพียงแห่งเดียวที่ยังหลงเหลืออยู่ในญี่ปุ่น ภายในจัดแสดงห้องโถง
-ไม้ที่ประณีต คลังเก็บข้าวสารโบราณ รวมถึงโบราณวัตถุและอาวุธที่สะท้อนถึงประวัติศาสตร์การปกครองอันยาวนานกว่าร้อยปีได้อย่างน่าประทับใจ</p>
+          <p class="font-semibold">🏬 ย่านซันมาจิ ซูจิ (Sanmachi Suji) </p>
+          <p class="text-subtle mt-1">ย่านซันมาจิ ซูจิ (Sanmachi Suji) หรือที่รู้จักกันในนาม ย่านเมืองเก่าทาเคยามะ (Takayama Old Town) ตั้งอยู่ในเมืองทาเคยามะ จังหวัดกิฟุ (Gifu) เป็นย่านอนุรักษ์อาคารบ้านเรือนโบราณที่ได้รับการจดทะเบียนเป็นเขตอนุรักษ์กลุ่มอาคารดั้งเดิมที่มีความสำคัญของประเทศญี่ปุ่น ได้รับฉายาว่า "Little Kyoto แห่งฮิดะ"</p>
           <div class="img-slider">
             <div class="img-slider-track">
               <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmgysO8Gc6n37uGXlIOFK_Z48jaWjoOABIw&s" loading="lazy" alt="Takayama Old Town 1"></div>
-              <div class="img-slide"><img src="https://images.trvl-media.com/place/6104068/9609d626-8b17-4e75-9aad-eba35ec1b63a.jpg" loading="lazy" alt="Takayama Old Town 2"></div>
+              <div class="img-slide"><img src="https://assets.japantravel.com/photo/330-191930/1200x630!/gifu-takayama-191930.jpg" loading="lazy" alt="Takayama Old Town 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -797,13 +796,12 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🛖 หมู่บ้านชิราคาวาโกะ (Shirakawa-go)</p>
-          <p class="text-subtle mt-1">เดินทางสู่ หมู่บ้านชิราคาวาโกะ (ใช้เวลาเดินทางประมาณ 1 ชั่วโมง) เป็นหมู่บ้านสไตล์กัชโชแบบญี่ปุ่นดั้งเดิม และยังได้รับเลือกเป็นมรดกโลกในปี 1995 ซึ่งเป็นหมู่บ้านสไตล์กัชโช-สึคุริ จะมีความยาวประมาณ 18 เมตร และมีความกว้าง 10 เมตร ซึ่งโครงสร้างของบ้านสามารถรองรับหิมะที่ตกหนักในช่วงฤดูหนาวได้ และรูปร่างของหลังคาเหมือนกับสองมือของพระเจ้า หรือพระพุทธเจ้า จึง
-เรียกหมู่บ้านในสไตล์นี้ว่า กัสโช พร้อมกันนี้ท่านจะเพลิดเพลินกับฝูงปลาคราฟนับร้อยที่แหวกว่ายอยู่ตามลำธารหน้าบ้านซึ่งจะเห็นได้ก็แต่เมืองในแถบนี้เท่านั้น
+          <p class="font-semibold">🏰 ปราสาทอินุยามา (Inuyama Castle) & ย่านเมืองเก่าอินุยามา (Inuyama Castle Town)  </p>
+          <p class="text-subtle mt-1">เดินทางสู่ ปราสาทอินุยามา (Inuyama Castle) (ใช้เวลาเดินทางประมาณ 2 ชั่วโมง) เป็นหนึ่งในห้าปราสาทของญี่ปุ่นที่ได้รับการขึ้นทะเบียนเป็นสมบัติชาติ โดยมีความโดดเด่นที่ตัวหอคอยหลัก (Tenshu) จังหวัดไอจิ สามารถเดินขึ้นไปยังชั้นบนสุดเพื่อชมวิวทิวทัศน์แบบพาโนรามาที่สวยงาม รวมถึงสัมผัสกลิ่นอายประวัติศาสตร์อันทรงพลังผ่านสถาปัตยกรรมยุคเซ็นโกคุที่ยังคงความสมบูรณ์มาจนถึงปัจจุบัน ชม ย่านเมืองเก่าอินุยามา (Inuyama Castle Town) ในจังหวัดไอจิ เป็นถนนสายประวัติศาสตร์ที่เต็มไปด้วยบรรยากาศย้อนยุคสมัยเอโดะ เรียงรายด้วยอาคารไม้โบราณที่ดัดแปลงเป็นร้านขนมและคาเฟ่ ไฮไลต์ที่ห้ามพลาดคือการชิมสตรีทฟู้ดหน้าตาสวยงามและการเดินชมวิวทอดยาวไปจนถึงปราสาทอินุยามา</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXtDrOprRhNVPV95ZUcU34lOVK8JOUFXlzdYQuEfNNeltILQfMcAxeI8Q&s=10" loading="lazy" alt="Shirakawa-go 1"></div>
-              <div class="img-slide"><img src="https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/kjwc0imvfkhdjtcf3ukb/TakayamaShirakawagoGasshoVillageOne-DayBusTripfromNagoya-Klook.jpg" loading="lazy" alt="Shirakawa-go 2"></div>
+              <div class="img-slide"><img src="https://centrip-japan.com/sites/default/files/inuyama-castle-ogp.jpg" loading="lazy" alt="Toki Premium Outlets 1"></div>
+              <div class="img-slide"><img src="https://muza-chan.net/aj/poze-weblog6/traditional-street-inuyama-castle-big.jpg" loading="lazy" alt="Toki Premium Outlets 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -824,34 +822,28 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🏰 ปราสาทอินุยามา (Inuyama Castle)  </p>
-          <p class="text-subtle mt-1">เดินทางสู่ ปราสาทอินุยามา (Inuyama Castle) (ใช้เวลาเดินทางประมาณ 2 ชั่วโมง) เป็นหนึ่งในห้าปราสาทของญี่ปุ่นที่ได้รับการขึ้นทะเบียนเป็นสมบัติชาติ โดยมีความโดดเด่นที่ตัวหอคอยหลัก (Tenshu) จังหวัดไอจิ สามารถเดินขึ้นไปยังชั้นบนสุดเพื่อชมวิวทิวทัศน์แบบพาโนรามาที่สวยงาม รวมถึงสัมผัสกลิ่นอายประวัติศาสตร์อันทรงพลังผ่านสถาปัตยกรรมยุคเซ็นโกคุที่ยังคงความสมบูรณ์มาจนถึงปัจจุบัน</p>
-          <div class="mt-3">
-           <img src="https://centrip-japan.com/sites/default/files/inuyama-castle-ogp.jpg" loading="lazy" class="tour-img" alt="Inuyama Castle">
-          </div>
-         </div>
-        </div>
-
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <div class="text-sm">
-          <p class="font-semibold">🏚️ ย่านเมืองเก่าอินุยามา (Inuyama Castle Town)</p>
-          <p class="text-subtle mt-1">ย่านเมืองเก่าอินุยามา (Inuyama Castle Town) ในจังหวัดไอจิ เป็นถนนสายประวัติศาสตร์ที่เต็มไปด้วยบรรยากาศย้อนยุคสมัยเอโดะ เรียงรายด้วยอาคารไม้โบราณที่ดัดแปลงเป็นร้านขนมและคาเฟ่ ไฮไลต์ที่ห้ามพลาดคือการชิมสตรีทฟู้ดหน้าตาสวยงามและการเดินชมวิวทอดยาวไปจนถึงปราสาทอินุยามา
-          <div class="mt-3">
-           <img src="https://muza-chan.net/aj/poze-weblog6/traditional-street-inuyama-castle-big.jpg" loading="lazy" class="tour-img" alt="Inuyama Castle Town">
-          </div>
-         </div>
-        </div>
-
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <div class="text-sm">
-          <p class="font-semibold">🛍️ Toki Premium Outlets</p>
-          <p class="text-subtle mt-1"> เดินทางสู่ Toki Premium Outlets (ใช้เวลาเดินทางประมาณ 40 นาที) เป็นหนึ่งในแหล่งช้อปปิ้งขนาดใหญ่ยอดนิยมในภูมิภาคชูบุ รวบรวมแบรนด์ชั้นนำ ทั้งในญี่ปุ่นและระดับโลกกว่า 180 ร้านค้า มีครบทั้งเสื้อผ้าแฟชั่น เครื่องแต่งกาย รองเท้า กระเป๋า สินค้ากีฬา อุปกรณ์ Outdoor ของใช้ในบ้าน ไปจนถึงร้านอาหารและคาเฟ่ ตัวเอาท์เล็ทออกแบบมาในสไตล์ American Art Deco ให้ความรู้สึกเหมือนเดินช้อปปิ้งอยู่ในแถบโคโลราโดหรือฝั่งตะวันออกของอเมริกา ตั้งอยู่บนเนินเขาที่โอบล้อมด้วยธรรมชาติ ทำให้ทัศนียภาพรอบ ๆ สวยงาม อากาศโปร่งสบาย และคนไม่หนาแน่นแออัดเท่าเอาท์เล็ทในเมืองใหญ่
+          <p class="font-semibold">🛍️ Mitsui Outlet Park Jazz Dream Nagashima</p>
+          <p class="text-subtle mt-1"> อิสระช้อปปิ้ง Mitsui Outlet Park Jazz Dream Nagashima เป็นหนึ่งในศูนย์รวมสินค้าเอาท์เล็ทที่ใหญ่ที่สุดในประเทศญี่ปุ่น โดดเด่นด้วยการออกแบบในธีมเมืองนิวออร์ลีนส์ (New Orleans) ซึ่งเป็นต้นกำเนิดของดนตรีแจ๊ส มีร้านค้ามากกว่า 300 ร้าน มีทั้งแบรนด์หรูระดับโลก (Luxury Brands), แบรนด์แฟชั่นไฮสตรีท, เสื้อผ้าสปอร์ตแวร์, อุปกรณ์เอาท์ดอร์, เครื่องสำอาง, ของใช้ในบ้าน และของเล่น แบรนด์ชั้นนำยอดนิยม Armani, Gucci, Coach, Michael Kors, Nike, Adidas, Puma, Mont-bell, LEGO และอีกมากมาย
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.prime-place.jp/cms/wp-content/uploads/2024/02/marela02_re2.webp" loading="lazy" alt="Toki Premium Outlets 1"></div>
-              <div class="img-slide"><img src="https://japanshopping.org/files/shopimg/MK1_3922kawai.jpg" loading="lazy" alt="Toki Premium Outlets 2"></div>
+              <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStOCGzuXzMb0UMiKzfcwIOW-Sn4AHUt5kIxjTPWY0grcfalK64xtsQhnrZ&s=10" loading="lazy" alt="Toki Premium Outlets 1"></div>
+              <div class="img-slide"><img src="https://visitmie-japan.travel/sites/default/files/2025-12/image1_44.jpeg" loading="lazy" alt="Toki Premium Outlets 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
+          </div>
+        </div>
+      </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">💡 งานประดับไฟ นาบานะโนะ ซาโตะ (Nabana no Sato) </p>
+          <p class="text-subtle mt-1">สวนพฤกษศาสตร์ขนาดใหญ่ที่เนรมิตงานประดับไฟ (Illumination) ได้ยิ่งใหญ่และสวยงามติดอันดับต้นๆ ของญี่ปุ่น ไฮไลท์สำคัญคืออุโมงค์ไฟระยิบระยับที่ยาวสุดลูกหูลูกตาและการจัดแสดงแสงสีบนทุ่งหญ้ากว้างที่เปลี่ยนธีมไปในแต่ละปีอย่างน่าอัศจรรย์</p>
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://www.nagoya-info.jp/upload/spots/large/4143834105e607e29bbdb0.jpg" loading="lazy" alt="Nabana no Sato 1"></div>
+              <div class="img-slide"><img src="https://s3-ap-northeast-1.amazonaws.com/thegate/2021/01/14/11/21/17/Nabana-no-sato.jpg" loading="lazy" alt="Nabana no Sato 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -885,22 +877,6 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
           </div>
           </div>
           </div>
-
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <div class="text-sm">
-          <p class="font-semibold">💡 งานประดับไฟ นาบานะโนะ ซาโตะ (Nabana no Sato) </p>
-          <p class="text-subtle mt-1">สวนพฤกษศาสตร์ขนาดใหญ่ที่เนรมิตงานประดับไฟ (Illumination) ได้ยิ่งใหญ่และสวยงามติดอันดับต้นๆ ของญี่ปุ่น ไฮไลท์สำคัญคืออุโมงค์ไฟระยิบระยับที่ยาวสุดลูกหูลูกตาและการจัดแสดงแสงสีบนทุ่งหญ้ากว้างที่เปลี่ยนธีมไปในแต่ละปีอย่างน่าอัศจรรย์</p>
-          <div class="img-slider">
-            <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.nagoya-info.jp/upload/spots/large/4143834105e607e29bbdb0.jpg" loading="lazy" alt="Nabana no Sato 1"></div>
-              <div class="img-slide"><img src="https://s3-ap-northeast-1.amazonaws.com/thegate/2021/01/14/11/21/17/Nabana-no-sato.jpg" loading="lazy" alt="Nabana no Sato 2"></div>
-            </div>
-            <div class="img-slider-dots"><span class="active"></span><span></span></div>
-            <div class="img-slider-counter">1/2</div>
-          </div>
-        </div>
-      </div>
 
         <div class="relative">
          <div class="timeline-dot absolute timeline-dot-wrap top-1"></div>
