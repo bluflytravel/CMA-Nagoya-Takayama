@@ -787,7 +787,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">5</span>
         <div>
          <h3 class="font-semibold text-lg">วันอาทิตย์ที่ 4 ตุลาคม 2569</h3>
-         <p class="text-sm text-subtle"> ทาคาโอกะ → ชิราคาวาโกะ → นาโกย่า </p>
+         <p class="text-sm text-subtle"> ทาคาโอกะ → นาโกย่า </p>
         </div>
         <span class="ml-auto text-2xl">🏰</span>
        </div>
@@ -1141,14 +1141,14 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
     </div>
   </div>
 
-  <h3 class="font-semibold text-brand-dark mb-3">🏙️ ชิราคาวาโกะ / นาโกย่า / ไอจิ (วันที่ 5–7)</h3>
+  <h3 class="font-semibold text-brand-dark mb-3">🏙️ นาโกย่า / ไอจิ (วันที่ 5–7)</h3>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
       <p class="text-xs text-subtle">4 ต.ค. (วันที่ 5)</p>
-      <p class="font-semibold text-sm">ชิราคาวาโกะ / อินุยามา / นาโกย่า</p>
+      <p class="font-semibold text-sm">อินุยามา / นาโกย่า</p>
       <div class="weather-icon my-2">🌥️</div>
       <p class="text-2xl font-bold text-brand-dark">24°<span class="text-base font-normal text-subtle">/19°C</span></p>
-      <p class="text-xs text-subtle mt-1">มีเมฆมาก อาจมีฝนเป็นช่วง<br><strong>ชิราคาวาโกะ ≈ 21°/14°C</strong></p>
+      <p class="text-xs text-subtle mt-1">มีเมฆมาก อาจมีฝนเป็นช่วง<br><strong></strong></p>
       <div class="flex justify-center gap-3 mt-2 text-xs text-subtle"><span>💧 75%</span><span>🌧️ 40%</span></div>
     </div>
     <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
@@ -1243,8 +1243,8 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
       <p class="text-xs text-subtle mt-1">👕 เสื้อแขนยาวบาง + 🧥 แจ็คเก็ตบางกันน้ำ (อากาศชื้น) / 👖 กางเกงขายาว / 👟 รองเท้าที่เปียกแล้วไม่ลื่น / ☂️ <strong>ร่มติดตัวทั้งวัน</strong> เดินตลาดปลาและสวนคันซุยเป็นพื้นที่กลางแจ้ง</p>
     </div>
     <div class="bg-white border-l-4 border-orange-400 rounded-r-xl p-4">
-      <p class="font-semibold text-sm">วันที่ 5 | ชิราคาวาโกะ → อินุยามา → นาโกย่า (4 ต.ค. | 14–24°C)</p>
-      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนสั้น/แขนยาวบาง (นาโกย่ากลางวัน 24°C) / 🧥 แจ็คเก็ตบางพับพก — ชิราคาวาโกะช่วงเช้าเย็นกว่าประมาณ 21°/14°C / 👟 รองเท้าเดินสบาย เดินเยอะทั้งหมู่บ้านและปราสาท / 💡 กลางคืนชม Nabana no Sato กลางแจ้ง ควรมีเสื้อคลุมติดตัว / ☂️ พกร่มเผื่อฝนเป็นช่วง</p>
+      <p class="font-semibold text-sm">วันที่ 5 | อินุยามา → นาโกย่า (4 ต.ค. | 14–24°C)</p>
+      <p class="text-xs text-subtle mt-1">👕 เสื้อแขนสั้น/แขนยาวบาง (นาโกย่ากลางวัน 24°C) / 🧥 แจ็คเก็ตบางพับพก / 👟 รองเท้าเดินสบาย เดินเยอะทั้งหมู่บ้านและปราสาท / 💡 กลางคืนชม Nabana no Sato กลางแจ้ง ควรมีเสื้อคลุมติดตัว / ☂️ พกร่มเผื่อฝนเป็นช่วง</p>
     </div>
     <div class="bg-white border-l-4 border-red-400 rounded-r-xl p-4">
       <p class="font-semibold text-sm">วันที่ 6 | โครังเค → ซากาเอะ (5 ต.ค. | 16–26°C · แดดออก)</p>
