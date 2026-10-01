@@ -597,7 +597,7 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Alps Kaido Hirayu</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>Hida Beef Grilled with Hoba Miso</p>
+           <p> Keichan-style Stir-fried Chicken & Seafood Hot Pot</p>
           <div class="img-slider">
             <div class="img-slider-track">
               <div class="img-slide"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnYHolnr10FUR7eyfEada8TWE68G7dzN4sOIFHK4m-JNhEVFdguo6iSPl82oPQpm0uPOILmZxo82EWh0QmfT1dlWVhHELgkl4TBvBxArM0u0uO7d7twVEy2GctblvgDBJkHrwULXzE1Ucmr=s680-w680-h510-rw" loading="lazy" alt="Okuhida Garden Hotel 1"></div>
@@ -696,8 +696,7 @@ body { font-family: 'Prompt', sans-serif; }
           <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Kaio-don (Seafood)</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>Kaio-don (Seafood Rice Bowl) A premium seafood bowl topped with approximately 12
-varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanese pickles.</p>
+           <p>Kaio-don (Seafood Rice Bowl)</p>
           <div class="img-slider">
             <div class="img-slider-track">
               <div class="img-slide"><img src="https://www.andtrip.jp/images/DSC00482.JPG" loading="lazy" alt="Kittokito-tei 1"></div>
@@ -757,15 +756,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Toyama Station Izakaya Keyaki-tei</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>Seasonal Delights Course</p>
-           <p>Two Small Appetizers</p>
-           <p>Savory Egg Custard (Chawanmushi)</p>
-           <p>Sashimi </p>
-           <p>Grilled Seasonal Fish</p>
-           <p>Seasonal Salad</p>
-           <p>Seasonal Tempura & Fried Dishes</p>
-           <p>Choice of Soba or Udon Noodles</p>
-           <p>Dessert</p>
+           <p>Seasonal Course Featuring Seasonal Flavors</p>
           <div class="mt-3">
            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmKcQcEZFbIgkesD97pEnsIc9ZVYxlPsmubaMZou_1EsiYJcqWxW8TCNiLGyTY-TDqe1LQfAKeLq46ROwOYod4lPW2XPQrRicdR28T5JerQXh1sCnhjrp3FOEdJisAZSz2hw5A=s680-w680-h510-rw" loading="lazy" class="tour-img" alt="Kajinicho Toyama">
           </div>
@@ -812,7 +803,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Daian </p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Taian Japanese Restaurant </p>
           <div class="mt-3">
            <img src="https://inuyama.gr.jp/upload/site/gourmets/large/5d411c1dccf8c4726b8e152b105c3fa3.jpg" loading="lazy" class="tour-img" alt="Taian">
           </div>
@@ -822,12 +813,12 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">💡 งานประดับไฟ นาบานะโนะ ซาโตะ (Nabana no Sato) </p>
-          <p class="text-subtle mt-1">สวนพฤกษศาสตร์ขนาดใหญ่ที่เนรมิตงานประดับไฟ (Illumination) ได้ยิ่งใหญ่และสวยงามติดอันดับต้นๆ ของญี่ปุ่น ไฮไลท์สำคัญคืออุโมงค์ไฟระยิบระยับที่ยาวสุดลูกหูลูกตาและการจัดแสดงแสงสีบนทุ่งหญ้ากว้างที่เปลี่ยนธีมไปในแต่ละปีอย่างน่าอัศจรรย์</p>
+          <p class="font-semibold"> สวนดอกไม้ นาบานะโนะ ซาโตะ (Nabana no Sato) </p>
+          <p class="text-subtle mt-1">พื้นที่กว้างใหญ่กว่า 43,000 ตารางเมตร บานเปลี่ยนหมุนเวียนตลอดปี เรือนกระจกขนาดใหญ่ที่จัดแสดงดอกเบโกเนียและดอกไม้สายพันธุ์เขตร้อนหลากสีสัน ฤดูใบไม้ร่วง (กันยายน - พฤศจิกายน) ชมทุ่งดอกคอสโมส (Cosmos) และดอกรักเร่ (Dahlia) พร้อมจุดชมใบไม้เปลี่ยนสีที่สะท้อนผิวน้ำอย่างงดงาม</p>
           <div class="img-slider">
             <div class="img-slider-track">
-              <div class="img-slide"><img src="https://www.nagoya-info.jp/upload/spots/large/4143834105e607e29bbdb0.jpg" loading="lazy" alt="Nabana no Sato 1"></div>
-              <div class="img-slide"><img src="https://s3-ap-northeast-1.amazonaws.com/thegate/2021/01/14/11/21/17/Nabana-no-sato.jpg" loading="lazy" alt="Nabana no Sato 2"></div>
+              <div class="img-slide"><img src="https://cdn.jeepe.jp/uploads/public_image/image/982/normal_e48a1833-0bd7-44fc-8c69-ddcb3388e755.jpg" loading="lazy" alt="Nabana no Sato 1"></div>
+              <div class="img-slide"><img src="https://travel.fav-agoodtime.com/wp-content/uploads/1-568.png" loading="lazy" alt="Nabana no Sato 2"></div>
             </div>
             <div class="img-slider-dots"><span class="active"></span><span></span></div>
             <div class="img-slider-counter">1/2</div>
@@ -841,15 +832,7 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
           <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Neo-Robata Donan Norin Suisanbu</p>
           <div class="meal-card rounded-lg p-3 mt-2 text-xs">
            <p class="font-medium text-brand-dark mb-1">📋เมนู:</p>
-           <p>Fatty Tuna (Otoro) Shabu-Shabu & Seafood Course (Includes 2-Hour All-You-Can-Drink) </p>
-           <p>・Dynamic! Fatty Tuna (Otoro) Shabu-Shabu</p>
-           <p>・Crispy Seasonal Vegetable Salad with Refreshing Plum-Perilla (Ume-Jiso) Dressing</p>
-           <p>・Straight from the Fishing Port! 5-Piece Assorted Fresh Sashimi Platter</p>
-           <p>・Hokkaido’s Famous Deep-Fried Chicken "Zangi"</p>
-           <p>・French Fries</p>
-           <p>・Rolled Dashi Omelet with Aromatic Thick Broth (Ankake)</p>
-           <p>・Finishing Rice Porridge (Zosui)</p>
-         
+           <p> Fatty Tuna Shabu-Shabu & Seafood Course ( All-You-Can-Drink) </p>         
           <div class="img-slider">
             <div class="img-slider-track">
               <div class="img-slide"><img src="https://qatawiydwofbhfjtxvdk.supabase.co/storage/v1/object/public/uploads/donan-sakae/imported/images/store-zashiki.webp" loading="lazy" alt="Neo-Robata Donan Norin Suisanbu 1"></div>
