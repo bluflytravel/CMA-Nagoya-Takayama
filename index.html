@@ -822,22 +822,6 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🛍️ Mitsui Outlet Park Jazz Dream Nagashima</p>
-          <p class="text-subtle mt-1"> อิสระช้อปปิ้ง Mitsui Outlet Park Jazz Dream Nagashima เป็นหนึ่งในศูนย์รวมสินค้าเอาท์เล็ทที่ใหญ่ที่สุดในประเทศญี่ปุ่น โดดเด่นด้วยการออกแบบในธีมเมืองนิวออร์ลีนส์ (New Orleans) ซึ่งเป็นต้นกำเนิดของดนตรีแจ๊ส มีร้านค้ามากกว่า 300 ร้าน มีทั้งแบรนด์หรูระดับโลก (Luxury Brands), แบรนด์แฟชั่นไฮสตรีท, เสื้อผ้าสปอร์ตแวร์, อุปกรณ์เอาท์ดอร์, เครื่องสำอาง, ของใช้ในบ้าน และของเล่น แบรนด์ชั้นนำยอดนิยม Armani, Gucci, Coach, Michael Kors, Nike, Adidas, Puma, Mont-bell, LEGO และอีกมากมาย
-          <div class="img-slider">
-            <div class="img-slider-track">
-              <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStOCGzuXzMb0UMiKzfcwIOW-Sn4AHUt5kIxjTPWY0grcfalK64xtsQhnrZ&s=10" loading="lazy" alt="Toki Premium Outlets 1"></div>
-              <div class="img-slide"><img src="https://visitmie-japan.travel/sites/default/files/2025-12/image1_44.jpeg" loading="lazy" alt="Toki Premium Outlets 2"></div>
-            </div>
-            <div class="img-slider-dots"><span class="active"></span><span></span></div>
-            <div class="img-slider-counter">1/2</div>
-          </div>
-        </div>
-      </div>
-
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <div class="text-sm">
           <p class="font-semibold">💡 งานประดับไฟ นาบานะโนะ ซาโตะ (Nabana no Sato) </p>
           <p class="text-subtle mt-1">สวนพฤกษศาสตร์ขนาดใหญ่ที่เนรมิตงานประดับไฟ (Illumination) ได้ยิ่งใหญ่และสวยงามติดอันดับต้นๆ ของญี่ปุ่น ไฮไลท์สำคัญคืออุโมงค์ไฟระยิบระยับที่ยาวสุดลูกหูลูกตาและการจัดแสดงแสงสีบนทุ่งหญ้ากว้างที่เปลี่ยนธีมไปในแต่ละปีอย่างน่าอัศจรรย์</p>
           <div class="img-slider">
@@ -930,13 +914,18 @@ varieties of fresh seafood. Served with a side dish, crab miso soup, and Japanes
         </div>
       </div>
 
-      <div class="relative">
-        <div class="timeline-dot absolute -left-[31px] top-1"></div>
-        <div class="text-sm">
-          <p class="font-semibold">🛍️ ย่านซากาเอะ (Sakae)</p>
-          <p class="text-subtle mt-1">เดินทางกลับสู่ เมืองนาโกย่า (Nagoya) จากนั้นอิสระช้อปปิ้ง ย่านซากาเอะ (Sakae) เป็นย่านการค้าที่มีความสำคัญที่สุดของเมืองนาโงย่า ทั้งยังเป็นที่ตั้งของหอคอยส่งสัญญาณโทรทัศน์แห่งเมืองนาโงย่า มีห้างสรรพสินค้าชื่อดังและร้านค้าแบรนด์เนมต่างๆ เรียงรายเต็มสองฟากฝั่งถนน</p>
-          <div class="mt-3">
-            <img src="https://www.kintetsu.co.jp/foreign/assets/sightseeing/nagoya/spot11/images/spot11_pic03.png" loading="lazy" class="tour-img" alt="Sakae Nagoya">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🛍️ Mitsui Outlet Park Jazz Dream Nagashima</p>
+          <p class="text-subtle mt-1"> อิสระช้อปปิ้ง Mitsui Outlet Park Jazz Dream Nagashima เป็นหนึ่งในศูนย์รวมสินค้าเอาท์เล็ทที่ใหญ่ที่สุดในประเทศญี่ปุ่น โดดเด่นด้วยการออกแบบในธีมเมืองนิวออร์ลีนส์ (New Orleans) ซึ่งเป็นต้นกำเนิดของดนตรีแจ๊ส มีร้านค้ามากกว่า 300 ร้าน มีทั้งแบรนด์หรูระดับโลก (Luxury Brands), แบรนด์แฟชั่นไฮสตรีท, เสื้อผ้าสปอร์ตแวร์, อุปกรณ์เอาท์ดอร์, เครื่องสำอาง, ของใช้ในบ้าน และของเล่น แบรนด์ชั้นนำยอดนิยม Armani, Gucci, Coach, Michael Kors, Nike, Adidas, Puma, Mont-bell, LEGO และอีกมากมาย
+          <div class="img-slider">
+            <div class="img-slider-track">
+              <div class="img-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStOCGzuXzMb0UMiKzfcwIOW-Sn4AHUt5kIxjTPWY0grcfalK64xtsQhnrZ&s=10" loading="lazy" alt="Toki Premium Outlets 1"></div>
+              <div class="img-slide"><img src="https://visitmie-japan.travel/sites/default/files/2025-12/image1_44.jpeg" loading="lazy" alt="Toki Premium Outlets 2"></div>
+            </div>
+            <div class="img-slider-dots"><span class="active"></span><span></span></div>
+            <div class="img-slider-counter">1/2</div>
           </div>
         </div>
       </div>
